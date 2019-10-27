@@ -1,4 +1,4 @@
-package pw.tereshkov.crocodile.crocodile_game
+package pw.tereshkov.crocodile
 
 import android.os.Bundle
 
