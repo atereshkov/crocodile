@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>796010435322-28ul3dggavlncn8tqae17mv5dd9jgf8g.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.796010435322-28ul3dggavlncn8tqae17mv5dd9jgf8g</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAoSHlCMxzqrcnk6513wIbDjaTOrkn6Zjg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>796010435322</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>pw.tereshkov.crocodile</string>
+	<key>PROJECT_ID</key>
+	<string>croco-at</string>
+	<key>STORAGE_BUCKET</key>
+	<string>croco-at.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:796010435322:ios:9c91f8ca6382b20cee2f43</string>
+	<key>DATABASE_URL</key>
+	<string>https://croco-at.firebaseio.com</string>
+</dict>
+</plist>

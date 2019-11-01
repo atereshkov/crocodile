@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "796010435322",
+    "firebase_url": "https://croco-at.firebaseio.com",
+    "project_id": "croco-at",
+    "storage_bucket": "croco-at.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796010435322:android:572be868a5e1e598ee2f43",
+        "android_client_info": {
+          "package_name": "pw.tereshkov.crocodile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796010435322-12shqjktm0kj1r2faane5b7r5cv1jmam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8Wlc4PHWFi-fwdOw1GZDdM-5qxTeCHOk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796010435322-12shqjktm0kj1r2faane5b7r5cv1jmam.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "796010435322-28ul3dggavlncn8tqae17mv5dd9jgf8g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "pw.tereshkov.crocodile"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

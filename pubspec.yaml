@@ -1,16 +1,5 @@
 name: crocodile_game
-description: A new Flutter project.
-
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+description: Crocodile Game
 version: 1.0.0+1
 
 environment:
@@ -19,13 +8,19 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   cupertino_icons: ^0.1.2
-  # admob_flutter: ^0.3.4
+  firebase_core: ^0.4.0+9
+  firebase_analytics: ^5.0.2
+  admob_flutter: ^0.3.4
+  injector: ^1.0.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  intl_translation: ^0.17.7
 
 
 # For information on the generic Dart part of this file, see the
