@@ -44,7 +44,8 @@ class AppComponentState extends State<AppComponent> {
 
   AppProvider _runApp(Widget widget) {
     final theme = ThemeData(
-      primarySwatch: Colors.red,
+      primarySwatch: Colors.green,
+      primaryColor: Colors.white,
     );
 
     final app = MaterialApp(
@@ -57,6 +58,7 @@ class AppComponentState extends State<AppComponent> {
       ],
       supportedLocales: [
         const Locale('en', 'US'),
+        const Locale('ru', 'RU'),
       ],
       debugShowCheckedModeBanner: false,
       theme: theme
