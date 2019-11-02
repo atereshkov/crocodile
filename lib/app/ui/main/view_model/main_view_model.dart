@@ -10,6 +10,11 @@ class MainViewModel implements MainViewModelType {
   }
 
   @override
+  void initState() {
+    
+  }
+
+  @override
   void dispose() {
     
   }

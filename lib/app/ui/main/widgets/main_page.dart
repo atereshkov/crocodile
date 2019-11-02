@@ -15,6 +15,7 @@ class _MainPageState extends State<MainPage> {
   @override
   void initState() {
     _buildViewModel();
+    widget._viewModel.initState();
     super.initState();
   }
 
