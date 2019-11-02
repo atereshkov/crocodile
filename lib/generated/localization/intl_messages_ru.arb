@@ -1,0 +1,9 @@
+{
+  "@@locale": "ru",
+  "@@last_modified": "2019-11-02T17:35:07.113537",
+  "mainScreenButtonStartGame": "Старт",
+  "@mainScreenButtonStartGame": {
+    "type": "text",
+    "placeholders": {}
+  }
+}

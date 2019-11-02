@@ -22,6 +22,7 @@ class AppLocalizations {
 
   String get getCurrentLangCode => Intl.shortLocale(Intl.defaultLocale);
 
-  // String get loginScreenTitle => Intl.message('Login', name: 'loginScreenTitle');
+  // Main:
+  String get mainScreenButtonStartGame => Intl.message('Start', name: 'mainScreenButtonStartGame');
   
 }

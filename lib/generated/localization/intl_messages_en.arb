@@ -1,5 +1,6 @@
 {
-  "@@last_modified": "2019-11-02T17:37:50.636643",
+  "@@locale": "en",
+  "@@last_modified": "2019-11-02T17:35:07.113537",
   "mainScreenButtonStartGame": "Start",
   "@mainScreenButtonStartGame": {
     "type": "text",
