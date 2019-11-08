@@ -1,0 +1,20 @@
+{
+	"words": [
+		{
+			"word": "Слово1",
+			"categories": [
+				{
+					"category": "Простые"
+				}
+			]
+		},
+		{
+			"word": "Слово2",
+			"categories": [
+				{
+					"category": "Простые"
+				}
+			]
+		}
+	]
+}

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:crocodile_game/app/ui/main/view_model/main_view_model_type.dart';
+import 'package:crocodile_game/app/ui/single_play/module.dart';
 
 class MainPage extends StatefulWidget {
   final MainViewModelType _viewModel;
@@ -14,9 +15,8 @@ class _MainPageState extends State<MainPage> {
 
   @override
   void initState() {
-    _buildViewModel();
-    widget._viewModel.initState();
     super.initState();
+    _buildViewModel();
   }
 
   @override
@@ -28,14 +28,21 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Title')),
+      appBar: _buildAppBar(context),
       body: _buildBody(context),
     );
   }
 
+  Widget _buildAppBar(BuildContext context) {
+    return AppBar(title: Text('Title'));
+  }
+
   Widget _buildBody(BuildContext context) {
-    return Center(
-      child: Text('Kek'),
+    return FlatButton(
+      child: Text("Single"),
+      onPressed: () {
+        widget._viewModel.singlePlayAction(context);
+      },
     );
   }
 

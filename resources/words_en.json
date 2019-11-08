@@ -1,0 +1,20 @@
+{
+	"words": [
+		{
+			"word": "Word1",
+			"categories": [
+				{
+					"category": "Easy"
+				}
+			]
+		},
+		{
+			"word": "Word2",
+			"categories": [
+				{
+					"category": "Easy"
+				}
+			]
+		}
+	]
+}
