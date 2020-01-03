@@ -24,4 +24,9 @@ class MainViewModel implements MainViewModelType {
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => SinglePlayPage(vm)));
   }
 
+  @override
+  void howToPlayAction(BuildContext context) {
+    
+  }
+
 }

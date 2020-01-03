@@ -5,4 +5,5 @@ abstract class MainViewModelType {
   void dispose();
 
   void singlePlayAction(BuildContext context);
+  void howToPlayAction(BuildContext context);
 }
