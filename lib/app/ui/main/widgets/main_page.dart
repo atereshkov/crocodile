@@ -50,6 +50,9 @@ class _MainPageState extends State<MainPage> {
   Widget _buildBody(BuildContext context) {
     return Column(
       children: <Widget>[
+        Image(
+          image: AssetImage('resources/images/cloud-sky.png'),
+        ),
         Expanded(
           child: Stack(
             children: <Widget>[
@@ -83,7 +86,7 @@ class _MainPageState extends State<MainPage> {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Colors.blue, Colors.white]
+          colors: [Color(0xff06b6ff), Colors.white]
         )
       ),
     );
