@@ -94,14 +94,14 @@ class _MainPageState extends State<MainPage> {
 
   Widget _buildMenu(BuildContext context) {
     return Center(
-        child: Column(
-          children: <Widget>[
-            _buildSinglePlayButton(context),
-            Padding(padding: EdgeInsets.symmetric(vertical: 4)),
-            _buildHowToPlayButton(context),
-          ],
-        ),
-      );
+      child: Column(
+        children: <Widget>[
+          _buildSinglePlayButton(context),
+          Padding(padding: EdgeInsets.symmetric(vertical: 4)),
+          _buildHowToPlayButton(context),
+        ],
+      ),
+    );
   }
 
   Widget _buildTeamPlayRow(BuildContext context) {
@@ -120,7 +120,6 @@ class _MainPageState extends State<MainPage> {
       color: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
-        side: BorderSide(color: Colors.grey)
       ),
       onPressed: () {
         widget._viewModel.singlePlayAction(context);
@@ -170,13 +169,12 @@ class _MainPageState extends State<MainPage> {
       color: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
-        side: BorderSide(color: Colors.grey)
       ),
       onPressed: () {
-        widget._viewModel.howToPlayAction(context);
+        
       },
       child: Text(
-        "How to play?",
+        "How To Play",
         style: TextStyle(
           fontSize: 19,
         ),
