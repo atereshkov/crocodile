@@ -45,7 +45,7 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
       children: <Widget>[
         _buildWord(context),
         FlatButton(
-          child: Text("Generate"),
+          child: Text("Next Word"),
           onPressed: () {
             widget._viewModel.generateNewWordAction(context);
           },

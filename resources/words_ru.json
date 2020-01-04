@@ -4,7 +4,10 @@
 			"word": "Слово1",
 			"categories": [
 				{
-					"category": "Простые"
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
 				}
 			]
 		},
@@ -12,7 +15,10 @@
 			"word": "Слово2",
 			"categories": [
 				{
-					"category": "Простые"
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
 				}
 			]
 		}

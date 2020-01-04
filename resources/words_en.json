@@ -4,7 +4,10 @@
 			"word": "Word1",
 			"categories": [
 				{
-					"category": "Easy"
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
 				}
 			]
 		},
@@ -12,7 +15,10 @@
 			"word": "Word2",
 			"categories": [
 				{
-					"category": "Easy"
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
 				}
 			]
 		}

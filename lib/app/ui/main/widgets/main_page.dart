@@ -27,39 +27,78 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppBar(context),
+      // extendBodyBehindAppBar: true,
+      // appBar: _buildAppBar(context),
       body: _buildBody(context),
+      backgroundColor: Colors.white,
     );
   }
 
   Widget _buildAppBar(BuildContext context) {
-    return AppBar(title: Text('Title'));
+    return AppBar(
+      title: Text(
+        'Title',
+        style: TextStyle(
+          color: Colors.white,
+        ),
+      ),
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+    );
   }
 
   Widget _buildBody(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(top: 60),
-      child: Center(
-        child: Column(
-          children: <Widget>[
-            _buildSinglePlayRow(context),
-            Padding(padding: EdgeInsets.symmetric(vertical: 4)),
-            _buildHowToPlayButton(context),
-          ],
+    return Column(
+      children: <Widget>[
+        Expanded(
+          child: Stack(
+            children: <Widget>[
+              _gradientBackground(),
+              SafeArea(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    _buildMenu(context),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
+        Expanded(
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: Image(
+              image: AssetImage("resources/images/main_croco.gif"),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _gradientBackground() {
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [Colors.blue, Colors.white]
+        )
       ),
     );
   }
 
-  Widget _buildSinglePlayRow(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        _buildSinglePlayButton(context),
-        // Padding(padding: EdgeInsets.symmetric(horizontal: 4)),
-        // _buildSinglePlayHelpIcon(context),
-      ],
-    );
+  Widget _buildMenu(BuildContext context) {
+    return Center(
+        child: Column(
+          children: <Widget>[
+            _buildSinglePlayButton(context),
+            Padding(padding: EdgeInsets.symmetric(vertical: 4)),
+            _buildHowToPlayButton(context),
+          ],
+        ),
+      );
   }
 
   Widget _buildTeamPlayRow(BuildContext context) {
@@ -83,23 +122,11 @@ class _MainPageState extends State<MainPage> {
       onPressed: () {
         widget._viewModel.singlePlayAction(context);
       },
-      child: Text("Single Mode"),
-    );
-  }
-
-  Widget _buildSinglePlayHelpIcon(BuildContext context) {
-    return ButtonTheme(
-      minWidth: 40,
-      child: RaisedButton(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-          side: BorderSide(color: Colors.grey)
+      child: Text(
+        "Play",
+        style: TextStyle(
+          fontSize: 19,
         ),
-        onPressed: () {
-          
-        },
-        child: Text("?"),
       ),
     );
   }
@@ -145,7 +172,12 @@ class _MainPageState extends State<MainPage> {
       onPressed: () {
         widget._viewModel.howToPlayAction(context);
       },
-      child: Text("How to play?"),
+      child: Text(
+        "How to play?",
+        style: TextStyle(
+          fontSize: 19,
+        ),
+      ),
     );
   }
 

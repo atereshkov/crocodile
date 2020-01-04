@@ -26,7 +26,6 @@ class GeneratorService implements GeneratorServiceType {
     }
 
     final _random = new Random();
-
     final randomItem = _allWords[_random.nextInt(_allWords.length)];
     var word = randomItem.word;
 

@@ -1,11 +1,13 @@
 class CategoryItem {
-  final String category;
+  final String name;
+  final String id;
 
-  CategoryItem({this.category});
+  CategoryItem({this.name, this.id});
 
   factory CategoryItem.fromMap(Map<String, dynamic> map) {
     return CategoryItem(
-        category: map['category']
+        name: map['name'],
+        id: map['id']
     );
   }
 
