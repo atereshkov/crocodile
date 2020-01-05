@@ -59,8 +59,8 @@ class _MainPageState extends State<MainPage> {
               _gradientBackground(),
               SafeArea(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
+                    // TODO: Logo
                     _buildMenu(context),
                   ],
                 ),
@@ -68,12 +68,10 @@ class _MainPageState extends State<MainPage> {
             ],
           ),
         ),
-        Expanded(
-          child: Align(
-            alignment: Alignment.bottomCenter,
-            child: Image(
-              image: AssetImage("resources/images/main_croco.gif"),
-            ),
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Image(
+            image: AssetImage("resources/images/main_croco.gif"),
           ),
         ),
       ],

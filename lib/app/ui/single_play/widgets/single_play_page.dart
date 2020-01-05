@@ -32,12 +32,41 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _buildAppBar(context),
-      body: _buildBody(context),
+      body: _buildBody2(context),
     );
   }
 
   Widget _buildAppBar(BuildContext context) {
     return AppBar(title: Text('Title'));
+  }
+
+  Widget _buildBody2(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Expanded(
+          child: Stack(
+            children: <Widget>[
+              _gradientBackground(),
+            ],
+          ),
+        ),
+        Image(
+          image: AssetImage("resources/images/source2.gif"),
+        ),
+      ],
+    );
+  }
+
+  Widget _gradientBackground() {
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [Color(0xFF06B6FF), Color(0xFFC1EDFA)]
+        )
+      ),
+    );
   }
 
   Widget _buildBody(BuildContext context) {
