@@ -32,7 +32,7 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _buildAppBar(context),
-      body: _buildBody2(context),
+      body: _buildBody(context),
     );
   }
 
@@ -40,13 +40,24 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
     return AppBar(title: Text('Title'));
   }
 
-  Widget _buildBody2(BuildContext context) {
+  Widget _buildBody(BuildContext context) {
     return Column(
       children: <Widget>[
         Expanded(
           child: Stack(
             children: <Widget>[
               _gradientBackground(),
+              Column(
+                children: <Widget>[
+                  _buildWord(context),
+                  FlatButton(
+                    child: Text("Next Word"),
+                    onPressed: () {
+                      widget._viewModel.generateNewWordAction(context);
+                    },
+                  ),
+                ],
+              ),
             ],
           ),
         ),
@@ -66,20 +77,6 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
           colors: [Color(0xFF06B6FF), Color(0xFFC1EDFA)]
         )
       ),
-    );
-  }
-
-  Widget _buildBody(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        _buildWord(context),
-        FlatButton(
-          child: Text("Next Word"),
-          onPressed: () {
-            widget._viewModel.generateNewWordAction(context);
-          },
-        )
-      ],
     );
   }
 
