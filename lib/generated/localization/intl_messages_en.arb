@@ -35,5 +35,15 @@
   "@rulesTeamModeContent": {
     "type": "text",
     "placeholders": {}
+  },
+  "singlePlayTitle": "Game",
+  "@singlePlayTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "singlePlayNextWordButton": "Next Word",
+  "@singlePlayNextWordButton": {
+    "type": "text",
+    "placeholders": {}
   }
 }

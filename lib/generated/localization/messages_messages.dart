@@ -23,10 +23,12 @@ class MessageLookup extends MessageLookupByLibrary {
   static _notInlinedMessages(_) => <String, Function> {
     "mainMenuHowToPlay" : MessageLookupByLibrary.simpleMessage("How To Play"),
     "mainMenuPlaySingleMode" : MessageLookupByLibrary.simpleMessage("Play"),
-    "rulesSingleModeContent" : MessageLookupByLibrary.simpleMessage("Игрок должен изобразить слово, используя только жесты и мимику (говорить нельзя), а остальные игроки должны угадать это слово. Тот, кто угадал - занимает место ведущего игрока и игра продолжается."),
-    "rulesSingleModeSubtitle" : MessageLookupByLibrary.simpleMessage("Обычная игра"),
-    "rulesTeamModeContent" : MessageLookupByLibrary.simpleMessage("Игроки делятся на команды с произвольным количеством игроков. Далее команды по кругу показывают слова (один игрок от команды). Игрок показывает слово и только его команда пытается отгадать слово. Если слово отгадано за отведенное время, команде начисляются баллы и очередь переходит к следущей команде по кругу."),
-    "rulesTeamModeSubtitle" : MessageLookupByLibrary.simpleMessage("Командная игра"),
-    "rulesTitle" : MessageLookupByLibrary.simpleMessage("Rules")
+    "rulesSingleModeContent" : MessageLookupByLibrary.simpleMessage("The player must depict the word using only gestures and facial expressions (you can’t speak), and the rest of the players must guess the word. The one who guessed the word takes the place of the leading player and the game continues."),
+    "rulesSingleModeSubtitle" : MessageLookupByLibrary.simpleMessage("Single mode"),
+    "rulesTeamModeContent" : MessageLookupByLibrary.simpleMessage("Players are divided into teams with any number of players. Then the teams show the words one by one (one player from the team). The player shows the word and only his team tries to guess the word. If a word is guessed within the time, points are awarded to the team and the line goes to the next team in a circle."),
+    "rulesTeamModeSubtitle" : MessageLookupByLibrary.simpleMessage("Team mode"),
+    "rulesTitle" : MessageLookupByLibrary.simpleMessage("Rules"),
+    "singlePlayNextWordButton" : MessageLookupByLibrary.simpleMessage("Next Word"),
+    "singlePlayTitle" : MessageLookupByLibrary.simpleMessage("Game")
   };
 }

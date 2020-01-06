@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-01-06T17:22:22.404494",
+  "@@last_modified": "2020-01-06T18:09:35.400214",
   "mainMenuPlaySingleMode": "Play",
   "@mainMenuPlaySingleMode": {
     "type": "text",
@@ -32,6 +32,16 @@
   },
   "rulesTeamModeContent": "Players are divided into teams with any number of players. Then the teams show the words one by one (one player from the team). The player shows the word and only his team tries to guess the word. If a word is guessed within the time, points are awarded to the team and the line goes to the next team in a circle.",
   "@rulesTeamModeContent": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "singlePlayTitle": "Game",
+  "@singlePlayTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "singlePlayNextWordButton": "Next Word",
+  "@singlePlayNextWordButton": {
     "type": "text",
     "placeholders": {}
   }

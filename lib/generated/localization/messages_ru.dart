@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "rulesSingleModeSubtitle" : MessageLookupByLibrary.simpleMessage("Обычная игра"),
     "rulesTeamModeContent" : MessageLookupByLibrary.simpleMessage("Игроки делятся на команды с произвольным количеством игроков. Далее команды по кругу показывают слова (один игрок от команды). Игрок показывает слово и только его команда пытается отгадать слово. Если слово отгадано за отведенное время, команде начисляются баллы и очередь переходит к следущей команде по кругу."),
     "rulesTeamModeSubtitle" : MessageLookupByLibrary.simpleMessage("Командная игра"),
-    "rulesTitle" : MessageLookupByLibrary.simpleMessage("Правила")
+    "rulesTitle" : MessageLookupByLibrary.simpleMessage("Правила"),
+    "singlePlayNextWordButton" : MessageLookupByLibrary.simpleMessage("Следующее слово"),
+    "singlePlayTitle" : MessageLookupByLibrary.simpleMessage("Обычный режим")
   };
 }

@@ -35,5 +35,15 @@
   "@rulesTeamModeContent": {
     "type": "text",
     "placeholders": {}
+  },
+  "singlePlayTitle": "Обычный режим",
+  "@singlePlayTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "singlePlayNextWordButton": "Следующее слово",
+  "@singlePlayNextWordButton": {
+    "type": "text",
+    "placeholders": {}
   }
 }
