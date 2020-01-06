@@ -2,6 +2,9 @@ import 'package:crocodile_game/app/localization/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:crocodile_game/app/ui/single_play/view_model/single_play_view_model_type.dart';
 
+import 'dart:io' show Platform;
+import 'package:admob_flutter/admob_flutter.dart';
+
 class SinglePlayPage extends StatefulWidget {
   final SinglePlayViewModelType _viewModel;
 
@@ -58,6 +61,10 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
         ),
         Image(
           image: AssetImage("resources/images/source2.gif"),
+        ),
+        AdmobBanner(
+          adUnitId: getBottomBannerId(),
+          adSize: AdmobBannerSize.BANNER,
         ),
       ],
     );
@@ -135,6 +142,16 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
 
   void _buildViewModel() {
 
+  }
+
+  String getBottomBannerId() {
+    if (Platform.isAndroid) {
+      return "ca-app-pub-4667215880477199/9071919868";
+    } else if (Platform.isIOS) {
+      return "ca-app-pub-4667215880477199/8928449638";
+    } else {
+      return "";
+    }
   }
 
 }

@@ -81,7 +81,7 @@ class _MainPageState extends State<MainPage> {
         AdmobBanner(
           adUnitId: getBottomBannerId(),
           adSize: AdmobBannerSize.BANNER,
-        )
+        ),
       ],
     );
   }
