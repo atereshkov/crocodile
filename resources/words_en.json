@@ -21,6 +21,17 @@
 					}
 				}
 			]
+		},
+		{
+			"word": "Word3",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
 		}
 	]
 }

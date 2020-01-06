@@ -37,7 +37,7 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
   }
 
   Widget _buildAppBar(BuildContext context) {
-    return AppBar(title: Text('Title'));
+    return AppBar(title: Text('Game'));
   }
 
   Widget _buildBody(BuildContext context) {
@@ -47,16 +47,8 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
           child: Stack(
             children: <Widget>[
               _gradientBackground(),
-              Column(
-                children: <Widget>[
-                  _buildWord(context),
-                  FlatButton(
-                    child: Text("Next Word"),
-                    onPressed: () {
-                      widget._viewModel.generateNewWordAction(context);
-                    },
-                  ),
-                ],
+              Center(
+                child: _buildActionContent(context),
               ),
             ],
           ),
@@ -80,16 +72,61 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
     );
   }
 
+  Widget _buildActionContent(BuildContext context) {
+    double topPadding = MediaQuery.of(context).size.width * 0.1; 
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        Padding(padding: EdgeInsets.only(top: topPadding)),
+        _buildWord(context),
+        Padding(padding: EdgeInsets.only(top: 16)),
+        _buildNextWordButton(context),
+      ],
+    );
+  }
+
   Widget _buildWord(BuildContext context) {
     return StreamBuilder(
       stream: widget._viewModel.item,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return Text(snapshot.data);
+          return Text(
+            snapshot.data,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 25,
+              color: Colors.white,
+            ),
+          );
         } else {
-          return Text("Loading");
+          return Text(
+            "Loading",
+            style: TextStyle(
+              color: Colors.white
+            ),
+          );
         }
       }
+    );
+  }
+
+  Widget _buildNextWordButton(BuildContext context) {
+    return RaisedButton(
+      color: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Text(
+        "Next Word",
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 20,
+        ),
+      ),
+      onPressed: () {
+        widget._viewModel.generateNewWordAction(context);
+      },
     );
   }
 

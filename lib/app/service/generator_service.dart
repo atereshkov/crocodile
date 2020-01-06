@@ -15,24 +15,35 @@ class GeneratorService implements GeneratorServiceType {
   GeneratorService(this._wordsProvider);
 
   @override
-  Future<String> getRandomWord(BuildContext context) async {
-    String lang = AppLocalizations.of(context).getCurrentLangCode;
-    String jsonFileName = "words";
-    String resourceFile = 'resources/${jsonFileName}_$lang.json';
-    String json = await DefaultAssetBundle.of(context).loadString(resourceFile);
+  void start(BuildContext context) async {
+    _allWords = await _loadWords(context);
+    _seenWords.clear();
+  }
 
+  @override
+  Future<String> getRandomWord(BuildContext context) async {
     if (_allWords.length == 0) {
-      _allWords = await _wordsProvider.getAllWords(json);
+      _allWords = await _loadWords(context);
+      _seenWords.clear();
     }
 
     final _random = new Random();
     final randomItem = _allWords[_random.nextInt(_allWords.length)];
-    var word = randomItem.word;
 
     _seenWords.add(randomItem);
     _allWords.remove(randomItem);
 
+    String word = randomItem.word;
     return Future.value(word);
+  }
+
+  Future<List<WordItem>> _loadWords(BuildContext context) async {
+    // TODO: move to words provider
+    String lang = AppLocalizations.of(context).getCurrentLangCode;
+    String jsonFileName = "words";
+    String resourceFile = 'resources/${jsonFileName}_$lang.json';
+    String json = await DefaultAssetBundle.of(context).loadString(resourceFile);
+    return _wordsProvider.getAllWords(json);
   }
 
 }

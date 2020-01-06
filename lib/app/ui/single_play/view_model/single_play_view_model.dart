@@ -18,7 +18,7 @@ class SinglePlayViewModel implements SinglePlayViewModelType {
 
   @override
   void initState(BuildContext context) async {
-    _generateNewWord(context);
+    _generatorService.start(context);
   }
 
   @override
