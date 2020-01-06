@@ -62,12 +62,12 @@ class _RulesPageState extends State<RulesPage> {
             children: <Widget>[
               Icon(
                 Icons.person,
-                color: Colors.white,
+                color: Colors.black,
               ),
               Padding(padding: EdgeInsets.only(left: 8)),
               Icon(
                 Icons.person,
-                color: Colors.white,
+                color: Colors.black,
               ),
               Padding(padding: EdgeInsets.only(left: 12)),
               Text(
@@ -75,7 +75,7 @@ class _RulesPageState extends State<RulesPage> {
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ],
@@ -85,7 +85,7 @@ class _RulesPageState extends State<RulesPage> {
             AppLocalizations.of(context).rulesSingleModeContent,
             style: TextStyle(
               fontSize: 15,
-              color: Colors.black,
+              color: Colors.white,
             ),
           ),
         ],
@@ -103,12 +103,12 @@ class _RulesPageState extends State<RulesPage> {
             children: <Widget>[
               Icon(
                 Icons.people,
-                color: Colors.white,
+                color: Colors.black,
               ),
               Padding(padding: EdgeInsets.only(left: 8)),
               Icon(
                 Icons.people,
-                color: Colors.white,
+                color: Colors.black,
               ),
               Padding(padding: EdgeInsets.only(left: 12)),
               Text(
@@ -116,7 +116,7 @@ class _RulesPageState extends State<RulesPage> {
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ],
@@ -126,7 +126,7 @@ class _RulesPageState extends State<RulesPage> {
             AppLocalizations.of(context).rulesTeamModeContent,
             style: TextStyle(
               fontSize: 15,
-              color: Colors.black,
+              color: Colors.white,
             ),
           ),
         ],
