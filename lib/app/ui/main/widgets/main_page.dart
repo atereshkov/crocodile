@@ -134,7 +134,7 @@ class _MainPageState extends State<MainPage> {
         borderRadius: BorderRadius.circular(20),
       ),
       onPressed: () {
-        
+        widget._viewModel.howToPlayAction(context);
       },
       child: Text(
         "How To Play",

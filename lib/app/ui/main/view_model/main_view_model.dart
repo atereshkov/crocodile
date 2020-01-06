@@ -1,5 +1,6 @@
 import 'package:crocodile_game/app/ui/main/view_model/main_view_model_type.dart';
 import 'package:crocodile_game/app/ui/single_play/module.dart';
+import 'package:crocodile_game/app/ui/rules/module.dart';
 import 'package:flutter/material.dart';
 import 'package:injector/injector.dart';
 
@@ -26,7 +27,8 @@ class MainViewModel implements MainViewModelType {
 
   @override
   void howToPlayAction(BuildContext context) {
-    
+    RulesViewModelType vm = RulesViewModel(_injector);
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => RulesPage(vm)));
   }
 
 }
