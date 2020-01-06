@@ -1,7 +1,7 @@
 {
 	"words": [
 		{
-			"word": "Слово1",
+			"word": "Снег",
 			"categories": [
 				{
 					"category": {
@@ -12,7 +12,7 @@
 			]
 		},
 		{
-			"word": "Слово2",
+			"word": "Палка",
 			"categories": [
 				{
 					"category": {
@@ -23,7 +23,7 @@
 			]
 		},
 		{
-			"word": "Слово3",
+			"word": "Облако",
 			"categories": [
 				{
 					"category": {
@@ -32,6 +32,424 @@
 					}
 				}
 			]
-		}
+		},
+		{
+			"word": "Стул",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Собака",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Кот",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Свеча",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Дед мороз",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Глобус",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Ноутбук",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Компьютер",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Ежедневник",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Субботник",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Календарь",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Мыльный пузырь",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Леопард",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Сауна",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Режим дня",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Бензопила",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Созвездие",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Дерево",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Лопата",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Птица",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Орёл",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Голубь",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Дятел",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Дуб",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Голубой бегемот",
+			"categories": [
+				{
+					"category": {
+						"name": "Сложные",
+						"id": "hard"
+					}
+				}
+			]
+		},
+		{
+			"word": "Трезвый электрик",
+			"categories": [
+				{
+					"category": {
+						"name": "Сложные",
+						"id": "hard"
+					}
+				}
+			]
+		},
+		{
+			"word": "Офтальмолог",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Врач",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Красная белка",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Кондуктор",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Драма",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Переводчик",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Ириска",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Лыжник",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Нестандартный подход",
+			"categories": [
+				{
+					"category": {
+						"name": "Абстрактные",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Стражник",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Солдат",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Гламурный учитель",
+			"categories": [
+				{
+					"category": {
+						"name": "Сложные",
+						"id": "hard"
+					}
+				}
+			]
+		},
 	]
 }
