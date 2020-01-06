@@ -17,7 +17,7 @@ class MainViewModel implements MainViewModelType {
 
   @override
   void initState() {
-    
+    _remoteAnalyticsService.setCurrentScreen('main');
   }
 
   @override

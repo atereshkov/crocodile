@@ -14,4 +14,8 @@ class FirebaseAnalyticsService implements RemoteAnalyticsServiceType {
     );
   }
 
+  void setCurrentScreen(String screenName) {
+    analytics.setCurrentScreen(screenName: screenName);
+  }
+
 }
