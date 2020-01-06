@@ -9,7 +9,7 @@ class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
   final bool isTest;
 
   @override
-  bool isSupported(Locale locale) => ['en'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => ['en', 'ru'].contains(locale.languageCode);
 
   @override
   Future<AppLocalizations> load(Locale locale) async {

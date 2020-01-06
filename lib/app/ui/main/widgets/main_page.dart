@@ -122,7 +122,7 @@ class _MainPageState extends State<MainPage> {
       child: Text(
         AppLocalizations.of(context).mainMenuPlaySingleMode,
         style: TextStyle(
-          fontSize: 19,
+          fontSize: 19, 
         ),
       ),
     );
