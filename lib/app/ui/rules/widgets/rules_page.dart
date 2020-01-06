@@ -1,3 +1,4 @@
+import 'package:crocodile_game/app/localization/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:crocodile_game/app/ui/rules/view_model/rules_view_model_type.dart';
 
@@ -32,7 +33,9 @@ class _RulesPageState extends State<RulesPage> {
   }
 
   Widget _buildAppBar(BuildContext context) {
-    return AppBar(title: Text('Rules'));
+    return AppBar(
+      title: Text(AppLocalizations.of(context).rulesTitle),
+    );
   }
 
   Widget _buildBody(BuildContext context) {
@@ -68,7 +71,7 @@ class _RulesPageState extends State<RulesPage> {
               ),
               Padding(padding: EdgeInsets.only(left: 12)),
               Text(
-                "Обычная игра",
+                AppLocalizations.of(context).rulesSingleModeSubtitle,
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -79,7 +82,7 @@ class _RulesPageState extends State<RulesPage> {
           ),
           Padding(padding: EdgeInsets.only(top: 12)),
           Text(
-            "Игрок должен изобразить слово, используя только жесты и мимику (говорить нельзя), а остальные игроки должны угадать это слово. Тот, кто угадал - занимает место ведущего игрока и игра продолжается.",
+            AppLocalizations.of(context).rulesSingleModeContent,
             style: TextStyle(
               fontSize: 15,
               color: Colors.black,
@@ -109,7 +112,7 @@ class _RulesPageState extends State<RulesPage> {
               ),
               Padding(padding: EdgeInsets.only(left: 12)),
               Text(
-                "Командная игра",
+                AppLocalizations.of(context).rulesTeamModeSubtitle,
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -120,7 +123,7 @@ class _RulesPageState extends State<RulesPage> {
           ),
           Padding(padding: EdgeInsets.only(top: 12)),
           Text(
-            "Игроки делятся на команды с произвольным количеством игроков. Далее команды по кругу показывают слова (один игрок от команды). Игрок показывает слово и только его команда пытается отгадать слово. Если слово отгадано за отведенное время, команде начисляются баллы и очередь переходит к следущей команде по кругу.",
+            AppLocalizations.of(context).rulesTeamModeContent,
             style: TextStyle(
               fontSize: 15,
               color: Colors.black,

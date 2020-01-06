@@ -21,6 +21,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
-    "mainScreenButtonStartGame" : MessageLookupByLibrary.simpleMessage("Старт")
+    "mainMenuHowToPlay" : MessageLookupByLibrary.simpleMessage("Правила"),
+    "mainMenuPlaySingleMode" : MessageLookupByLibrary.simpleMessage("Начать игру"),
+    "rulesSingleModeContent" : MessageLookupByLibrary.simpleMessage("Игрок должен изобразить слово, используя только жесты и мимику (говорить нельзя), а остальные игроки должны угадать это слово. Тот, кто угадал - занимает место ведущего игрока и игра продолжается."),
+    "rulesSingleModeSubtitle" : MessageLookupByLibrary.simpleMessage("Обычная игра"),
+    "rulesTeamModeContent" : MessageLookupByLibrary.simpleMessage("Игроки делятся на команды с произвольным количеством игроков. Далее команды по кругу показывают слова (один игрок от команды). Игрок показывает слово и только его команда пытается отгадать слово. Если слово отгадано за отведенное время, команде начисляются баллы и очередь переходит к следущей команде по кругу."),
+    "rulesTeamModeSubtitle" : MessageLookupByLibrary.simpleMessage("Командная игра"),
+    "rulesTitle" : MessageLookupByLibrary.simpleMessage("Правила")
   };
 }

@@ -1,3 +1,4 @@
+import 'package:crocodile_game/app/localization/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:crocodile_game/app/ui/main/view_model/main_view_model_type.dart';
 
@@ -119,7 +120,7 @@ class _MainPageState extends State<MainPage> {
         widget._viewModel.singlePlayAction(context);
       },
       child: Text(
-        "Play",
+        AppLocalizations.of(context).mainMenuPlaySingleMode,
         style: TextStyle(
           fontSize: 19,
         ),
@@ -137,7 +138,7 @@ class _MainPageState extends State<MainPage> {
         widget._viewModel.howToPlayAction(context);
       },
       child: Text(
-        "How To Play",
+        AppLocalizations.of(context).mainMenuHowToPlay,
         style: TextStyle(
           fontSize: 19,
         ),

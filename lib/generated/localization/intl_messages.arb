@@ -1,7 +1,37 @@
 {
-  "@@last_modified": "2019-11-02T17:37:50.636643",
-  "mainScreenButtonStartGame": "Start",
-  "@mainScreenButtonStartGame": {
+  "@@last_modified": "2020-01-06T17:22:22.404494",
+  "mainMenuPlaySingleMode": "Play",
+  "@mainMenuPlaySingleMode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "mainMenuHowToPlay": "How To Play",
+  "@mainMenuHowToPlay": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "rulesTitle": "Rules",
+  "@rulesTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "rulesSingleModeSubtitle": "Single mode",
+  "@rulesSingleModeSubtitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "rulesTeamModeSubtitle": "Team mode",
+  "@rulesTeamModeSubtitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "rulesSingleModeContent": "The player must depict the word using only gestures and facial expressions (you can’t speak), and the rest of the players must guess the word. The one who guessed the word takes the place of the leading player and the game continues.",
+  "@rulesSingleModeContent": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "rulesTeamModeContent": "Players are divided into teams with any number of players. Then the teams show the words one by one (one player from the team). The player shows the word and only his team tries to guess the word. If a word is guessed within the time, points are awarded to the team and the line goes to the next team in a circle.",
+  "@rulesTeamModeContent": {
     "type": "text",
     "placeholders": {}
   }
