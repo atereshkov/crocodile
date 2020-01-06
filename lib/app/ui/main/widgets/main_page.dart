@@ -109,17 +109,6 @@ class _MainPageState extends State<MainPage> {
     );
   }
 
-  Widget _buildTeamPlayRow(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        _buildTeamPlayButton(context),
-        Padding(padding: EdgeInsets.symmetric(horizontal: 4)),
-        _buildTeamPlayHelpIcon(context),
-      ],
-    );
-  }
-
   Widget _buildSinglePlayButton(BuildContext context) {
     return RaisedButton(
       color: Colors.white,
@@ -134,37 +123,6 @@ class _MainPageState extends State<MainPage> {
         style: TextStyle(
           fontSize: 19,
         ),
-      ),
-    );
-  }
-
-  Widget _buildTeamPlayButton(BuildContext context) {
-    return RaisedButton(
-      color: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-        side: BorderSide(color: Colors.grey)
-      ),
-      onPressed: () {
-        widget._viewModel.singlePlayAction(context);
-      },
-      child: Text("Team Mode"),
-    );
-  }
-
-  Widget _buildTeamPlayHelpIcon(BuildContext context) {
-    return ButtonTheme(
-      minWidth: 40,
-      child: RaisedButton(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-          side: BorderSide(color: Colors.grey)
-        ),
-        onPressed: () {
-          
-        },
-        child: Text("?"),
       ),
     );
   }
