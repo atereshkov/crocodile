@@ -7,7 +7,7 @@ packages:
       name: admob_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.4"
+    version: "1.0.0-beta"
   analyzer:
     dependency: transitive
     description:
@@ -345,4 +345,4 @@ packages:
     version: "2.2.0"
 sdks:
   dart: ">=2.4.0 <3.0.0"
-  flutter: ">=1.5.0 <2.0.0"
+  flutter: ">=1.10.0 <2.0.0"

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:crocodile_game/app/ui/main/view_model/main_view_model_type.dart';
 
+import 'dart:io' show Platform;
+import 'package:admob_flutter/admob_flutter.dart';
+
 class MainPage extends StatefulWidget {
   final MainViewModelType _viewModel;
 
@@ -74,6 +77,10 @@ class _MainPageState extends State<MainPage> {
             image: AssetImage("resources/images/main_croco.gif"),
           ),
         ),
+        AdmobBanner(
+          adUnitId: getBottomBannerId(),
+          adSize: AdmobBannerSize.BANNER,
+        )
       ],
     );
   }
@@ -182,6 +189,16 @@ class _MainPageState extends State<MainPage> {
 
   void _buildViewModel() {
 
+  }
+
+  String getBottomBannerId() {
+    if (Platform.isAndroid) {
+      return "ca-app-pub-4667215880477199/2013054477";
+    } else if (Platform.isIOS) {
+      return "ca-app-pub-4667215880477199/9626345834";
+    } else {
+      return "";
+    }
   }
 
 }
