@@ -133,7 +133,6 @@ class _MainPageState extends State<MainPage> {
                 width: 24,
                 image: AssetImage('resources/icons/flag_lang_${lang.code}.png'),
               ),
-              Padding(padding: EdgeInsets.only(left: 10)),
               Text(lang.name),
             ],
           ),
