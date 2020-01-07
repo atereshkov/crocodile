@@ -1,6 +1,7 @@
 import 'package:crocodile_game/app/localization/app_localizations.dart';
 import 'package:flutter/material.dart';
-import 'package:crocodile_game/app/ui/main/view_model/main_view_model_type.dart';
+import 'package:crocodile_game/app/ui/main/module.dart';
+import 'package:crocodile_game/app/model/models.dart';
 
 import 'dart:io' show Platform;
 import 'package:admob_flutter/admob_flutter.dart';
@@ -19,6 +20,7 @@ class _MainPageState extends State<MainPage> {
   @override
   void initState() {
     super.initState();
+    widget._viewModel.initState();
     _buildViewModel();
   }
 
@@ -52,6 +54,8 @@ class _MainPageState extends State<MainPage> {
   }
 
   Widget _buildBody(BuildContext context) {
+    double bottomAnimationHeight = MediaQuery.of(context).size.height * 0.25; 
+
     return Column(
       children: <Widget>[
         Image(
@@ -64,11 +68,15 @@ class _MainPageState extends State<MainPage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.only(top: 8, left: 6),
-                    child: _buildLanguagePicker(context),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(top: 4, right: 16),
+                        child: _buildLanguagePicker(context),
+                      ),
+                    ],
                   ),
-                  Padding(padding: EdgeInsets.only(top: 4)),
                   _buildMenu(context),
                ],
               ),
@@ -78,6 +86,7 @@ class _MainPageState extends State<MainPage> {
         Align(
           alignment: Alignment.bottomCenter,
           child: Image(
+            height: bottomAnimationHeight,
             image: AssetImage("resources/images/main_croco.gif"),
           ),
         ),
@@ -90,15 +99,52 @@ class _MainPageState extends State<MainPage> {
   }
 
   Widget _buildLanguagePicker(BuildContext context) {
-    return IconButton(
-      icon: Image.asset('resources/icons/flag_lang_${AppLocalizations.of(context).getCurrentLangCode}.png'),
-      tooltip: 'Language',
-      onPressed: () {
+    return FutureBuilder(
+      future: widget._viewModel.languages,
+      builder: (BuildContext context, AsyncSnapshot<List<Language>> snapshot) {
+        if (snapshot.hasData) {
+          var items = snapshot.data;
+          return _buildLanguagePickerDropDown(context, items);
+        } else {
+          return Text('Loading');
+        }
+      }
+    );
+  }
+
+  // Widget _buildLanguagePickerDropDown(BuildContext context, List<Language> items) {
+  //   return Text("Text3 ${items.length}");
+  // }
+
+  Widget _buildLanguagePickerDropDown(BuildContext context, List<Language> items) {
+    return DropdownButton(
+      underline: SizedBox(),
+      icon: Image(
+        width: 24,
+        image: AssetImage('resources/icons/flag_lang_${AppLocalizations.of(context).getCurrentLangCode}.png'),
+      ),
+      items: items.map((lang) {
+        return DropdownMenuItem<String>(
+          value: lang.code,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Image(
+                width: 24,
+                image: AssetImage('resources/icons/flag_lang_${lang.code}.png'),
+              ),
+              Padding(padding: EdgeInsets.only(left: 10)),
+              Text(lang.name),
+            ],
+          ),
+          );
+        }).toList(),
+      onChanged: (value) {
         setState(() {
-          if (AppLocalizations.of(context).getCurrentLangCode == 'en') {
-            AppLocalizations.load(Locale('ru', 'RU'));
-          } else {
+          if (value == 'en') {
             AppLocalizations.load(Locale('en', 'US'));
+          } else {
+            AppLocalizations.load(Locale('ru', 'RU'));
           }
         });
       },

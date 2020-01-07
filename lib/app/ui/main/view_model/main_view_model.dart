@@ -1,23 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:injector/injector.dart';
 
-import 'package:crocodile_game/app/ui/main/view_model/main_view_model_type.dart';
+import 'package:crocodile_game/app/ui/main/module.dart';
 import 'package:crocodile_game/app/ui/single_play/module.dart';
 import 'package:crocodile_game/app/ui/rules/module.dart';
 import 'package:crocodile_game/app/service/services.dart';
+import 'package:crocodile_game/app/provider/providers.dart';
 import 'package:crocodile_game/app/model/models.dart';
 
 class MainViewModel implements MainViewModelType {
   Injector _injector;
   RemoteAnalyticsServiceType _remoteAnalyticsService;
+  LanguageProviderType _languageProvider;
+
+  Future<List<Language>> languages;
 
   MainViewModel(this._injector) {
     _remoteAnalyticsService = _injector.getDependency<RemoteAnalyticsServiceType>();
+    _languageProvider = _injector.getDependency<LanguageProviderType>();
   }
 
   @override
   void initState() {
     _remoteAnalyticsService.setCurrentScreen('main');
+
+    languages = _languageProvider.getLanguages();
   }
 
   @override
