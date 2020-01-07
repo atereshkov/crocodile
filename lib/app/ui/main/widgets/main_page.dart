@@ -61,13 +61,16 @@ class _MainPageState extends State<MainPage> {
           child: Stack(
             children: <Widget>[
               _gradientBackground(),
-              SafeArea(
-                child: Column(
-                  children: <Widget>[
-                    // TODO: Logo
-                    _buildMenu(context),
-                  ],
-                ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(top: 8, left: 6),
+                    child: _buildLanguagePicker(context),
+                  ),
+                  Padding(padding: EdgeInsets.only(top: 4)),
+                  _buildMenu(context),
+               ],
               ),
             ],
           ),
@@ -83,6 +86,22 @@ class _MainPageState extends State<MainPage> {
           adSize: AdmobBannerSize.BANNER,
         ),
       ],
+    );
+  }
+
+  Widget _buildLanguagePicker(BuildContext context) {
+    return IconButton(
+      icon: Image.asset('resources/icons/flag_lang_${AppLocalizations.of(context).getCurrentLangCode}.png'),
+      tooltip: 'Language',
+      onPressed: () {
+        setState(() {
+          if (AppLocalizations.of(context).getCurrentLangCode == 'en') {
+            AppLocalizations.load(Locale('ru', 'RU'));
+          } else {
+            AppLocalizations.load(Locale('en', 'US'));
+          }
+        });
+      },
     );
   }
 
