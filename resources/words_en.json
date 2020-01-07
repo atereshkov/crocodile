@@ -1,7 +1,7 @@
 {
 	"words": [
 		{
-			"word": "Word1",
+			"word": "Snow",
 			"categories": [
 				{
 					"category": {
@@ -12,7 +12,7 @@
 			]
 		},
 		{
-			"word": "Word2",
+			"word": "Stick",
 			"categories": [
 				{
 					"category": {
@@ -23,12 +23,617 @@
 			]
 		},
 		{
-			"word": "Word3",
+			"word": "Cloud",
 			"categories": [
 				{
 					"category": {
 						"name": "Easy",
 						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Chair",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Dog",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Cat",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Candle",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Sant Claus",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Glove",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Laptop",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Dog",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Computer",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Diary",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Calendar",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Soap Bubble",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Leopard",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Sauna",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Daily regime",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Constellation",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Tree",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Shovel",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Bird",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Eagle",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Pigeon",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Woodpecker",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Oak",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Blue hippo",
+			"categories": [
+				{
+					"category": {
+						"name": "Hard",
+						"id": "hard"
+					}
+				}
+			]
+		},
+		{
+			"word": "Sober electrician",
+			"categories": [
+				{
+					"category": {
+						"name": "Hard",
+						"id": "hard"
+					}
+				}
+			]
+		},
+		{
+			"word": "Ophthalmologist",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Doctor",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Red squirrel",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Conductor",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Drama",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Interpreter",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Toffee",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Skier",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Unconventional approach",
+			"categories": [
+				{
+					"category": {
+						"name": "Abstract",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Guard",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Soldier",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Teacher",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Glamorous teacher",
+			"categories": [
+				{
+					"category": {
+						"name": "Hard",
+						"id": "hard"
+					}
+				}
+			]
+		},
+		{
+			"word": "Props",
+			"categories": [
+				{
+					"category": {
+						"name": "Abstract",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Baroque",
+			"categories": [
+				{
+					"category": {
+						"name": "Abstract",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Avvreviation",
+			"categories": [
+				{
+					"category": {
+						"name": "Abstract",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Illustration",
+			"categories": [
+				{
+					"category": {
+						"name": "Abstract",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "New Year present",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "March 8",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Frying pan",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Bouquet",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Corporate party",
+			"categories": [
+				{
+					"category": {
+						"name": "Abstract",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Collective",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Pancakes",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Personnel department",
+			"categories": [
+				{
+					"category": {
+						"name": "Hard",
+						"id": "hard"
+					}
+				}
+			]
+		},
+		{
+			"word": "Programmer",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Logics",
+			"categories": [
+				{
+					"category": {
+						"name": "Abstract",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Contract",
+			"categories": [
+				{
+					"category": {
+						"name": "Hard",
+						"id": "hard"
+					}
+				}
+			]
+		},
+		{
+			"word": "Tractor driver",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Police department",
+			"categories": [
+				{
+					"category": {
+						"name": "Hard",
+						"id": "hard"
 					}
 				}
 			]
