@@ -124,8 +124,8 @@ class _MainPageState extends State<MainPage> {
         image: AssetImage('resources/icons/flag_lang_${AppLocalizations.of(context).getCurrentLangCode}.png'),
       ),
       items: items.map((lang) {
-        return DropdownMenuItem<String>(
-          value: lang.code,
+        return DropdownMenuItem<Language>(
+          value: lang,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -141,11 +141,7 @@ class _MainPageState extends State<MainPage> {
         }).toList(),
       onChanged: (value) {
         setState(() {
-          if (value == 'en') {
-            AppLocalizations.load(Locale('en', 'US'));
-          } else {
-            AppLocalizations.load(Locale('ru', 'RU'));
-          }
+          widget._viewModel.languageDropDownAction(value);
         });
       },
     );

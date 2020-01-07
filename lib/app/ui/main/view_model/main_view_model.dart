@@ -7,6 +7,7 @@ import 'package:crocodile_game/app/ui/rules/module.dart';
 import 'package:crocodile_game/app/service/services.dart';
 import 'package:crocodile_game/app/provider/providers.dart';
 import 'package:crocodile_game/app/model/models.dart';
+import 'package:crocodile_game/app/localization/app_localizations.dart';
 
 class MainViewModel implements MainViewModelType {
   Injector _injector;
@@ -46,6 +47,11 @@ class MainViewModel implements MainViewModelType {
     _remoteAnalyticsService.sendAnalyticsEvent(event);
     RulesViewModelType vm = RulesViewModel(_injector);
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => RulesPage(vm)));
+  }
+
+  @override
+  void languageDropDownAction(Language language) {
+    AppLocalizations.load(Locale(language.code, language.country));
   }
 
 }

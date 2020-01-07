@@ -7,6 +7,7 @@ abstract class MainViewModelType {
 
   void singlePlayAction(BuildContext context);
   void howToPlayAction(BuildContext context);
+  void languageDropDownAction(Language language);
 
   Future<List<Language>> languages;
 }
