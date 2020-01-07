@@ -450,6 +450,193 @@
 					}
 				}
 			]
+		},
+		{
+			"word": "Бутафория",
+			"categories": [
+				{
+					"category": {
+						"name": "Абстрактные",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Барокко",
+			"categories": [
+				{
+					"category": {
+						"name": "Абстрактные",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Аббревиатура",
+			"categories": [
+				{
+					"category": {
+						"name": "Абстрактные",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Иллюстрация",
+			"categories": [
+				{
+					"category": {
+						"name": "Абстрактные",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Новогодний подарок",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "8 марта",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Сковородка",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Букет",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Корпоратив",
+			"categories": [
+				{
+					"category": {
+						"name": "Абстрактные",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Коллектив",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Блинчики",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Отдел кадров",
+			"categories": [
+				{
+					"category": {
+						"name": "Сложные",
+						"id": "hard"
+					}
+				}
+			]
+		},
+		{
+			"word": "Программист",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Логика",
+			"categories": [
+				{
+					"category": {
+						"name": "Абстрактные",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Контракт",
+			"categories": [
+				{
+					"category": {
+						"name": "Сложные",
+						"id": "hard"
+					}
+				}
+			]
+		},
+		{
+			"word": "Тракторист",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Отдел полиции",
+			"categories": [
+				{
+					"category": {
+						"name": "Сложные",
+						"id": "hard"
+					}
+				}
+			]
 		}
 	]
 }
