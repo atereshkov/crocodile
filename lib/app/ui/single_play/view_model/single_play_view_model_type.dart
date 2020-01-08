@@ -5,5 +5,6 @@ abstract class SinglePlayViewModelType {
 
   void initState(BuildContext context);
   void generateNewWordAction(BuildContext context);
+  void selectCategoryAction(BuildContext context);
   void dispose();
 }
