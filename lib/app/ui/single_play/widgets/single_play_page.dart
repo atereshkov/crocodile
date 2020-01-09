@@ -1,4 +1,5 @@
 import 'package:crocodile_game/app/localization/app_localizations.dart';
+import 'package:crocodile_game/app/model/category_item.dart';
 import 'package:flutter/material.dart';
 import 'package:crocodile_game/app/ui/single_play/view_model/single_play_view_model_type.dart';
 
@@ -92,8 +93,6 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
         _buildWord(context),
         Padding(padding: EdgeInsets.only(top: 16)),
         _buildNextWordButton(context),
-        Padding(padding: EdgeInsets.only(top: 16)),
-        _buildCategoryButton(context),
       ],
     );
   }
@@ -138,25 +137,6 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
       ),
       onPressed: () {
         widget._viewModel.generateNewWordAction(context);
-      },
-    );
-  }
-
-  Widget _buildCategoryButton(BuildContext context) {
-    return RaisedButton(
-      color: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Text(
-        'Categories',
-        style: TextStyle(
-          color: Colors.black,
-          fontSize: 20,
-        ),
-      ),
-      onPressed: () {
-        widget._viewModel.selectCategoryAction(context);
       },
     );
   }

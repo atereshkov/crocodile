@@ -1,10 +1,10 @@
 import 'package:injector/injector.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:crocodile_game/app/ui/select_category/module.dart';
+import 'package:crocodile_game/app/ui/select_game/module.dart';
 import 'package:crocodile_game/app/model/models.dart';
 import 'package:crocodile_game/app/provider/providers.dart';
 
-class SelectCategoryViewModel implements SelectCategoryViewModelType {
+class SelectGameViewModel implements SelectGameViewModelType {
 
   final Injector _injector;
   final List<CategoryItem> currentCategories;
@@ -13,7 +13,7 @@ class SelectCategoryViewModel implements SelectCategoryViewModelType {
 
   final _itemsController = BehaviorSubject<List<CategoryItem>>();
 
-  SelectCategoryViewModel(this._injector, this.currentCategories) {
+  SelectGameViewModel(this._injector, this.currentCategories) {
     _categoryProvider = _injector.getDependency<CategoryProviderType>();
   }
 

@@ -4,7 +4,6 @@ import 'package:rxdart/rxdart.dart';
 
 import 'package:crocodile_game/app/service/services.dart';
 import 'package:crocodile_game/app/ui/single_play/module.dart';
-import 'package:crocodile_game/app/ui/select_category/module.dart';
 import 'package:crocodile_game/app/model/models.dart';
 
 class SinglePlayViewModel implements SinglePlayViewModelType {
@@ -33,14 +32,6 @@ class SinglePlayViewModel implements SinglePlayViewModelType {
   @override
   void generateNewWordAction(BuildContext context) {
     _generateNewWord(context);
-  }
-
-  @override
-  void selectCategoryAction(BuildContext context) {
-    AnalyticsEventType event = RemoteAnalyticsEvent(name: "open_screen", parameters: { 'screen': 'select_category', 'from': 'single_play' });
-    _remoteAnalyticsService.sendAnalyticsEvent(event);
-    SelectCategoryViewModelType vm = SelectCategoryViewModel(_injector, selectedCategories);
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SelectCategoryPage(vm)));
   }
 
   @override
