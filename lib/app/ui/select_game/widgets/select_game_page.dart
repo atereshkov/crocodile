@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rxdart/rxdart.dart';
 import 'package:crocodile_game/app/model/models.dart';
 import 'package:crocodile_game/app/ui/select_game/module.dart';
 
@@ -29,7 +28,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Choose words'),
+        title: Text('Choose game type & words'),
       ),
       body: _buildBody(context),
     );
@@ -57,6 +56,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
         Expanded(
           child: _buildList(context),
         ),
+        _buildStartGameButton(context),
       ],
     );
   }
@@ -101,16 +101,18 @@ class _SelectGamePageState extends State<SelectGamePage> {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           List<CategoryItem> items = snapshot.data;
-          return ListView.separated(
-            key: PageStorageKey('select-category-page-key'),
-            separatorBuilder: (context, index) {
-              return Divider(indent: 12, height: 2.0);
-            },
-            itemBuilder: (BuildContext context, int index) {
-              CategoryItem item = items[index];
-              return _buildItem(context, item);
-            },
-            itemCount: items == null ? 0 : items.length,
+          return Scrollbar(
+            child: ListView.separated(
+              key: PageStorageKey('select-category-page-key'),
+              separatorBuilder: (context, index) {
+                return Divider(indent: 12, height: 2.0);
+              },
+              itemBuilder: (BuildContext context, int index) {
+                CategoryItem item = items[index];
+                return _buildItem(context, item);
+              },
+              itemCount: items == null ? 0 : items.length,
+            ),
           );
         } else {
           return Center(
@@ -128,6 +130,44 @@ class _SelectGamePageState extends State<SelectGamePage> {
         widget._viewModel.handleTap(item);
       },
       child: CategoryItemWidget(item: item, isSelected: isItemSelected),
+    );
+  }
+
+  Widget _buildStartGameButton(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Container(
+          decoration: new BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                blurRadius: 20.0,
+                spreadRadius: 5.0,
+              )
+            ],
+          ),
+          height: 50,
+          width: double.infinity,
+          child: Container(
+            color: Colors.orange,
+            child: Center(
+              child: Text(
+                'Play',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+        ),
+        Container(
+          height: MediaQuery.of(context).padding.bottom,
+          color: Colors.orange,
+        ),
+      ],
     );
   }
 
