@@ -46,17 +46,12 @@ class _SelectGamePageState extends State<SelectGamePage> {
         Divider(),
         Padding(
           padding: EdgeInsets.only(top: 4, bottom: 4, left: 12),
-          child: Text(
-           'Choose words for the game:',
-           style: TextStyle(
-             fontSize: 15,
-           ),
-          ),
+          child: _buildChooseWordsLabel(context),
         ),
         Expanded(
           child: _buildList(context),
         ),
-        _buildStartGameButton(context),
+        _buildBottomContainer(context),
       ],
     );
   }
@@ -92,6 +87,15 @@ class _SelectGamePageState extends State<SelectGamePage> {
           ],
         ),
       ],
+    );
+  }
+
+  Widget _buildChooseWordsLabel(BuildContext context) {
+    return Text(
+      'Choose words for the game:',
+      style: TextStyle(
+        fontSize: 15,
+      ),
     );
   }
 
@@ -133,14 +137,14 @@ class _SelectGamePageState extends State<SelectGamePage> {
     );
   }
 
-  Widget _buildStartGameButton(BuildContext context) {
+  Widget _buildBottomContainer(BuildContext context) {
     return Column(
       children: <Widget>[
         Container(
           decoration: new BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
+                color: Colors.grey.withOpacity(0.4),
                 blurRadius: 20.0,
                 spreadRadius: 5.0,
               )
@@ -148,26 +152,35 @@ class _SelectGamePageState extends State<SelectGamePage> {
           ),
           height: 50,
           width: double.infinity,
-          child: Container(
-            color: Colors.orange,
-            child: Center(
-              child: Text(
-                'Play',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 18,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
+          child: _buildStartGameButton(context),
         ),
         Container(
           height: MediaQuery.of(context).padding.bottom,
           color: Colors.orange,
         ),
       ],
+    );
+  }
+
+  Widget _buildStartGameButton(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        widget._viewModel.startGameAction(context);
+      },
+      child: Container(
+        color: Colors.orange,
+        child: Center(
+          child: Text(
+            'Play',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.w500,
+              fontSize: 18,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
     );
   }
 

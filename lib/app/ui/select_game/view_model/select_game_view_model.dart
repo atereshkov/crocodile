@@ -1,8 +1,11 @@
 import 'package:injector/injector.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:flutter/material.dart';
 import 'package:crocodile_game/app/ui/select_game/module.dart';
+import 'package:crocodile_game/app/ui/single_play/module.dart';
 import 'package:crocodile_game/app/model/models.dart';
 import 'package:crocodile_game/app/provider/providers.dart';
+import 'package:crocodile_game/app/service/services.dart';
 
 class SelectGameViewModel implements SelectGameViewModelType {
 
@@ -10,11 +13,13 @@ class SelectGameViewModel implements SelectGameViewModelType {
   final List<CategoryItem> currentCategories;
 
   CategoryProviderType _categoryProvider;
+  RemoteAnalyticsServiceType _remoteAnalyticsService;
 
   final _itemsController = BehaviorSubject<List<CategoryItem>>();
 
   SelectGameViewModel(this._injector, this.currentCategories) {
     _categoryProvider = _injector.getDependency<CategoryProviderType>();
+    _remoteAnalyticsService = _injector.getDependency<RemoteAnalyticsServiceType>();
   }
 
   @override
@@ -47,6 +52,14 @@ class SelectGameViewModel implements SelectGameViewModelType {
     _itemsController.first.then((items) {
       _itemsController.sink.add(items);
     });
+  }
+
+  @override
+  void startGameAction(BuildContext context) {
+    AnalyticsEventType event = RemoteAnalyticsEvent(name: "open_screen", parameters: { 'screen': 'single_play', 'from': 'main' });
+    _remoteAnalyticsService.sendAnalyticsEvent(event);
+    SinglePlayViewModelType vm = SinglePlayViewModel(_injector);
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SinglePlayPage(vm)));
   }
 
   @override
