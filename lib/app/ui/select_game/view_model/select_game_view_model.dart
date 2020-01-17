@@ -10,14 +10,14 @@ import 'package:crocodile_game/app/service/services.dart';
 class SelectGameViewModel implements SelectGameViewModelType {
 
   final Injector _injector;
-  final List<CategoryInfoItem> currentCategories;
+  final List<CategoryInfoItem> currentCategories = [];
 
   CategoryProviderType _categoryProvider;
   RemoteAnalyticsServiceType _remoteAnalyticsService;
 
   final _itemsController = BehaviorSubject<List<CategoryInfoItem>>();
 
-  SelectGameViewModel(this._injector, this.currentCategories) {
+  SelectGameViewModel(this._injector) {
     _categoryProvider = _injector.getDependency<CategoryProviderType>();
     _remoteAnalyticsService = _injector.getDependency<RemoteAnalyticsServiceType>();
   }
@@ -37,6 +37,10 @@ class SelectGameViewModel implements SelectGameViewModelType {
   @override
   void initState(BuildContext context) async {
     _categoryProvider.getAllCategories(context).then((categories) {
+      // tick first category as default one
+      currentCategories.add(categories.first);
+
+      // add all the categories to items
       _itemsController.sink.add(categories);
     });
   }

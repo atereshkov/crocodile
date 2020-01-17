@@ -35,14 +35,9 @@ class MainViewModel implements MainViewModelType {
 
   @override
   void singlePlayAction(BuildContext context) {
-    // AnalyticsEventType event = RemoteAnalyticsEvent(name: "open_screen", parameters: { 'screen': 'single_play', 'from': 'main' });
-    // _remoteAnalyticsService.sendAnalyticsEvent(event);
-    // SinglePlayViewModelType vm = SinglePlayViewModel(_injector);
-    // Navigator.of(context).push(MaterialPageRoute(builder: (context) => SinglePlayPage(vm)));
-
     AnalyticsEventType event = RemoteAnalyticsEvent(name: "open_screen", parameters: { 'screen': 'select_game', 'from': 'main' });
     _remoteAnalyticsService.sendAnalyticsEvent(event);
-    SelectGameViewModelType vm = SelectGameViewModel(_injector, []);
+    SelectGameViewModelType vm = SelectGameViewModel(_injector);
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => SelectGamePage(vm)));
   }
 
