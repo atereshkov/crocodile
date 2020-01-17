@@ -16,7 +16,11 @@ class _SelectGamePageState extends State<SelectGamePage> {
   @override
   void initState() {
     _bindViewModel();
-    widget._viewModel.initState();
+
+    Future.delayed(Duration.zero, () {
+      widget._viewModel.initState(context);
+    });
+
     super.initState();
   }
 
@@ -57,19 +61,13 @@ class _SelectGamePageState extends State<SelectGamePage> {
   }
 
   Widget _buildGameType(BuildContext context) {
-    double containerSize = MediaQuery.of(context).size.width * 0.2; 
-
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Container(
-              width: containerSize,
-              height: containerSize,
-              color: Colors.orange,
-            ),
+            _buildSinglePlayIcon(context),
             Padding(padding: EdgeInsets.only(top: 4)),
             Text('Single Play'),
           ],
@@ -77,16 +75,58 @@ class _SelectGamePageState extends State<SelectGamePage> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Container(
-              width: containerSize,
-              height: containerSize,
-              color: Colors.orange,
-            ),
+            _buildTeamPlayIcon(context),
             Padding(padding: EdgeInsets.only(top: 4)),
             Text('Team Play'),
           ],
         ),
       ],
+    );
+  }
+
+  Widget _buildSinglePlayIcon(BuildContext context) {
+    double containerSize = MediaQuery.of(context).size.width * 0.2;
+    
+    return Container(
+      width: containerSize,
+      height: containerSize,
+      color: Colors.orange,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Icon(Icons.person, color: Colors.white70),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Icon(Icons.person, color: Colors.white),
+              Icon(Icons.person, color: Colors.white),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildTeamPlayIcon(BuildContext context) {
+    double containerSize = MediaQuery.of(context).size.width * 0.2;
+
+    return Container(
+      width: containerSize,
+      height: containerSize,
+      color: Colors.orange,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Icon(Icons.person, color: Colors.white70),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Icon(Icons.people, color: Colors.white),
+              Icon(Icons.people, color: Colors.white),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
@@ -104,7 +144,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
       stream: widget._viewModel.getItemsStream,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          List<CategoryItem> items = snapshot.data;
+          List<CategoryInfoItem> items = snapshot.data;
           return Scrollbar(
             child: ListView.separated(
               key: PageStorageKey('select-category-page-key'),
@@ -112,7 +152,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
                 return Divider(indent: 12, height: 2.0);
               },
               itemBuilder: (BuildContext context, int index) {
-                CategoryItem item = items[index];
+                CategoryInfoItem item = items[index];
                 return _buildItem(context, item);
               },
               itemCount: items == null ? 0 : items.length,
@@ -127,7 +167,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
     );
   }
 
-  Widget _buildItem(BuildContext context, CategoryItem item) {
+  Widget _buildItem(BuildContext context, CategoryInfoItem item) {
     final bool isItemSelected = widget._viewModel.isItemSelected(item);
     return InkWell(
       onTap: () {

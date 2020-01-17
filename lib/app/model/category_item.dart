@@ -6,8 +6,8 @@ class CategoryItem {
 
   factory CategoryItem.fromMap(Map<String, dynamic> map) {
     return CategoryItem(
-        name: map['name'],
-        id: map['id']
+      name: map['name'],
+      id: map['id'],
     );
   }
 

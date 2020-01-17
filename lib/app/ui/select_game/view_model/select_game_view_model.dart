@@ -10,12 +10,12 @@ import 'package:crocodile_game/app/service/services.dart';
 class SelectGameViewModel implements SelectGameViewModelType {
 
   final Injector _injector;
-  final List<CategoryItem> currentCategories;
+  final List<CategoryInfoItem> currentCategories;
 
   CategoryProviderType _categoryProvider;
   RemoteAnalyticsServiceType _remoteAnalyticsService;
 
-  final _itemsController = BehaviorSubject<List<CategoryItem>>();
+  final _itemsController = BehaviorSubject<List<CategoryInfoItem>>();
 
   SelectGameViewModel(this._injector, this.currentCategories) {
     _categoryProvider = _injector.getDependency<CategoryProviderType>();
@@ -23,26 +23,26 @@ class SelectGameViewModel implements SelectGameViewModelType {
   }
 
   @override
-  Stream<List<CategoryItem>> get getItemsStream => _itemsController.stream;
+  Stream<List<CategoryInfoItem>> get getItemsStream => _itemsController.stream;
 
   @override
-  List<CategoryItem> selectedItems;
+  List<CategoryInfoItem> selectedItems;
 
   @override
-  bool isItemSelected(CategoryItem item) {
+  bool isItemSelected(CategoryInfoItem item) {
     final selected = currentCategories.firstWhere((i) => i.id == item.id, orElse: () => null);
     return selected == null ? false : true;
   }
 
   @override
-  void initState() async {
-    _categoryProvider.getAllCategories().then((categories) {
+  void initState(BuildContext context) async {
+    _categoryProvider.getAllCategories(context).then((categories) {
       _itemsController.sink.add(categories);
     });
   }
 
   @override
-  void handleTap(CategoryItem item) async {
+  void handleTap(CategoryInfoItem item) async {
     if (!isItemSelected(item)) {
       currentCategories.add(item);
     } else {
@@ -58,7 +58,7 @@ class SelectGameViewModel implements SelectGameViewModelType {
   void startGameAction(BuildContext context) {
     AnalyticsEventType event = RemoteAnalyticsEvent(name: "open_screen", parameters: { 'screen': 'single_play', 'from': 'main' });
     _remoteAnalyticsService.sendAnalyticsEvent(event);
-    SinglePlayViewModelType vm = SinglePlayViewModel(_injector);
+    SinglePlayViewModelType vm = SinglePlayViewModel(_injector, currentCategories);
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => SinglePlayPage(vm)));
   }
 

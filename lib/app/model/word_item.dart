@@ -8,7 +8,7 @@ class WordItem {
 
   factory WordItem.fromMap(Map<String, dynamic> map) {
     var categoriesList = map['categories'] as List;
-    List<CategoryItem> categories = categoriesList.map((i) => CategoryItem.fromMap(i)).toList();
+    List<CategoryItem> categories = categoriesList.map((i) => CategoryItem.fromMap(i['category'])).toList();
 
     return WordItem(
       word: map['word'],

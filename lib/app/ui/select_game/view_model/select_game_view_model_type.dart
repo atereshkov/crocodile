@@ -2,13 +2,13 @@ import 'package:crocodile_game/app/model/models.dart';
 import 'package:flutter/material.dart';
 
 abstract class SelectGameViewModelType {
-  Stream<List<CategoryItem>> get getItemsStream;
-  List<CategoryItem> get selectedItems;
-  bool isItemSelected(CategoryItem item);
+  Stream<List<CategoryInfoItem>> get getItemsStream;
+  List<CategoryInfoItem> get selectedItems;
+  bool isItemSelected(CategoryInfoItem item);
 
   void startGameAction(BuildContext context);
-  void handleTap(CategoryItem item);
+  void handleTap(CategoryInfoItem item);
 
-  void initState();
+  void initState(BuildContext context);
   void dispose();
 }

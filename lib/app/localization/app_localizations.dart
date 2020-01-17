@@ -36,5 +36,15 @@ class AppLocalizations {
   // Single mode
   String get singlePlayTitle => Intl.message('Game', name: 'singlePlayTitle');
   String get singlePlayNextWordButton => Intl.message('Next Word', name: 'singlePlayNextWordButton');
+
+  // Categories
+  String get categoryEasy => Intl.message('Easy', name: 'categoryEasy');
+  String get categoryEasyDescription => Intl.message('Simple words like: dog, laptop, char, bird, soldier...', name: 'categoryEasyDescription');
+  String get categoryMedium => Intl.message('Medium', name: 'categoryMedium');
+  String get categoryMediumDescription => Intl.message('A bit complicated words like: drama, squirrel, pancakes, tractor driver...', name: 'categoryMediumDescription');
+  String get categoryHard => Intl.message('Hard', name: 'categoryHard');
+  String get categoryHardDescription => Intl.message('Words like: contract, police department, blue hippo, electrician...', name: 'categoryHardDescription');
+  String get categoryAbstract => Intl.message('Abstract', name: 'categoryAbstract');
+  String get categoryAbstractDescription => Intl.message('The hardest words to show: approach, logics, illustration, baroque...', name: 'categoryAbstractDescription');
   
 }

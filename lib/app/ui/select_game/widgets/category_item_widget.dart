@@ -4,28 +4,53 @@ import 'package:crocodile_game/app/model/models.dart';
 class CategoryItemWidget extends StatelessWidget {
   CategoryItemWidget({Key key, this.item, this.isSelected}) : super(key: key);
 
-  final CategoryItem item;
+  final CategoryInfoItem item;
   final bool isSelected;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(left: 12.0, right: 12.0),
-      alignment: Alignment.centerLeft,
-      height: 45,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          _buildName(context, item.name),
-          if (isSelected)
-          _buildSelectedLabel(context),
-        ],
+    return ConstrainedBox(
+      constraints: BoxConstraints(minHeight: 60),
+      child: Container(
+        padding: EdgeInsets.only(left: 12.0, right: 12.0),
+        alignment: Alignment.centerLeft,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Expanded(
+              child: _buildContent(context),
+            ),
+            if (isSelected)
+            _buildSelectedLabel(context),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildContent(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        _buildName(context, item.name),
+        if (item.description != null && item.description.isNotEmpty)
+        _buildDescription(context, item.description)
+      ],
+    );
+  }
+
+  Widget _buildDescription(BuildContext context, String description) {
+    return Padding(
+      padding: EdgeInsets.only(top: 4),
+      child: Text(
+        description,
+        style: TextStyle(fontWeight: FontWeight.w400, fontSize: 13.0),
       ),
     );
   }
 
   Widget _buildName(BuildContext context, String name) {
-    //FontWeight weight = isHighlighted ? FontWeight.w600 : FontWeight.w400;
     return Text(
       name,
       style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.0),

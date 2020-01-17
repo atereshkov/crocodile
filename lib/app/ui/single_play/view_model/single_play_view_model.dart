@@ -14,9 +14,9 @@ class SinglePlayViewModel implements SinglePlayViewModelType {
 
   final _itemController = BehaviorSubject<String>();
 
-  List<CategoryItem> selectedCategories = [];
+  List<CategoryInfoItem> _selectedCategories = [];
 
-  SinglePlayViewModel(this._injector) {
+  SinglePlayViewModel(this._injector, this._selectedCategories) {
     _generatorService = _injector.getDependency<GeneratorServiceType>();
     _remoteAnalyticsService = _injector.getDependency<RemoteAnalyticsServiceType>();
   }
@@ -26,7 +26,7 @@ class SinglePlayViewModel implements SinglePlayViewModelType {
   @override
   void initState(BuildContext context) async {
     _remoteAnalyticsService.setCurrentScreen('single_play');
-    _generatorService.start(context);
+    _generatorService.start(context, _selectedCategories);
   }
 
   @override
