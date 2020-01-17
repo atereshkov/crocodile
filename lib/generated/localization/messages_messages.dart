@@ -36,6 +36,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "rulesTeamModeContent" : MessageLookupByLibrary.simpleMessage("Players are divided into teams with any number of players. Then the teams show the words one by one (one player from the team). The player shows the word and only his team tries to guess the word. If a word is guessed within the time, points are awarded to the team and the line goes to the next team in a circle."),
     "rulesTeamModeSubtitle" : MessageLookupByLibrary.simpleMessage("Team mode"),
     "rulesTitle" : MessageLookupByLibrary.simpleMessage("Rules"),
+    "selectGameSinglePlay" : MessageLookupByLibrary.simpleMessage("Single Play"),
+    "selectGameStartGameButton" : MessageLookupByLibrary.simpleMessage("Play"),
+    "selectGameTeamPlay" : MessageLookupByLibrary.simpleMessage("Team Play"),
+    "selectGameTitle" : MessageLookupByLibrary.simpleMessage("Choose game type & words"),
     "singlePlayNextWordButton" : MessageLookupByLibrary.simpleMessage("Next Word"),
     "singlePlayTitle" : MessageLookupByLibrary.simpleMessage("Game")
   };

@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-01-17T23:47:09.024941",
+  "@@last_modified": "2020-01-18T00:04:44.222088",
   "mainMenuPlaySingleMode": "Play",
   "@mainMenuPlaySingleMode": {
     "type": "text",
@@ -82,6 +82,26 @@
   },
   "categoryAbstractDescription": "The hardest words to show (e.g., approach, logics, illustration, baroque).",
   "@categoryAbstractDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectGameTitle": "Choose game type & words",
+  "@selectGameTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectGameSinglePlay": "Single Play",
+  "@selectGameSinglePlay": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectGameTeamPlay": "Team Play",
+  "@selectGameTeamPlay": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectGameStartGameButton": "Play",
+  "@selectGameStartGameButton": {
     "type": "text",
     "placeholders": {}
   }

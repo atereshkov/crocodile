@@ -46,5 +46,11 @@ class AppLocalizations {
   String get categoryHardDescription => Intl.message('Complicated words (e.g., contract, police department, blue hippo, electrician, etc).', name: 'categoryHardDescription');
   String get categoryAbstract => Intl.message('Abstract', name: 'categoryAbstract');
   String get categoryAbstractDescription => Intl.message('The hardest words to show (e.g., approach, logics, illustration, baroque).', name: 'categoryAbstractDescription');
+
+  // Select game
+  String get selectGameTitle => Intl.message('Choose game type & words', name: 'selectGameTitle');
+  String get selectGameSinglePlay => Intl.message('Single Play', name: 'selectGameSinglePlay');
+  String get selectGameTeamPlay => Intl.message('Team Play', name: 'selectGameTeamPlay');
+  String get selectGameStartGameButton => Intl.message('Play', name: 'selectGameStartGameButton');
   
 }

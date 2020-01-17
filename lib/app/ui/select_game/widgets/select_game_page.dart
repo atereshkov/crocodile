@@ -1,3 +1,4 @@
+import 'package:crocodile_game/app/localization/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:crocodile_game/app/model/models.dart';
 import 'package:crocodile_game/app/ui/select_game/module.dart';
@@ -32,7 +33,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Choose game type & words'),
+        title: Text(AppLocalizations.of(context).selectGameTitle),
       ),
       body: _buildBody(context),
     );
@@ -48,10 +49,6 @@ class _SelectGamePageState extends State<SelectGamePage> {
         ),
         Padding(padding: EdgeInsets.only(top: 6)),
         Divider(),
-        Padding(
-          padding: EdgeInsets.only(top: 4, bottom: 4, left: 12),
-          child: _buildChooseWordsLabel(context),
-        ),
         Expanded(
           child: _buildList(context),
         ),
@@ -69,7 +66,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
           children: <Widget>[
             _buildSinglePlayIcon(context),
             Padding(padding: EdgeInsets.only(top: 4)),
-            Text('Single Play'),
+            Text(AppLocalizations.of(context).selectGameSinglePlay),
           ],
         ),
         Column(
@@ -77,7 +74,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
           children: <Widget>[
             _buildTeamPlayIcon(context),
             Padding(padding: EdgeInsets.only(top: 4)),
-            Text('Team Play'),
+            Text(AppLocalizations.of(context).selectGameTeamPlay),
           ],
         ),
       ],
@@ -126,15 +123,6 @@ class _SelectGamePageState extends State<SelectGamePage> {
             ],
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _buildChooseWordsLabel(BuildContext context) {
-    return Text(
-      'Choose words for the game:',
-      style: TextStyle(
-        fontSize: 15,
       ),
     );
   }
@@ -211,7 +199,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
         color: Colors.orange,
         child: Center(
           child: Text(
-            'Play',
+            AppLocalizations.of(context).selectGameStartGameButton,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.w500,

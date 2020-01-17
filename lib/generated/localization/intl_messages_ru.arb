@@ -85,5 +85,25 @@
   "@categoryAbstractDescription": {
     "type": "text",
     "placeholders": {}
+  },
+  "selectGameTitle": "Тип игры и слова",
+  "@selectGameTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectGameSinglePlay": "Обычная игра",
+  "@selectGameSinglePlay": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectGameTeamPlay": "Командная игра",
+  "@selectGameTeamPlay": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectGameStartGameButton": "Старт",
+  "@selectGameStartGameButton": {
+    "type": "text",
+    "placeholders": {}
   }
 }

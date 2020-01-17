@@ -85,5 +85,25 @@
   "@categoryAbstractDescription": {
     "type": "text",
     "placeholders": {}
+  },
+  "selectGameTitle": "Choose game type & words",
+  "@selectGameTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectGameSinglePlay": "Single Play",
+  "@selectGameSinglePlay": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectGameTeamPlay": "Team Play",
+  "@selectGameTeamPlay": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectGameStartGameButton": "Play",
+  "@selectGameStartGameButton": {
+    "type": "text",
+    "placeholders": {}
   }
 }
