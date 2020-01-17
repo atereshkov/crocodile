@@ -22,13 +22,13 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
     "categoryAbstract" : MessageLookupByLibrary.simpleMessage("Abstract"),
-    "categoryAbstractDescription" : MessageLookupByLibrary.simpleMessage("The hardest words to show: approach, logics, illustration, baroque..."),
+    "categoryAbstractDescription" : MessageLookupByLibrary.simpleMessage("The hardest words to show (e.g., approach, logics, illustration, baroque)."),
     "categoryEasy" : MessageLookupByLibrary.simpleMessage("Easy"),
-    "categoryEasyDescription" : MessageLookupByLibrary.simpleMessage("Simple words like: dog, laptop, char, bird, soldier..."),
+    "categoryEasyDescription" : MessageLookupByLibrary.simpleMessage("Simple words (e.g., dog, laptop, char, bird, soldier, etc)."),
     "categoryHard" : MessageLookupByLibrary.simpleMessage("Hard"),
-    "categoryHardDescription" : MessageLookupByLibrary.simpleMessage("Words like: contract, police department, blue hippo, electrician..."),
+    "categoryHardDescription" : MessageLookupByLibrary.simpleMessage("Complicated words (e.g., contract, police department, blue hippo, electrician, etc)."),
     "categoryMedium" : MessageLookupByLibrary.simpleMessage("Medium"),
-    "categoryMediumDescription" : MessageLookupByLibrary.simpleMessage("A bit complicated words like: drama, squirrel, pancakes, tractor driver..."),
+    "categoryMediumDescription" : MessageLookupByLibrary.simpleMessage("Not easy and not really hard (e.g., drama, squirrel, pancakes, tractor driver, etc)."),
     "mainMenuHowToPlay" : MessageLookupByLibrary.simpleMessage("How To Play"),
     "mainMenuPlaySingleMode" : MessageLookupByLibrary.simpleMessage("Play"),
     "rulesSingleModeContent" : MessageLookupByLibrary.simpleMessage("The player must depict the word using only gestures and facial expressions (you can’t speak), and the rest of the players must guess the word. The one who guessed the word takes the place of the leading player and the game continues."),

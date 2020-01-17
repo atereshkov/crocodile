@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-01-17T21:58:52.158999",
+  "@@last_modified": "2020-01-17T23:47:09.024941",
   "mainMenuPlaySingleMode": "Play",
   "@mainMenuPlaySingleMode": {
     "type": "text",
@@ -50,7 +50,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "categoryEasyDescription": "Simple words like: dog, laptop, char, bird, soldier...",
+  "categoryEasyDescription": "Simple words (e.g., dog, laptop, char, bird, soldier, etc).",
   "@categoryEasyDescription": {
     "type": "text",
     "placeholders": {}
@@ -60,7 +60,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "categoryMediumDescription": "A bit complicated words like: drama, squirrel, pancakes, tractor driver...",
+  "categoryMediumDescription": "Not easy and not really hard (e.g., drama, squirrel, pancakes, tractor driver, etc).",
   "@categoryMediumDescription": {
     "type": "text",
     "placeholders": {}
@@ -70,7 +70,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "categoryHardDescription": "Words like: contract, police department, blue hippo, electrician...",
+  "categoryHardDescription": "Complicated words (e.g., contract, police department, blue hippo, electrician, etc).",
   "@categoryHardDescription": {
     "type": "text",
     "placeholders": {}
@@ -80,7 +80,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "categoryAbstractDescription": "The hardest words to show: approach, logics, illustration, baroque...",
+  "categoryAbstractDescription": "The hardest words to show (e.g., approach, logics, illustration, baroque).",
   "@categoryAbstractDescription": {
     "type": "text",
     "placeholders": {}

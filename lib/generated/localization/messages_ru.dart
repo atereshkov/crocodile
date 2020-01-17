@@ -22,13 +22,13 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
     "categoryAbstract" : MessageLookupByLibrary.simpleMessage("Абстрактные"),
-    "categoryAbstractDescription" : MessageLookupByLibrary.simpleMessage("Самые сложные слова: подход, логика, иллюстрация, барокко..."),
+    "categoryAbstractDescription" : MessageLookupByLibrary.simpleMessage("Очень сложные слова. Например: подход, логика, иллюстрация, барокко..."),
     "categoryEasy" : MessageLookupByLibrary.simpleMessage("Простые"),
-    "categoryEasyDescription" : MessageLookupByLibrary.simpleMessage("Простые слова: собака, ноутбук, стул, птица, солдат..."),
+    "categoryEasyDescription" : MessageLookupByLibrary.simpleMessage("Простые слова. Например: собака, ноутбук, стул, птица, солдат..."),
     "categoryHard" : MessageLookupByLibrary.simpleMessage("Сложные"),
-    "categoryHardDescription" : MessageLookupByLibrary.simpleMessage("Слова: контракт, полицейский участок, голубой бегемот, электрик..."),
+    "categoryHardDescription" : MessageLookupByLibrary.simpleMessage("Сложные слова. Например: контракт, полицейский участок, голубой бегемот, электрик..."),
     "categoryMedium" : MessageLookupByLibrary.simpleMessage("Средние"),
-    "categoryMediumDescription" : MessageLookupByLibrary.simpleMessage("Слова посложнее: драма, белка, блины, тракторист..."),
+    "categoryMediumDescription" : MessageLookupByLibrary.simpleMessage("Что-то среднее. Например: драма, белка, блины, тракторист..."),
     "mainMenuHowToPlay" : MessageLookupByLibrary.simpleMessage("Правила"),
     "mainMenuPlaySingleMode" : MessageLookupByLibrary.simpleMessage("Начать игру"),
     "rulesSingleModeContent" : MessageLookupByLibrary.simpleMessage("Игрок должен изобразить слово, используя только жесты и мимику (говорить нельзя), а остальные игроки должны угадать это слово. Тот, кто угадал - занимает место ведущего игрока и игра продолжается."),

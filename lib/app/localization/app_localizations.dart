@@ -39,12 +39,12 @@ class AppLocalizations {
 
   // Categories
   String get categoryEasy => Intl.message('Easy', name: 'categoryEasy');
-  String get categoryEasyDescription => Intl.message('Simple words like: dog, laptop, char, bird, soldier...', name: 'categoryEasyDescription');
+  String get categoryEasyDescription => Intl.message('Simple words (e.g., dog, laptop, char, bird, soldier, etc).', name: 'categoryEasyDescription');
   String get categoryMedium => Intl.message('Medium', name: 'categoryMedium');
-  String get categoryMediumDescription => Intl.message('A bit complicated words like: drama, squirrel, pancakes, tractor driver...', name: 'categoryMediumDescription');
+  String get categoryMediumDescription => Intl.message('Not easy and not really hard (e.g., drama, squirrel, pancakes, tractor driver, etc).', name: 'categoryMediumDescription');
   String get categoryHard => Intl.message('Hard', name: 'categoryHard');
-  String get categoryHardDescription => Intl.message('Words like: contract, police department, blue hippo, electrician...', name: 'categoryHardDescription');
+  String get categoryHardDescription => Intl.message('Complicated words (e.g., contract, police department, blue hippo, electrician, etc).', name: 'categoryHardDescription');
   String get categoryAbstract => Intl.message('Abstract', name: 'categoryAbstract');
-  String get categoryAbstractDescription => Intl.message('The hardest words to show: approach, logics, illustration, baroque...', name: 'categoryAbstractDescription');
+  String get categoryAbstractDescription => Intl.message('The hardest words to show (e.g., approach, logics, illustration, baroque).', name: 'categoryAbstractDescription');
   
 }

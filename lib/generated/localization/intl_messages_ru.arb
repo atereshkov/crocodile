@@ -51,7 +51,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "categoryEasyDescription": "Простые слова: собака, ноутбук, стул, птица, солдат...",
+  "categoryEasyDescription": "Простые слова. Например: собака, ноутбук, стул, птица, солдат...",
   "@categoryEasyDescription": {
     "type": "text",
     "placeholders": {}
@@ -61,7 +61,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "categoryMediumDescription": "Слова посложнее: драма, белка, блины, тракторист...",
+  "categoryMediumDescription": "Что-то среднее. Например: драма, белка, блины, тракторист...",
   "@categoryMediumDescription": {
     "type": "text",
     "placeholders": {}
@@ -71,7 +71,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "categoryHardDescription": "Слова: контракт, полицейский участок, голубой бегемот, электрик...",
+  "categoryHardDescription": "Сложные слова. Например: контракт, полицейский участок, голубой бегемот, электрик...",
   "@categoryHardDescription": {
     "type": "text",
     "placeholders": {}
@@ -81,7 +81,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "categoryAbstractDescription": "Самые сложные слова: подход, логика, иллюстрация, барокко...",
+  "categoryAbstractDescription": "Очень сложные слова. Например: подход, логика, иллюстрация, барокко...",
   "@categoryAbstractDescription": {
     "type": "text",
     "placeholders": {}
