@@ -45,5 +45,45 @@
   "@singlePlayNextWordButton": {
     "type": "text",
     "placeholders": {}
+  },
+  "categoryEasy": "Простые",
+  "@categoryEasy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "categoryEasyDescription": "Простые слова: собака, ноутбук, стул, птица, солдат...",
+  "@categoryEasyDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "categoryMedium": "Средние",
+  "@categoryMedium": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "categoryMediumDescription": "Слова посложнее: драма, белка, блины, тракторист...",
+  "@categoryMediumDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "categoryHard": "Сложные",
+  "@categoryHard": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "categoryHardDescription": "Слова: контракт, полицейский участок, голубой бегемот, электрик...",
+  "@categoryHardDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "categoryAbstract": "Абстрактные",
+  "@categoryAbstract": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "categoryAbstractDescription": "Самые сложные слова: подход, логика, иллюстрация, барокко...",
+  "@categoryAbstractDescription": {
+    "type": "text",
+    "placeholders": {}
   }
 }
