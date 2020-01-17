@@ -52,7 +52,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
         Expanded(
           child: _buildList(context),
         ),
-        _buildBottomContainer(context),
+        _buildBottomContainerBuilder(context),
       ],
     );
   }
@@ -165,7 +165,21 @@ class _SelectGamePageState extends State<SelectGamePage> {
     );
   }
 
-  Widget _buildBottomContainer(BuildContext context) {
+  Widget _buildBottomContainerBuilder(BuildContext context) {
+    return StreamBuilder(
+      stream: widget._viewModel.startGameButtonEnabledStream,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          bool isEnabled = snapshot.data;
+          return _buildBottomContainer(context, isEnabled);
+        } else {
+          return Container();
+        }
+      },
+    ); 
+  }
+
+  Widget _buildBottomContainer(BuildContext context, bool isEnabled) {
     return Column(
       children: <Widget>[
         Container(
@@ -180,31 +194,17 @@ class _SelectGamePageState extends State<SelectGamePage> {
           ),
           height: 50,
           width: double.infinity,
-          child: _buildStartGameButton(context),
+          child: _buildStartGameButton(context, isEnabled),
         ),
         Container(
           height: MediaQuery.of(context).padding.bottom,
-          color: Colors.orange,
+          color: isEnabled ? Colors.orange : Colors.grey,
         ),
       ],
     );
   }
 
-  Widget _buildStartGameButton(BuildContext context) {
-    return StreamBuilder(
-      stream: widget._viewModel.startGameButtonEnabledStream,
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          bool isEnabled = snapshot.data;
-          return _buildStartGameButtonWidget(context, isEnabled);
-        } else {
-          return Container();
-        }
-      },
-    );
-  }
-
-  Widget _buildStartGameButtonWidget(BuildContext context, bool isEnabled) {
+  Widget _buildStartGameButton(BuildContext context, bool isEnabled) {
     return InkWell(
       onTap: () {
         if (isEnabled)
