@@ -16,6 +16,7 @@ class SelectGameViewModel implements SelectGameViewModelType {
   RemoteAnalyticsServiceType _remoteAnalyticsService;
 
   final _itemsController = BehaviorSubject<List<CategoryInfoItem>>();
+  final _startButtonEnabledController = BehaviorSubject<bool>();
 
   SelectGameViewModel(this._injector) {
     _categoryProvider = _injector.getDependency<CategoryProviderType>();
@@ -24,6 +25,9 @@ class SelectGameViewModel implements SelectGameViewModelType {
 
   @override
   Stream<List<CategoryInfoItem>> get getItemsStream => _itemsController.stream;
+
+  @override
+  Stream<bool> get startGameButtonEnabledStream => _startButtonEnabledController.stream;
 
   @override
   List<CategoryInfoItem> selectedItems;
@@ -39,6 +43,9 @@ class SelectGameViewModel implements SelectGameViewModelType {
     _categoryProvider.getAllCategories(context).then((categories) {
       // tick first category as default one
       currentCategories.add(categories.first);
+
+      // enable start button by default if current categories is not empty
+      _startButtonEnabledController.sink.add(currentCategories.isNotEmpty);
 
       // add all the categories to items
       _itemsController.sink.add(categories);
@@ -56,6 +63,8 @@ class SelectGameViewModel implements SelectGameViewModelType {
     _itemsController.first.then((items) {
       _itemsController.sink.add(items);
     });
+
+    _startButtonEnabledController.sink.add(currentCategories.isNotEmpty);
   }
 
   @override
@@ -69,6 +78,7 @@ class SelectGameViewModel implements SelectGameViewModelType {
   @override
   void dispose() {
     _itemsController.close();
+    _startButtonEnabledController.close();
   }
 
 }

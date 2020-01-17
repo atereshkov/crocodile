@@ -191,12 +191,27 @@ class _SelectGamePageState extends State<SelectGamePage> {
   }
 
   Widget _buildStartGameButton(BuildContext context) {
+    return StreamBuilder(
+      stream: widget._viewModel.startGameButtonEnabledStream,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          bool isEnabled = snapshot.data;
+          return _buildStartGameButtonWidget(context, isEnabled);
+        } else {
+          return Container();
+        }
+      },
+    );
+  }
+
+  Widget _buildStartGameButtonWidget(BuildContext context, bool isEnabled) {
     return InkWell(
       onTap: () {
+        if (isEnabled)
         widget._viewModel.startGameAction(context);
       },
       child: Container(
-        color: Colors.orange,
+        color: isEnabled ? Colors.orange : Colors.grey,
         child: Center(
           child: Text(
             AppLocalizations.of(context).selectGameStartGameButton,
@@ -204,7 +219,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
             style: TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 18,
-              color: Colors.white,
+              color: isEnabled ? Colors.white : Colors.white70,
             ),
           ),
         ),

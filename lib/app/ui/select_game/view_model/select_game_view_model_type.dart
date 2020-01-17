@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 abstract class SelectGameViewModelType {
   Stream<List<CategoryInfoItem>> get getItemsStream;
+  Stream<bool> get startGameButtonEnabledStream;
+
   List<CategoryInfoItem> get selectedItems;
   bool isItemSelected(CategoryInfoItem item);
 
