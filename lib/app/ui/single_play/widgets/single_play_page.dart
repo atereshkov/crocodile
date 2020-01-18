@@ -1,5 +1,4 @@
 import 'package:crocodile_game/app/localization/app_localizations.dart';
-import 'package:crocodile_game/app/model/category_item.dart';
 import 'package:flutter/material.dart';
 import 'package:crocodile_game/app/ui/single_play/view_model/single_play_view_model_type.dart';
 
