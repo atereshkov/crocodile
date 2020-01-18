@@ -6,17 +6,21 @@ import 'package:crocodile_game/app/ui/single_play/module.dart';
 import 'package:crocodile_game/app/model/models.dart';
 import 'package:crocodile_game/app/provider/providers.dart';
 import 'package:crocodile_game/app/service/services.dart';
+import 'package:crocodile_game/app/model/enum/enums.dart';
 
 class SelectGameViewModel implements SelectGameViewModelType {
 
   final Injector _injector;
-  final List<CategoryInfoItem> currentCategories = [];
 
   CategoryProviderType _categoryProvider;
   RemoteAnalyticsServiceType _remoteAnalyticsService;
 
+  final List<CategoryInfoItem> currentCategories = [];
+  final GameType _gameType = GameType.single;
+
   final _itemsController = BehaviorSubject<List<CategoryInfoItem>>();
   final _startButtonEnabledController = BehaviorSubject<bool>();
+  final _gameTypeController = BehaviorSubject<GameType>();
 
   SelectGameViewModel(this._injector) {
     _categoryProvider = _injector.getDependency<CategoryProviderType>();
@@ -28,6 +32,9 @@ class SelectGameViewModel implements SelectGameViewModelType {
 
   @override
   Stream<bool> get startGameButtonEnabledStream => _startButtonEnabledController.stream;
+
+  @override
+  Stream<GameType> get currentGameTypeStream => _gameTypeController.stream;
 
   @override
   List<CategoryInfoItem> selectedItems;
@@ -44,8 +51,8 @@ class SelectGameViewModel implements SelectGameViewModelType {
       // tick first category as default one
       currentCategories.add(categories.first);
 
-      // enable start button by default if current categories is not empty
-      _startButtonEnabledController.sink.add(currentCategories.isNotEmpty);
+      _updateStartGameButtonState();
+      _gameTypeController.sink.add(_gameType);
 
       // add all the categories to items
       _itemsController.sink.add(categories);
@@ -64,7 +71,12 @@ class SelectGameViewModel implements SelectGameViewModelType {
       _itemsController.sink.add(items);
     });
 
-    _startButtonEnabledController.sink.add(currentCategories.isNotEmpty);
+    _updateStartGameButtonState();
+  }
+
+  @override
+  void handleGameTypeTap(GameType type) {
+    _gameTypeController.sink.add(type);
   }
 
   @override
@@ -79,6 +91,12 @@ class SelectGameViewModel implements SelectGameViewModelType {
   void dispose() {
     _itemsController.close();
     _startButtonEnabledController.close();
+    _gameTypeController.close();
+  }
+
+  void _updateStartGameButtonState() {
+    bool isEnabled = currentCategories.isNotEmpty;
+    _startButtonEnabledController.sink.add(isEnabled);
   }
 
 }

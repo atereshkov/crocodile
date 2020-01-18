@@ -1,0 +1,4 @@
+enum GameType {
+  single,
+  team
+}

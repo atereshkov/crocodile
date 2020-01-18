@@ -1,6 +1,7 @@
 import 'package:crocodile_game/app/localization/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:crocodile_game/app/model/models.dart';
+import 'package:crocodile_game/app/model/enum/enums.dart';
 import 'package:crocodile_game/app/ui/select_game/module.dart';
 
 class SelectGamePage extends StatefulWidget {
@@ -58,27 +59,71 @@ class _SelectGamePageState extends State<SelectGamePage> {
   }
 
   Widget _buildGameType(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return StreamBuilder(
+      stream: widget._viewModel.currentGameTypeStream,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          GameType currentGameType = snapshot.data;
+          bool singleGameActive = currentGameType == GameType.single;
+          bool teamGameActive = currentGameType == GameType.team;
+          return Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              _buildSingleGameWidget(context, singleGameActive),
+              _buildTeamGameWidget(context, teamGameActive),
+            ],
+          );
+        } else {
+          return Container();
+        }
+      },
+    );
+  }
+
+  Widget _buildSingleGameWidget(BuildContext context, bool isActive) {
+    if (isActive) {
+      return _buildActiveSingleGameWidget(context);
+    } else {
+      return _buildUnactiveSingleGameWidget(context);
+    }
+  }
+
+  Widget _buildTeamGameWidget(BuildContext context, bool isActive) {
+    if (isActive) {
+      return _buildActiveTeamGameWidget(context);
+    } else {
+      return _buildUnactiveTeamGameWidget(context);
+    }
+  }
+
+  Widget _buildActiveSingleGameWidget(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            _buildSinglePlayIcon(context),
-            Padding(padding: EdgeInsets.only(top: 4)),
-            Text(AppLocalizations.of(context).selectGameSinglePlay),
-          ],
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            _buildTeamPlayIcon(context),
-            Padding(padding: EdgeInsets.only(top: 4)),
-            Text(AppLocalizations.of(context).selectGameTeamPlay),
-          ],
-        ),
+        _buildSinglePlayIcon(context),
+        Padding(padding: EdgeInsets.only(top: 4)),
+        Text(AppLocalizations.of(context).selectGameSinglePlay),
       ],
     );
+  }
+
+  Widget _buildUnactiveSingleGameWidget(BuildContext context) {
+    return Container();
+  }
+
+  Widget _buildActiveTeamGameWidget(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        _buildTeamPlayIcon(context),
+        Padding(padding: EdgeInsets.only(top: 4)),
+        Text(AppLocalizations.of(context).selectGameTeamPlay),
+      ],
+    );
+  }
+
+  Widget _buildUnactiveTeamGameWidget(BuildContext context) {
+    return Container();
   }
 
   Widget _buildSinglePlayIcon(BuildContext context) {

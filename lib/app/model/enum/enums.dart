@@ -1,0 +1,1 @@
+export 'package:crocodile_game/app/model/enum/game_type.dart';
