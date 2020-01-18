@@ -82,21 +82,69 @@ class _SelectGamePageState extends State<SelectGamePage> {
 
   Widget _buildSingleGameWidget(BuildContext context, bool isActive) {
     if (isActive) {
-      return _buildActiveSingleGameWidget(context);
+      return InkWell(
+        onTap: () {
+          widget._viewModel.handleGameTypeTap(GameType.single);
+        },
+        child: _buildActiveSingleGameWidget(context),
+      );
     } else {
-      return _buildUnactiveSingleGameWidget(context);
+      return InkWell(
+        onTap: () {
+          widget._viewModel.handleGameTypeTap(GameType.single);
+        },
+        child: _buildUnactiveSingleGameWidget(context),
+      );
     }
   }
 
   Widget _buildTeamGameWidget(BuildContext context, bool isActive) {
     if (isActive) {
-      return _buildActiveTeamGameWidget(context);
+      return InkWell(
+        onTap: () {
+          widget._viewModel.handleGameTypeTap(GameType.team);
+        },
+        child: _buildActiveTeamGameWidget(context),
+      );
     } else {
-      return _buildUnactiveTeamGameWidget(context);
+      return InkWell(
+        onTap: () {
+          widget._viewModel.handleGameTypeTap(GameType.team);
+        },
+        child: _buildUnactiveTeamGameWidget(context),
+      );
     }
   }
 
   Widget _buildActiveSingleGameWidget(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        Container(
+          child: _buildSinglePlayIcon(context),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                blurRadius: 10.0,
+                spreadRadius: 2.0,
+              )
+            ],
+          ),
+        ),
+        Padding(padding: EdgeInsets.only(top: 6)),
+        Text(
+          AppLocalizations.of(context).selectGameSinglePlay,
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            color: Colors.orange,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildUnactiveSingleGameWidget(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
@@ -107,11 +155,35 @@ class _SelectGamePageState extends State<SelectGamePage> {
     );
   }
 
-  Widget _buildUnactiveSingleGameWidget(BuildContext context) {
-    return Container();
+  Widget _buildActiveTeamGameWidget(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        Container(
+          child: _buildTeamPlayIcon(context),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                blurRadius: 10.0,
+                spreadRadius: 2.0,
+              )
+            ],
+          ),
+        ),
+        Padding(padding: EdgeInsets.only(top: 6)),
+        Text(
+          AppLocalizations.of(context).selectGameTeamPlay,
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            color: Colors.orange,
+          ),
+        ),
+      ],
+    );
   }
 
-  Widget _buildActiveTeamGameWidget(BuildContext context) {
+  Widget _buildUnactiveTeamGameWidget(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
@@ -120,10 +192,6 @@ class _SelectGamePageState extends State<SelectGamePage> {
         Text(AppLocalizations.of(context).selectGameTeamPlay),
       ],
     );
-  }
-
-  Widget _buildUnactiveTeamGameWidget(BuildContext context) {
-    return Container();
   }
 
   Widget _buildSinglePlayIcon(BuildContext context) {
