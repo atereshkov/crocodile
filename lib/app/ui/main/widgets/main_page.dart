@@ -109,10 +109,6 @@ class _MainPageState extends State<MainPage> {
     );
   }
 
-  // Widget _buildLanguagePickerDropDown(BuildContext context, List<Language> items) {
-  //   return Text("Text3 ${items.length}");
-  // }
-
   Widget _buildLanguagePickerDropDown(BuildContext context, List<Language> items) {
     return DropdownButton(
       underline: SizedBox(),

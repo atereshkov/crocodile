@@ -637,6 +637,468 @@
 					}
 				}
 			]
+		},
+		{
+			"word": "Походка",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Леденец",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Зарплата",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Шашлык",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Клаустрофобия",
+			"categories": [
+				{
+					"category": {
+						"name": "Абстрактные",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Енот",
+			"categories": [
+				{
+					"category": {
+						"name": "Сложные",
+						"id": "hard"
+					}
+				}
+			]
+		},
+		{
+			"word": "Блоха",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Ежик в тумане",
+			"categories": [
+				{
+					"category": {
+						"name": "Сложные",
+						"id": "hard"
+					}
+				}
+			]
+		},
+		{
+			"word": "Грязные носки",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Вялый помидор",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Извращение",
+			"categories": [
+				{
+					"category": {
+						"name": "Абстрактные",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Водопад",
+			"categories": [
+				{
+					"category": {
+						"name": "Сложные",
+						"id": "hard"
+					}
+				}
+			]
+		},
+		{
+			"word": "Идеал",
+			"categories": [
+				{
+					"category": {
+						"name": "Абстрактные",
+						"id": "abstract"
+					}
+				}
+			]
+		},
+		{
+			"word": "Измена",
+			"categories": [
+				{
+					"category": {
+						"name": "Сложные",
+						"id": "hard"
+					}
+				}
+			]
+		},
+		{
+			"word": "Революция",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Пятница",
+			"categories": [
+				{
+					"category": {
+						"name": "Сложные",
+						"id": "hard"
+					}
+				}
+			]
+		},
+		{
+			"word": "Черепашка ниндзя",
+			"categories": [
+				{
+					"category": {
+						"name": "Средние",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Чай",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Успех",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Отдых",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Пляж",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Зонт",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+		  "word": "Лень",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Турбулентность",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+			"word": "Портфель",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Фейерверк",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+		  "word": "Напольные весы",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+			"word": "Диджей",
+			"categories": [
+				{
+					"category": {
+						"name": "Простые",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+		  "word": "Наушники",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Спички",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Взрыв",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Ковёр",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Медведь",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Градусник",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Скрипка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Бутерброд",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Радуга",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Пуля",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Выстрел",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Пистолет",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Квартира",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Тайна",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
 		}
 	]
 }

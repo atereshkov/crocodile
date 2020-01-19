@@ -637,6 +637,94 @@
 					}
 				}
 			]
-		}
+		},
+		{
+			"word": "Gait",
+			"categories": [
+				{
+					"category": {
+						"name": "Easy",
+						"id": "easy"
+					}
+				}
+			]
+		},
+		{
+			"word": "Lollipop",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Salary",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+			"word": "Barbecue",
+			"categories": [
+				{
+					"category": {
+						"name": "Medium",
+						"id": "medium"
+					}
+				}
+			]
+		},
+		{
+		  "word": "Claustrophobia",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Raccoon",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Flea",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Hedgehog in the fog",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
 	]
 }
