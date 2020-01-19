@@ -168,36 +168,46 @@ class _MainPageState extends State<MainPage> {
   }
 
   Widget _buildSinglePlayButton(BuildContext context) {
-    return RaisedButton(
-      color: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        minWidth: MediaQuery.of(context).size.width * 0.35,
       ),
-      onPressed: () {
-        widget._viewModel.singlePlayAction(context);
-      },
-      child: Text(
-        AppLocalizations.of(context).mainMenuPlaySingleMode,
-        style: TextStyle(
-          fontSize: 19, 
+      child: RaisedButton(
+        color: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+        onPressed: () {
+          widget._viewModel.singlePlayAction(context);
+        },
+        child: Text(
+          AppLocalizations.of(context).mainMenuPlaySingleMode,
+          style: TextStyle(
+            fontSize: 19, 
+          ),
         ),
       ),
     );
   }
 
   Widget _buildHowToPlayButton(BuildContext context) {
-    return RaisedButton(
-      color: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        minWidth: MediaQuery.of(context).size.width * 0.35,
       ),
-      onPressed: () {
-        widget._viewModel.howToPlayAction(context);
-      },
-      child: Text(
-        AppLocalizations.of(context).mainMenuHowToPlay,
-        style: TextStyle(
-          fontSize: 19,
+      child: RaisedButton(
+        color: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+        onPressed: () {
+          widget._viewModel.howToPlayAction(context);
+        },
+        child: Text(
+          AppLocalizations.of(context).mainMenuHowToPlay,
+          style: TextStyle(
+            fontSize: 19,
+          ),
         ),
       ),
     );

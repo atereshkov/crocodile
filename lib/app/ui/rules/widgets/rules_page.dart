@@ -62,12 +62,12 @@ class _RulesPageState extends State<RulesPage> {
             children: <Widget>[
               Icon(
                 Icons.person,
-                color: Colors.black,
+                color: Colors.white,
               ),
               Padding(padding: EdgeInsets.only(left: 8)),
               Icon(
                 Icons.person,
-                color: Colors.black,
+                color: Colors.white,
               ),
               Padding(padding: EdgeInsets.only(left: 12)),
               Text(
@@ -75,7 +75,7 @@ class _RulesPageState extends State<RulesPage> {
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ),
             ],
@@ -103,12 +103,12 @@ class _RulesPageState extends State<RulesPage> {
             children: <Widget>[
               Icon(
                 Icons.people,
-                color: Colors.black,
+                color: Colors.white,
               ),
               Padding(padding: EdgeInsets.only(left: 8)),
               Icon(
                 Icons.people,
-                color: Colors.black,
+                color: Colors.white,
               ),
               Padding(padding: EdgeInsets.only(left: 12)),
               Text(
@@ -116,7 +116,7 @@ class _RulesPageState extends State<RulesPage> {
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ),
             ],
@@ -140,7 +140,7 @@ class _RulesPageState extends State<RulesPage> {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Color(0xB300A010), Color(0xFFF2E6E6)]
+          colors: [Colors.blue, Colors.lightBlue[200]]
         )
       ),
     );
