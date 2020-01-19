@@ -126,9 +126,11 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
     double width = MediaQuery.of(context).size.width * 0.5; 
     double height = MediaQuery.of(context).size.height * 0.06;
 
-    return Container(
-      width: width,
-      height: height,
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        minWidth: width,
+        minHeight: height,
+      ),
       child: RaisedButton(
         color: Colors.white,
         shape: RoundedRectangleBorder(
