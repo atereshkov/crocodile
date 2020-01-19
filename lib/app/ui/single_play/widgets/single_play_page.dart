@@ -87,7 +87,7 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         // Padding(padding: EdgeInsets.only(top: topPadding)),
         _buildWord(context),
@@ -108,6 +108,13 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
             style: TextStyle(
               fontSize: 25,
               color: Colors.white,
+              shadows: [
+                Shadow(
+                  color: Colors.grey.shade900.withOpacity(0.5),
+                  offset: Offset(1.0, 1.0),
+                  blurRadius: 5.0,
+                ),
+              ],
             ),
           );
         } else {

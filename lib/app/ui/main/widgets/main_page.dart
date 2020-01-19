@@ -65,20 +65,17 @@ class _MainPageState extends State<MainPage> {
           child: Stack(
             children: <Widget>[
               _gradientBackground(),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.only(top: 4, right: 16),
-                        child: _buildLanguagePicker(context),
-                      ),
-                    ],
+                  Padding(
+                    padding: EdgeInsets.only(top: 4, right: 16),
+                    child: _buildLanguagePicker(context),
                   ),
-                  _buildMenu(context),
-               ],
+                ],
+              ),
+              Center(
+                child: _buildMenu(context),
               ),
             ],
           ),
@@ -159,14 +156,14 @@ class _MainPageState extends State<MainPage> {
   }
 
   Widget _buildMenu(BuildContext context) {
-    return Center(
-      child: Column(
-        children: <Widget>[
-          _buildSinglePlayButton(context),
-          Padding(padding: EdgeInsets.symmetric(vertical: 4)),
-          _buildHowToPlayButton(context),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        _buildSinglePlayButton(context),
+        Padding(padding: EdgeInsets.symmetric(vertical: 4)),
+        _buildHowToPlayButton(context),
+      ],
     );
   }
 

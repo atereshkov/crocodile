@@ -19,6 +19,8 @@ void main() async {
     statusBarBrightness: Brightness.light,
   ));
 
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  
   runApp(application.component);
 }
 
