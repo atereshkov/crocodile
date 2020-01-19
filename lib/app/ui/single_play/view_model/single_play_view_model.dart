@@ -26,7 +26,7 @@ class SinglePlayViewModel implements SinglePlayViewModelType {
   @override
   void initState(BuildContext context) async {
     _remoteAnalyticsService.setCurrentScreen('single_play');
-    _generatorService.start(context, _selectedCategories);
+    await _generatorService.start(context, _selectedCategories);
     _generateNewWord(context);
   }
 
