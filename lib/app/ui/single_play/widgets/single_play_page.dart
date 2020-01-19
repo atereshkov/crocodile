@@ -83,13 +83,10 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
   }
 
   Widget _buildActionContent(BuildContext context) {
-    // double topPadding = MediaQuery.of(context).size.height * 0.05; 
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
-        // Padding(padding: EdgeInsets.only(top: topPadding)),
         _buildWord(context),
         Padding(padding: EdgeInsets.only(top: 16)),
         _buildNextWordButton(context),
