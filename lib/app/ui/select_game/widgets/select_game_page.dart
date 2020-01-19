@@ -45,7 +45,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.only(top: 14),
+          padding: EdgeInsets.only(top: 16),
           child: _buildGameType(context),
         ),
         Padding(padding: EdgeInsets.only(top: 6)),
@@ -137,7 +137,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
           AppLocalizations.of(context).selectGameSinglePlay,
           style: TextStyle(
             fontWeight: FontWeight.w500,
-            color: Colors.orange,
+            color: Colors.lightBlue,
           ),
         ),
       ],
@@ -176,7 +176,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
           AppLocalizations.of(context).selectGameTeamPlay,
           style: TextStyle(
             fontWeight: FontWeight.w500,
-            color: Colors.orange,
+            color: Colors.lightBlue,
           ),
         ),
       ],
@@ -200,7 +200,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
     return Container(
       width: containerSize,
       height: containerSize,
-      color: Colors.orange,
+      color: Colors.lightBlue,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -223,7 +223,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
     return Container(
       width: containerSize,
       height: containerSize,
-      color: Colors.orange,
+      color: Colors.lightBlue,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -311,7 +311,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
         ),
         Container(
           height: MediaQuery.of(context).padding.bottom,
-          color: isEnabled ? Colors.orange : Colors.grey,
+          color: isEnabled ? Colors.lightBlue : Colors.grey,
         ),
       ],
     );
@@ -324,7 +324,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
         widget._viewModel.startGameAction(context);
       },
       child: Container(
-        color: isEnabled ? Colors.orange : Colors.grey,
+        color: isEnabled ? Colors.lightBlue : Colors.grey,
         child: Center(
           child: Text(
             AppLocalizations.of(context).selectGameStartGameButton,

@@ -58,7 +58,7 @@ class CategoryItemWidget extends StatelessWidget {
   }
 
   Widget _buildSelectedLabel(BuildContext context) {
-    return Icon(Icons.check);
+    return Icon(Icons.check, color: Colors.blue);
   }
 
 }

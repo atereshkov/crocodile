@@ -83,12 +83,13 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
   }
 
   Widget _buildActionContent(BuildContext context) {
-    double topPadding = MediaQuery.of(context).size.height * 0.05; 
+    // double topPadding = MediaQuery.of(context).size.height * 0.05; 
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: <Widget>[
-        Padding(padding: EdgeInsets.only(top: topPadding)),
+        // Padding(padding: EdgeInsets.only(top: topPadding)),
         _buildWord(context),
         Padding(padding: EdgeInsets.only(top: 16)),
         _buildNextWordButton(context),
@@ -122,21 +123,28 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
   }
 
   Widget _buildNextWordButton(BuildContext context) {
-    return RaisedButton(
-      color: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Text(
-        AppLocalizations.of(context).singlePlayNextWordButton,
-        style: TextStyle(
-          color: Colors.black,
-          fontSize: 20,
+    double width = MediaQuery.of(context).size.width * 0.5; 
+    double height = MediaQuery.of(context).size.height * 0.06;
+
+    return Container(
+      width: width,
+      height: height,
+      child: RaisedButton(
+        color: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(height / 2),
         ),
+        child: Text(
+          AppLocalizations.of(context).singlePlayNextWordButton,
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20,
+          ),
+        ),
+        onPressed: () {
+          widget._viewModel.generateNewWordAction(context);
+        },
       ),
-      onPressed: () {
-        widget._viewModel.generateNewWordAction(context);
-      },
     );
   }
 
