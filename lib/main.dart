@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:crocodile_game/app/core/application.dart';
 import 'package:injector/injector.dart';
+import 'package:flutter/services.dart';
 
 import 'dart:io' show Platform;
 import 'package:admob_flutter/admob_flutter.dart';
@@ -12,6 +13,12 @@ void main() async {
   final injector = Injector();
   var application = GameApplication(injector);
   await application.onCreate();
+
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.black,
+    statusBarBrightness: Brightness.light,
+  ));
+
   runApp(application.component);
 }
 
