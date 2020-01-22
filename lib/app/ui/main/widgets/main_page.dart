@@ -157,7 +157,7 @@ class _MainPageState extends State<MainPage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         _buildSinglePlayButton(context),
-        Padding(padding: EdgeInsets.symmetric(vertical: 4)),
+        Padding(padding: EdgeInsets.symmetric(vertical: 2)),
         _buildHowToPlayButton(context),
       ],
     );
