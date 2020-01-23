@@ -87,9 +87,14 @@ class _MainPageState extends State<MainPage> {
             image: AssetImage("resources/images/main_croco.gif"),
           ),
         ),
-        AdmobBanner(
-          adUnitId: getBottomBannerId(),
-          adSize: AdmobBannerSize.BANNER,
+        Container(
+          width: double.maxFinite,
+          child: SafeArea(
+            child: AdmobBanner(
+              adUnitId: getBottomBannerId(),
+              adSize: AdmobBannerSize.BANNER,
+            ),
+          ),
         ),
       ],
     );

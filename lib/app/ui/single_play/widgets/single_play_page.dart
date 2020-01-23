@@ -62,9 +62,15 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
         Image(
           image: AssetImage("resources/images/source2.gif"),
         ),
-        AdmobBanner(
-          adUnitId: getBottomBannerId(),
-          adSize: AdmobBannerSize.BANNER,
+        Container(
+          width: double.maxFinite,
+          color: Color(0xffC1ECFC),
+          child: SafeArea(
+            child: AdmobBanner(
+              adUnitId: getBottomBannerId(),
+              adSize: AdmobBannerSize.BANNER,
+            ),
+          ),
         ),
       ],
     );
