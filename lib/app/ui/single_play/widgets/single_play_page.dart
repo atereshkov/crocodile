@@ -103,7 +103,7 @@ class _SinglePlayPageState extends State<SinglePlayPage> {
             snapshot.data,
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 25,
+              fontSize: 27,
               color: Colors.white,
               shadows: [
                 Shadow(
