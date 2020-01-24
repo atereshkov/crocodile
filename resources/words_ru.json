@@ -1099,6 +1099,50 @@
 		      }
 		    }
 		  ]
+		},
+		{
+		  "word": "Шар",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Одуванчик",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Скейтбоард",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Велосипед",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
 		}
 	]
 }
