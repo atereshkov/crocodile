@@ -18,6 +18,8 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
 
   final _itemsController = BehaviorSubject<List<TeamItem>>();
   final _startButtonEnabledController = BehaviorSubject<bool>();
+  final _timerCheckboxController = BehaviorSubject<bool>();
+  final _timerDropdownController = BehaviorSubject<String>();
 
   SelectTeamViewModel(this._injector, this._selectedCategories) {
     _remoteAnalyticsService = _injector.getDependency<RemoteAnalyticsServiceType>();
@@ -30,6 +32,12 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   Stream<bool> get startGameButtonEnabledStream => _startButtonEnabledController.stream;
 
   @override
+  Stream<bool> get isTimerChecked => _timerCheckboxController.stream;
+
+  @override
+  Stream<String> get timerValue => _timerDropdownController.stream;
+  
+  @override
   void initState(BuildContext context) async {
     List<TeamItem> teams = [];
 
@@ -37,6 +45,14 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
     teams.add(TeamItem(name: 'Team 2', id: Random().nextInt(1000000).toString()));
 
     _itemsController.sink.add(teams);
+
+    // enable timer checkbox by default
+    _timerCheckboxController.sink.add(true);
+
+    // disable play button by default
+    _startButtonEnabledController.sink.add(true);
+
+    _timerDropdownController.sink.add('60');
   }
 
   @override
@@ -47,6 +63,16 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   @override
   void onTeamDeleteTap(TeamItem item) async {
     print('Delete');
+  }
+
+  @override
+  void onTimerCheckboxAction(bool value) {
+    _timerCheckboxController.sink.add(value);
+  }
+
+  @override
+  void timerDropdownAction(String value) {
+    _timerDropdownController.sink.add(value);
   }
 
   @override
@@ -61,6 +87,8 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   void dispose() {
     _itemsController.close();
     _startButtonEnabledController.close();
+    _timerCheckboxController.close();
+    _timerDropdownController.close();
   }
 
 }

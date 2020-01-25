@@ -33,7 +33,7 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Create teams'),
+        title: Text('Team Play'),
       ),
       body: _buildBody(context),
     );
@@ -43,11 +43,92 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
+        Padding(
+          padding: EdgeInsets.only(top: 12, bottom: 4, left: 12, right: 12),
+          child: _buildSettings(context),
+        ),
+        Divider(),
         Expanded(
           child: _buildList(context),
         ),
         _buildBottomContainerBuilder(context),
       ],
+    );
+  }
+
+  Widget _buildSettings(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        _buildTimerSettings(context),
+      ],
+    );
+  }
+
+  Widget _buildTimerSettings(BuildContext context) {
+    return StreamBuilder(
+      stream: widget._viewModel.isTimerChecked,
+      builder: (context, snapshot) {
+        bool isChecked = snapshot.data;
+
+        if (snapshot.hasData) {
+          return Row(
+            children: <Widget>[
+              Expanded(
+                child: _buildTimerCheckbox(context, isChecked),
+              ),
+              if (isChecked)
+              Padding(
+                padding: EdgeInsets.only(right: 12),
+                child: _buildTimerDropdown(context),
+              ),
+            ],
+          );
+        } else {
+          return Text('Loading');
+        }
+      }
+    );
+  }
+
+  Widget _buildTimerCheckbox(BuildContext context, bool isChecked) {
+    return CheckboxListTile(
+      title: Text('Timer (s)'),
+      onChanged: (newValue) {
+        widget._viewModel.onTimerCheckboxAction(newValue);
+      },
+      value: isChecked,
+      controlAffinity: ListTileControlAffinity.leading,
+    );
+  }
+
+  Widget _buildTimerDropdown(BuildContext context) {
+    return StreamBuilder(
+      stream: widget._viewModel.timerValue,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return DropdownButton(
+            hint: Text(snapshot.data),
+            style: TextStyle(color: Colors.blue),
+            items: ['15', '30', '45', '60', '75', '90'].map(
+              (val) {
+                return DropdownMenuItem<String>(
+                  value: val,
+                  child: Text(val),
+                );
+              },
+            ).toList(),
+            onChanged: (newValue) {
+              setState(
+                () {
+                  widget._viewModel.timerDropdownAction(newValue);
+                },
+              );
+            },
+          );
+        } else {
+          return Container();
+        }
+      },
     );
   }
 

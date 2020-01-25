@@ -5,6 +5,7 @@ import 'package:rxdart/rxdart.dart';
 import 'package:crocodile_game/app/service/services.dart';
 import 'package:crocodile_game/app/ui/team_play/module.dart';
 import 'package:crocodile_game/app/model/models.dart';
+import 'package:crocodile_game/app/model/enum/enums.dart';
 
 class TeamPlayViewModel implements TeamPlayViewModelType {
 
@@ -12,16 +13,22 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   GeneratorServiceType _generatorService;
   RemoteAnalyticsServiceType _remoteAnalyticsService;
 
+  final _modeController = BehaviorSubject<TeamPlayMode>();
   final _itemController = BehaviorSubject<String>();
 
   List<CategoryInfoItem> _selectedCategories = [];
+  TeamPlayMode _mode = TeamPlayMode.prepare;
 
   TeamPlayViewModel(this._injector, this._selectedCategories) {
     _generatorService = _injector.getDependency<GeneratorServiceType>();
     _remoteAnalyticsService = _injector.getDependency<RemoteAnalyticsServiceType>();
   }
 
+  @override
   Stream<String> get item => _itemController.stream;
+
+  @override
+  Stream<TeamPlayMode> get mode => _modeController.stream;
 
   @override
   void initState(BuildContext context) async {
@@ -38,6 +45,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   @override
   void dispose() {
     _itemController.close();
+    _modeController.close();
   }
 
   void _generateNewWord(BuildContext context) async {
