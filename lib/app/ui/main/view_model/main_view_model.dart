@@ -52,6 +52,9 @@ class MainViewModel implements MainViewModelType {
   @override
   void languageDropDownAction(Language language) {
     AppLocalizations.load(Locale(language.code, language.country));
+    
+    AnalyticsEventType event = RemoteAnalyticsEvent(name: "switch_language");
+    _remoteAnalyticsService.sendAnalyticsEvent(event);
   }
 
 }
