@@ -56,9 +56,9 @@ class _TeamPlayPageState extends State<TeamPlayPage> {
 
   String getBottomBannerId() {
     if (Platform.isAndroid) {
-      return "ca-app-pub-4667215880477199/9071919868";
+      return "ca-app-pub-4667215880477199/8333965958";
     } else if (Platform.isIOS) {
-      return "ca-app-pub-4667215880477199/8928449638";
+      return "ca-app-pub-4667215880477199/6693581224";
     } else {
       return "";
     }
