@@ -17,11 +17,20 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   final _itemController = BehaviorSubject<String>();
 
   List<CategoryInfoItem> _selectedCategories = [];
+  List<TeamItem> _teams = [];
+  bool _isTimerEnabled = false;
+  int _timerSeconds = 0;
+
   TeamPlayMode _mode = TeamPlayMode.prepare;
 
-  TeamPlayViewModel(this._injector, this._selectedCategories) {
+  TeamPlayViewModel(this._injector, TeamPlayModeBuilder params) {
     _generatorService = _injector.getDependency<GeneratorServiceType>();
     _remoteAnalyticsService = _injector.getDependency<RemoteAnalyticsServiceType>();
+
+    _selectedCategories = params.categories;
+    _teams = params.teams;
+    _isTimerEnabled = params.isTimerTurnedOn;
+    _timerSeconds = params.timerSeconds;
   }
 
   @override

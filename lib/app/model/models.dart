@@ -5,3 +5,4 @@ export 'package:crocodile_game/app/model/analytics_event.dart';
 export 'package:crocodile_game/app/model/language.dart';
 export 'package:crocodile_game/app/model/category_info_item.dart';
 export 'package:crocodile_game/app/model/team_item.dart';
+export 'package:crocodile_game/app/model/team_play_mode_builder.dart';

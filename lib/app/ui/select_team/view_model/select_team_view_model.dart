@@ -16,7 +16,7 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
 
   final List<CategoryInfoItem> _selectedCategories;
 
-  final _itemsController = BehaviorSubject<List<TeamItem>>();
+  final _teamsController = BehaviorSubject<List<TeamItem>>();
   final _startButtonEnabledController = BehaviorSubject<bool>();
   final _timerCheckboxController = BehaviorSubject<bool>();
   final _timerDropdownController = BehaviorSubject<String>();
@@ -26,7 +26,7 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   }
 
   @override
-  Stream<List<TeamItem>> get getTeamsStream => _itemsController.stream;
+  Stream<List<TeamItem>> get getTeamsStream => _teamsController.stream;
 
   @override
   Stream<bool> get startGameButtonEnabledStream => _startButtonEnabledController.stream;
@@ -44,7 +44,7 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
     teams.add(TeamItem(name: 'Team 1', id: Random().nextInt(1000000).toString()));
     teams.add(TeamItem(name: 'Team 2', id: Random().nextInt(1000000).toString()));
 
-    _itemsController.sink.add(teams);
+    _teamsController.sink.add(teams);
 
     // enable timer checkbox by default
     _timerCheckboxController.sink.add(true);
@@ -62,7 +62,14 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
 
   @override
   void onTeamDeleteTap(TeamItem item) async {
-    print('Delete');
+    List<TeamItem> currentTeams = _teamsController.value;
+
+    var teamToDelete = currentTeams.firstWhere((team) => team.id == item.id, orElse: () => null);
+    currentTeams.remove(teamToDelete);
+
+    _teamsController.sink.add(currentTeams);
+
+    _updateStartGameButtonState();
   }
 
   @override
@@ -79,13 +86,25 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   void startGameAction(BuildContext context) {
     AnalyticsEventType event = RemoteAnalyticsEvent(name: "open_screen", parameters: { 'screen': 'team_play', 'from': 'select_team' });
     _remoteAnalyticsService.sendAnalyticsEvent(event);
-    TeamPlayViewModelType vm = TeamPlayViewModel(_injector, _selectedCategories);
+
+    TeamPlayModeBuilder params = TeamPlayModeBuilder();
+    params.categories = _selectedCategories;
+    params.teams = _teamsController.value;
+    params.isTimerTurnedOn = _timerCheckboxController.value;
+    params.timerSeconds = int.tryParse(_timerDropdownController.value) ?? 0;
+
+    TeamPlayViewModelType vm = TeamPlayViewModel(_injector, params);
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => TeamPlayPage(vm)));
+  }
+
+  void _updateStartGameButtonState() {
+    bool isEnabled = _teamsController.value.isNotEmpty;
+    _startButtonEnabledController.sink.add(isEnabled);
   }
 
   @override
   void dispose() {
-    _itemsController.close();
+    _teamsController.close();
     _startButtonEnabledController.close();
     _timerCheckboxController.close();
     _timerDropdownController.close();
