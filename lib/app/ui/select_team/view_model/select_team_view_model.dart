@@ -6,6 +6,8 @@ import 'package:crocodile_game/app/ui/team_play/module.dart';
 import 'package:crocodile_game/app/model/models.dart';
 import 'package:crocodile_game/app/service/services.dart';
 
+import 'dart:math';
+
 class SelectTeamViewModel implements SelectTeamViewModelType {
 
   final Injector _injector;
@@ -29,12 +31,22 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
 
   @override
   void initState(BuildContext context) async {
-    
+    List<TeamItem> teams = [];
+
+    teams.add(TeamItem(name: 'Team 1', id: Random().nextInt(1000000).toString()));
+    teams.add(TeamItem(name: 'Team 2', id: Random().nextInt(1000000).toString()));
+
+    _itemsController.sink.add(teams);
   }
 
   @override
   void handleTeamItemTap(TeamItem item) async {
-    
+    print('Item');
+  }
+
+  @override
+  void onTeamDeleteTap(TeamItem item) async {
+    print('Delete');
   }
 
   @override

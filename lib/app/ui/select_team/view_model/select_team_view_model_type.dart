@@ -7,6 +7,7 @@ abstract class SelectTeamViewModelType {
 
   void startGameAction(BuildContext context);
   void handleTeamItemTap(TeamItem item);
+  void onTeamDeleteTap(TeamItem item);
 
   void initState(BuildContext context);
   void dispose();

@@ -84,12 +84,13 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
       onTap: () {
         widget._viewModel.handleTeamItemTap(item);
       },
-      child: TeamItemWidget(item: item, onDeleteCallback: onTeamItemDelete),
+      child: TeamItemWidget(
+        item: item, 
+        onDeleteCallback: () {
+          widget._viewModel.onTeamDeleteTap(item);
+        },
+      ),
     );
-  }
-
-  void onTeamItemDelete(TeamItem item) {
-    print('Delete');
   }
 
   Widget _buildBottomContainerBuilder(BuildContext context) {

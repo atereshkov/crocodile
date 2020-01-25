@@ -45,11 +45,11 @@ class TeamItemWidget extends StatelessWidget {
   }
 
   Widget _buildDeleteIcon(BuildContext context) {
-    return InkWell(
-      onTap: () {
+    return IconButton(
+      icon: Icon(Icons.delete, color: Colors.blue),
+      onPressed: () {
         onDeleteCallback();
       },
-      child: Icon(Icons.delete, color: Colors.blue),
     );
   }
 
