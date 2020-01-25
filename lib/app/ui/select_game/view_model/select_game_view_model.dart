@@ -3,6 +3,7 @@ import 'package:rxdart/rxdart.dart';
 import 'package:flutter/material.dart';
 import 'package:crocodile_game/app/ui/select_game/module.dart';
 import 'package:crocodile_game/app/ui/single_play/module.dart';
+import 'package:crocodile_game/app/ui/team_play/module.dart';
 import 'package:crocodile_game/app/model/models.dart';
 import 'package:crocodile_game/app/provider/providers.dart';
 import 'package:crocodile_game/app/service/services.dart';
@@ -81,10 +82,22 @@ class SelectGameViewModel implements SelectGameViewModelType {
 
   @override
   void startGameAction(BuildContext context) {
-    AnalyticsEventType event = RemoteAnalyticsEvent(name: "open_screen", parameters: { 'screen': 'single_play', 'from': 'main' });
-    _remoteAnalyticsService.sendAnalyticsEvent(event);
-    SinglePlayViewModelType vm = SinglePlayViewModel(_injector, currentCategories);
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SinglePlayPage(vm)));
+    GameType type = _gameTypeController.value;
+
+    switch (type) {
+      case GameType.single:
+        AnalyticsEventType event = RemoteAnalyticsEvent(name: "open_screen", parameters: { 'screen': 'single_play', 'from': 'main' });
+        _remoteAnalyticsService.sendAnalyticsEvent(event);
+        SinglePlayViewModelType vm = SinglePlayViewModel(_injector, currentCategories);
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => SinglePlayPage(vm)));
+        break;
+      case GameType.team:
+        AnalyticsEventType event = RemoteAnalyticsEvent(name: "open_screen", parameters: { 'screen': 'team_play', 'from': 'main' });
+        _remoteAnalyticsService.sendAnalyticsEvent(event);
+        TeamPlayViewModelType vm = TeamPlayViewModel(_injector, currentCategories);
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => TeamPlayPage(vm)));
+        break;
+    }
   }
 
   @override

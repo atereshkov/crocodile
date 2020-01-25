@@ -1,6 +1,6 @@
 import 'package:crocodile_game/app/localization/app_localizations.dart';
 import 'package:flutter/material.dart';
-import 'package:crocodile_game/app/ui/single_play/view_model/single_play_view_model_type.dart';
+import 'package:crocodile_game/app/ui/single_play/module.dart';
 
 import 'dart:io' show Platform;
 import 'package:admob_flutter/admob_flutter.dart';

@@ -70,7 +70,7 @@ class _SelectGamePageState extends State<SelectGamePage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               _buildSingleGameWidget(context, singleGameActive),
-              // _buildTeamGameWidget(context, teamGameActive),
+              _buildTeamGameWidget(context, teamGameActive),
             ],
           );
         } else {
