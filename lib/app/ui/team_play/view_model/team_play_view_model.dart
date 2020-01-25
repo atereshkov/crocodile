@@ -35,6 +35,9 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     _remoteAnalyticsService.setCurrentScreen('team_play');
     await _generatorService.start(context, _selectedCategories);
     _generateNewWord(context);
+
+    // set current mode as default
+    _modeController.sink.add(_mode);
   }
 
   @override

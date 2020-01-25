@@ -51,14 +51,18 @@ class _TeamPlayPageState extends State<TeamPlayPage> {
     return StreamBuilder(
       stream: widget._viewModel.mode,
       builder: (context, snapshot) {
-        TeamPlayMode mode = snapshot.data;
-        switch (mode) {
-          case TeamPlayMode.prepare:
-          return _buildPrepareMode(context);
-          case TeamPlayMode.game:
-          return _buildGameMode(context);
-          case TeamPlayMode.results:
-          return _buildResultsMode(context);
+        if (snapshot.hasData) {
+          TeamPlayMode mode = snapshot.data;
+          switch (mode) {
+            case TeamPlayMode.prepare:
+              return _buildPrepareMode(context);
+            case TeamPlayMode.game:
+              return _buildGameMode(context);
+            case TeamPlayMode.results:
+              return _buildResultsMode(context);
+          }
+        } else {
+          return Container();
         }
       }
     );
