@@ -98,13 +98,21 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
   }
 
   Widget _buildTimerCheckbox(BuildContext context, bool isChecked) {
-    return CheckboxListTile(
-      title: Text('Timer (seconds)'),
-      onChanged: (newValue) {
-        widget._viewModel.onTimerCheckboxAction(newValue);
+    return InkWell(
+      child: Row(
+        children: <Widget>[
+          Checkbox(
+            value: isChecked,
+            onChanged: (newValue) {
+              widget._viewModel.onTimerCheckboxAction(newValue);
+            },
+          ),
+          Text('Timer (seconds)'),
+        ],
+      ),
+      onTap: () {
+        widget._viewModel.onTimerCheckboxAction(!isChecked);
       },
-      value: isChecked,
-      controlAffinity: ListTileControlAffinity.leading,
     );
   }
 
