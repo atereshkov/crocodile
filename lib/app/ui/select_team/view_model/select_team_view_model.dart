@@ -64,7 +64,7 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
         List<TeamItem> currentTeams = _teamsController.value;
 
         // avoid changing team name to already existing one
-        final duplicatedTeam = currentTeams.firstWhere((i) => i.id == item.id, orElse: () => null);
+        final duplicatedTeam = currentTeams.firstWhere((i) => i.name == newTeamName, orElse: () => null);
         if (duplicatedTeam != null) {
           return;
         }
