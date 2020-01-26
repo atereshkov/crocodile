@@ -73,6 +73,21 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   }
 
   @override
+  void onTeamRenameTap(TeamItem item) async {
+    List<TeamItem> currentTeams = _teamsController.value;
+
+    var teamToRename = currentTeams.firstWhere((team) => team.id == item.id, orElse: () => null);
+    int prevIndex = currentTeams.indexOf(teamToRename);
+    currentTeams.remove(teamToRename);
+    teamToRename.rename('New name');
+    currentTeams.insert(prevIndex, teamToRename);
+
+    _teamsController.sink.add(currentTeams);
+
+    _updateStartGameButtonState();
+  }
+
+  @override
   void onTimerCheckboxAction(bool value) {
     _timerCheckboxController.sink.add(value);
   }
@@ -80,6 +95,16 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   @override
   void timerDropdownAction(String value) {
     _timerDropdownController.sink.add(value);
+  }
+
+  @override
+  void addTeamAction() {
+    List<TeamItem> currentTeams = _teamsController.value;
+    TeamItem newTeam = TeamItem(id: Random().nextInt(1000000).toString(), name: 'Team ${currentTeams.length + 1}');
+    currentTeams.add(newTeam);
+    _teamsController.sink.add(currentTeams);
+
+    _updateStartGameButtonState();
   }
 
   @override

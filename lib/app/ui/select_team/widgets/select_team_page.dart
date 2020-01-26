@@ -145,10 +145,18 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
                 return Divider(indent: 12, height: 2.0);
               },
               itemBuilder: (BuildContext context, int index) {
-                TeamItem item = items[index];
-                return _buildItem(context, item);
+                if (items.isEmpty) {
+                  return _buildAddTeamButton(context);
+                } else {
+                  if (index == items.length) {
+                    return _buildAddTeamButton(context);
+                  } else {
+                    TeamItem item = items[index];
+                    return _buildItem(context, item);
+                  }
+                }
               },
-              itemCount: items == null ? 0 : items.length,
+              itemCount: items == null ? 1 : items.length + 1,
             ),
           );
         } else {
@@ -170,6 +178,24 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
         onDeleteCallback: () {
           widget._viewModel.onTeamDeleteTap(item);
         },
+        onRenameCallback: () {
+          widget._viewModel.onTeamRenameTap(item);
+        },
+      ),
+    );
+  }
+
+  Widget _buildAddTeamButton(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: EdgeInsets.only(top: 14),
+        child: IconButton(
+          iconSize: 32,
+          icon: Icon(Icons.add),
+          onPressed: () {
+            widget._viewModel.addTeamAction();
+          },
+        ),
       ),
     );
   }

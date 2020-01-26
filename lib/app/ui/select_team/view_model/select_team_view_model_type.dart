@@ -10,8 +10,10 @@ abstract class SelectTeamViewModelType {
   void startGameAction(BuildContext context);
   void handleTeamItemTap(TeamItem item);
   void onTeamDeleteTap(TeamItem item);
+  void onTeamRenameTap(TeamItem item);
   void onTimerCheckboxAction(bool value);
   void timerDropdownAction(String value);
+  void addTeamAction();
 
   void initState(BuildContext context);
   void dispose();
