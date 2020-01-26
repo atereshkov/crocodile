@@ -48,6 +48,13 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
           child: _buildSettings(context),
         ),
         Divider(),
+        Padding(
+          padding: EdgeInsets.only(left: 12, top: 2, bottom: 0, right: 14),
+          child: Text(
+            'Teams',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ),
         Expanded(
           child: _buildList(context),
         ),
@@ -92,7 +99,7 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
 
   Widget _buildTimerCheckbox(BuildContext context, bool isChecked) {
     return CheckboxListTile(
-      title: Text('Timer (s)'),
+      title: Text('Timer (seconds)'),
       onChanged: (newValue) {
         widget._viewModel.onTimerCheckboxAction(newValue);
       },

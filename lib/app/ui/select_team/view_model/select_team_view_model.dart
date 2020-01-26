@@ -43,12 +43,7 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   void initState(BuildContext context) async {
     await _teamGeneratorService.start(context);
 
-    List<TeamItem> teams = [];
-
-    teams.add(TeamItem(name: 'Team 1', id: Random().nextInt(1000000).toString()));
-    teams.add(TeamItem(name: 'Team 2', id: Random().nextInt(1000000).toString()));
-
-    _teamsController.sink.add(teams);
+    await _addStubTeams(context);
 
     // enable timer checkbox by default
     _timerCheckboxController.sink.add(true);
@@ -136,6 +131,20 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   void _updateStartGameButtonState() {
     bool isEnabled = _teamsController.value.isNotEmpty;
     _startButtonEnabledController.sink.add(isEnabled);
+  }
+
+  Future<void> _addStubTeams(BuildContext context) async {
+    List<TeamItem> teams = [];
+
+    String team1Name = await _teamGeneratorService.getRandomTeamName(context, []);
+    TeamItem team1 = TeamItem(name: team1Name, id: Random().nextInt(1000000).toString());
+    teams.add(team1);
+
+    String team2Name = await _teamGeneratorService.getRandomTeamName(context, teams.map((t) => t.name).toList());
+    TeamItem team2 = TeamItem(name: team2Name, id: Random().nextInt(1000000).toString());
+    teams.add(team2);
+
+    _teamsController.sink.add(teams);
   }
 
   @override
