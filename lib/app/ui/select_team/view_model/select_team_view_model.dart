@@ -13,6 +13,7 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   final Injector _injector;
 
   RemoteAnalyticsServiceType _remoteAnalyticsService;
+  TeamGeneratorServiceType _teamGeneratorService;
 
   final List<CategoryInfoItem> _selectedCategories;
 
@@ -23,6 +24,7 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
 
   SelectTeamViewModel(this._injector, this._selectedCategories) {
     _remoteAnalyticsService = _injector.getDependency<RemoteAnalyticsServiceType>();
+    _teamGeneratorService = _injector.getDependency<TeamGeneratorServiceType>();
   }
 
   @override
@@ -39,6 +41,8 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   
   @override
   void initState(BuildContext context) async {
+    await _teamGeneratorService.start(context);
+
     List<TeamItem> teams = [];
 
     teams.add(TeamItem(name: 'Team 1', id: Random().nextInt(1000000).toString()));
@@ -73,13 +77,15 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   }
 
   @override
-  void onTeamRenameTap(TeamItem item) async {
+  void onTeamRenameTap(BuildContext context, TeamItem item) async {
     List<TeamItem> currentTeams = _teamsController.value;
 
     var teamToRename = currentTeams.firstWhere((team) => team.id == item.id, orElse: () => null);
     int prevIndex = currentTeams.indexOf(teamToRename);
     currentTeams.remove(teamToRename);
-    teamToRename.rename('New name');
+
+    String randomTeamName = await _teamGeneratorService.getRandomTeamName(context);
+    teamToRename.rename(randomTeamName);
     currentTeams.insert(prevIndex, teamToRename);
 
     _teamsController.sink.add(currentTeams);

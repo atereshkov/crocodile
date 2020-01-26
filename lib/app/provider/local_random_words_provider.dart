@@ -8,7 +8,7 @@ class LocalRandomWordsProvider implements RandomWordsProviderType {
 
   @override
   Future<List<WordItem>> getAllWords(BuildContext context) async {
-    var jsonWords = _getJsonWords(context);
+    var jsonWords = await _getJsonWords(context);
 
     List<WordItem> items = [];
     for (var model in jsonWords) {
@@ -37,7 +37,7 @@ class LocalRandomWordsProvider implements RandomWordsProviderType {
     return Future.value(items);
   }
 
-  dynamic _getJsonWords(BuildContext context) async {
+  Future<dynamic> _getJsonWords(BuildContext context) async {
     String lang = AppLocalizations.of(context).getCurrentLangCode;
     String resourceFile = 'resources/words_$lang.json';
     String jsonData = await DefaultAssetBundle.of(context).loadString(resourceFile);

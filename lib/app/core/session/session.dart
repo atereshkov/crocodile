@@ -10,8 +10,11 @@ class Session implements SessionType {
   @override
   void registerDependencies(Injector injector) {  
     final wordProvider = LocalRandomWordsProvider();
-
     injector.registerSingleton<GeneratorServiceType>((_) => GeneratorService(wordProvider));
+
+    final teamNameProvider = LocalRandomNamesProvider();
+    injector.registerSingleton<TeamGeneratorServiceType>((_) => TeamGeneratorService(teamNameProvider));
+
     injector.registerSingleton<RemoteAnalyticsServiceType>((_) => FirebaseAnalyticsService());
     injector.registerSingleton<LanguageProviderType>((_) => LanguageProvider());
     injector.registerSingleton<CategoryProviderType>((_) => CategoryProvider());

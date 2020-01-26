@@ -6,3 +6,4 @@ export 'package:crocodile_game/app/model/language.dart';
 export 'package:crocodile_game/app/model/category_info_item.dart';
 export 'package:crocodile_game/app/model/team_item.dart';
 export 'package:crocodile_game/app/model/team_play_mode_builder.dart';
+export 'package:crocodile_game/app/model/team_name_item.dart';

@@ -179,7 +179,7 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
           widget._viewModel.onTeamDeleteTap(item);
         },
         onRenameCallback: () {
-          widget._viewModel.onTeamRenameTap(item);
+          widget._viewModel.onTeamRenameTap(context, item);
         },
       ),
     );
