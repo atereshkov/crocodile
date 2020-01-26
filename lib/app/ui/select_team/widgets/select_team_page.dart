@@ -204,12 +204,23 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
     return Center(
       child: Padding(
         padding: EdgeInsets.only(top: 14),
-        child: IconButton(
-          iconSize: 32,
-          icon: Icon(Icons.add),
-          onPressed: () {
-            widget._viewModel.addTeamAction(context);
-          },
+        child: Column(
+          children: <Widget>[
+            IconButton(
+              iconSize: 32,
+              icon: Icon(Icons.add),
+              onPressed: () {
+                widget._viewModel.addTeamAction(context);
+              },
+            ),
+            Text(
+              'Add team',
+              style: TextStyle(
+                fontSize: 12,
+                color: Color(0xFF4F4F4F),
+              )
+            ),
+          ],
         ),
       ),
     );
