@@ -186,7 +186,7 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
   Widget _buildItem(BuildContext context, TeamItem item) {
     return InkWell(
       onTap: () {
-        widget._viewModel.handleTeamItemTap(item);
+        widget._viewModel.handleTeamItemTap(context, item);
       },
       child: TeamItemWidget(
         item: item, 

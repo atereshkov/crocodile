@@ -8,7 +8,7 @@ abstract class SelectTeamViewModelType {
   Stream<String> get timerValue;
 
   void startGameAction(BuildContext context);
-  void handleTeamItemTap(TeamItem item);
+  void handleTeamItemTap(BuildContext context, TeamItem item);
   void onTeamDeleteTap(TeamItem item);
   void onTeamRenameTap(BuildContext context, TeamItem item);
   void onTimerCheckboxAction(bool value);

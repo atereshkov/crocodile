@@ -5,6 +5,7 @@ import 'package:crocodile_game/app/ui/select_team/module.dart';
 import 'package:crocodile_game/app/ui/team_play/module.dart';
 import 'package:crocodile_game/app/model/models.dart';
 import 'package:crocodile_game/app/service/services.dart';
+import 'package:crocodile_game/app/ui/dialog/text_dialog.dart';
 
 import 'dart:math';
 
@@ -55,8 +56,29 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   }
 
   @override
-  void handleTeamItemTap(TeamItem item) async {
-    print('Item');
+  void handleTeamItemTap(BuildContext context, TeamItem item) async {
+    TextDialogPresenterType dialogPresenter = TextDialogPresenter(
+      'Change name',
+      item.name,
+      (newTeamName) async {
+        List<TeamItem> currentTeams = _teamsController.value;
+
+        // avoid changing team name to already existing one
+        final duplicatedTeam = currentTeams.firstWhere((i) => i.id == item.id, orElse: () => null);
+        if (duplicatedTeam != null) {
+          return;
+        }
+
+        int prevIndex = currentTeams.indexOf(item);
+        currentTeams.remove(item);
+
+        item.rename(newTeamName);
+        currentTeams.insert(prevIndex, item);
+
+        _teamsController.sink.add(currentTeams);
+      },
+    );
+    dialogPresenter.show(context);
   }
 
   @override
