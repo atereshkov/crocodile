@@ -13,7 +13,7 @@ abstract class SelectTeamViewModelType {
   void onTeamRenameTap(BuildContext context, TeamItem item);
   void onTimerCheckboxAction(bool value);
   void timerDropdownAction(String value);
-  void addTeamAction();
+  void addTeamAction(BuildContext context);
 
   void initState(BuildContext context);
   void dispose();

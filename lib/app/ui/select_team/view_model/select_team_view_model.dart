@@ -105,9 +105,13 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   }
 
   @override
-  void addTeamAction() {
+  void addTeamAction(BuildContext context) async {
     List<TeamItem> currentTeams = _teamsController.value;
-    TeamItem newTeam = TeamItem(id: Random().nextInt(1000000).toString(), name: 'Team ${currentTeams.length + 1}');
+
+    List<String> currentTeamNames = currentTeams.map((t) => t.name).toList();
+    String randomTeamName = await _teamGeneratorService.getRandomTeamName(context, currentTeamNames);
+
+    TeamItem newTeam = TeamItem(id: Random().nextInt(1000000).toString(), name: randomTeamName);
     currentTeams.add(newTeam);
     _teamsController.sink.add(currentTeams);
 

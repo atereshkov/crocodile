@@ -193,7 +193,7 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
           iconSize: 32,
           icon: Icon(Icons.add),
           onPressed: () {
-            widget._viewModel.addTeamAction();
+            widget._viewModel.addTeamAction(context);
           },
         ),
       ),
