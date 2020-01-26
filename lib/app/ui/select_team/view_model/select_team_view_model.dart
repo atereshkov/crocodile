@@ -41,8 +41,6 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   
   @override
   void initState(BuildContext context) async {
-    await _teamGeneratorService.start(context);
-
     List<TeamItem> teams = [];
 
     teams.add(TeamItem(name: 'Team 1', id: Random().nextInt(1000000).toString()));
@@ -84,7 +82,8 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
     int prevIndex = currentTeams.indexOf(teamToRename);
     currentTeams.remove(teamToRename);
 
-    String randomTeamName = await _teamGeneratorService.getRandomTeamName(context);
+    List<String> currentTeamNames = currentTeams.map((t) => t.name).toList();
+    String randomTeamName = await _teamGeneratorService.getRandomTeamName(context, currentTeamNames);
     teamToRename.rename(randomTeamName);
     currentTeams.insert(prevIndex, teamToRename);
 

@@ -20,14 +20,22 @@ class TeamGeneratorService implements TeamGeneratorServiceType {
   }
 
   @override
-  Future<String> getRandomTeamName(BuildContext context) async {
+  Future<String> getRandomTeamName(BuildContext context, List<String> exclude) async {
     if (_allNames.length == 0) {
       _allNames = await _loadNames(context);
       _seenNames.clear();
     }
 
-    final _random = new Random();
-    final randomItem = _allNames[_random.nextInt(_allNames.length)];
+    for (String excludeName in exclude) {
+      var foundItem = _allNames.firstWhere((t) => t.name == excludeName, orElse: () => null);
+      _allNames.remove(foundItem);
+    }
+
+    if (_allNames.isEmpty) {
+      return Future.value('Team');
+    }
+
+    final randomItem = _allNames[Random().nextInt(_allNames.length)];
 
     _seenNames.add(randomItem);
     _allNames.remove(randomItem);

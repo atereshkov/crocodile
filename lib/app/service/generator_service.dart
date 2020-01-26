@@ -29,8 +29,7 @@ class GeneratorService implements GeneratorServiceType {
       _seenWords.clear();
     }
 
-    final _random = new Random();
-    final randomItem = _allWords[_random.nextInt(_allWords.length)];
+    final randomItem = _allWords[Random().nextInt(_allWords.length)];
 
     _seenWords.add(randomItem);
     _allWords.remove(randomItem);
