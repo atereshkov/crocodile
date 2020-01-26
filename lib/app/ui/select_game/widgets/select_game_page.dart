@@ -117,26 +117,47 @@ class _SelectGamePageState extends State<SelectGamePage> {
   }
 
   Widget _buildActiveSingleGameWidget(BuildContext context) {
+    double containerSize = MediaQuery.of(context).size.width * 0.2;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Container(
-          child: _buildSinglePlayIcon(context),
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                blurRadius: 10.0,
-                spreadRadius: 2.0,
-              )
-            ],
-          ),
+        Stack(
+          children: <Widget>[
+            Container(
+              child: _buildSinglePlayIcon(context),
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    blurRadius: 10.0,
+                    spreadRadius: 2.0,
+                  )
+                ],
+              ),
+            ),
+            Container(
+              height: containerSize,
+              width: containerSize,
+              child: Align(
+              alignment: Alignment.topRight,
+                child: Padding(
+                  padding: EdgeInsets.all(3.0),
+                  child: Icon(
+                    Icons.check_circle,
+                    size: 18,
+                    color: Colors.greenAccent,
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
         Padding(padding: EdgeInsets.only(top: 6)),
         Text(
           AppLocalizations.of(context).selectGameSinglePlay,
           style: TextStyle(
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.bold,
             color: Colors.lightBlue,
           ),
         ),
@@ -156,26 +177,47 @@ class _SelectGamePageState extends State<SelectGamePage> {
   }
 
   Widget _buildActiveTeamGameWidget(BuildContext context) {
+    double containerSize = MediaQuery.of(context).size.width * 0.2;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Container(
-          child: _buildTeamPlayIcon(context),
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                blurRadius: 10.0,
-                spreadRadius: 2.0,
-              )
-            ],
-          ),
+        Stack(
+          children: <Widget>[
+            Container(
+              child: _buildTeamPlayIcon(context),
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    blurRadius: 10.0,
+                    spreadRadius: 2.0,
+                  )
+                ],
+              ),
+            ),
+            Container(
+              height: containerSize,
+              width: containerSize,
+              child: Align(
+              alignment: Alignment.topRight,
+                child: Padding(
+                  padding: EdgeInsets.all(3.0),
+                  child: Icon(
+                    Icons.check_circle,
+                    size: 18,
+                    color: Colors.greenAccent,
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
         Padding(padding: EdgeInsets.only(top: 6)),
         Text(
           AppLocalizations.of(context).selectGameTeamPlay,
           style: TextStyle(
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.bold,
             color: Colors.lightBlue,
           ),
         ),
