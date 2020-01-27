@@ -1143,6 +1143,644 @@
 		      }
 		    }
 		  ]
+		},
+		{
+		  "word": "Ножницы",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Одеяло",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Диван",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Вода",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Цветы",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Тушь",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Помада",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Расчёска",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Серёжки",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Попкорн",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Шприц",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Татуировка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Гитара",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Телефон",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Нож",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Спагетти",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Дартс",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Корона",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Сигарета",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Костёр",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Микрофон",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Книга",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Лампочка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Карандаш",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Тарелка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Унитаз",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Монета",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Невеста",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Телевизор",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Окно",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Конфеты",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Лестница",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Люстра",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Кружка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Бокал",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Танец",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Розетка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Сладкая вата",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Слёзы",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Улитка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Кролик",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Ваза",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Маска",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Интернет",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Сейф",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Фильм",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Сон",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Принтер",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Тамада",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Вишня",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Кимано",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Аэропорт",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Свадьба",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Паспорт",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Зарядное устройство",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Скотч",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Карта мира",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Ёлка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
 		}
 	]
 }

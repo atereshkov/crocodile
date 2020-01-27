@@ -45,7 +45,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     await _generatorService.start(context, _selectedCategories);
     _generateNewWord(context);
 
-    // set current mode as default
+    // set current play mode as starting one
     _modeController.sink.add(_mode);
   }
 
