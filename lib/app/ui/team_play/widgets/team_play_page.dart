@@ -54,10 +54,12 @@ class _TeamPlayPageState extends State<TeamPlayPage> {
         if (snapshot.hasData) {
           TeamPlayMode mode = snapshot.data;
           switch (mode) {
-            case TeamPlayMode.prepare:
+            case TeamPlayMode.start:
               return _buildPrepareMode(context);
-            case TeamPlayMode.game:
-              return _buildGameMode(context);
+            case TeamPlayMode.act:
+              return _buildActMode(context);
+            case TeamPlayMode.nextTeam:
+              return _buildNextTeamMode(context);
             case TeamPlayMode.results:
               return _buildResultsMode(context);
           }
@@ -72,34 +74,12 @@ class _TeamPlayPageState extends State<TeamPlayPage> {
     return Text('Prepare');
   }
 
-  Widget _buildGameMode(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Expanded(
-          child: Stack(
-            children: <Widget>[
-              _gradientBackground(),
-              Center(
-                child: _buildActionContent(context),
-              ),
-            ],
-          ),
-        ),
-        Image(
-          image: AssetImage("resources/images/source2.gif"),
-        ),
-        Container(
-          width: double.maxFinite,
-          color: Color(0xffC1ECFC),
-          child: SafeArea(
-            child: AdmobBanner(
-              adUnitId: getBottomBannerId(),
-              adSize: AdmobBannerSize.BANNER,
-            ),
-          ),
-        ),
-      ],
-    );
+  Widget _buildActMode(BuildContext context) {
+    return Text('Act');
+  }
+
+  Widget _buildNextTeamMode(BuildContext context) {
+    return Text('Next team');
   }
 
   Widget _buildResultsMode(BuildContext context) {

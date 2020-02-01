@@ -1,5 +1,6 @@
 enum TeamPlayMode {
-  prepare,
-  game,
+  start,
+  act,
+  nextTeam,
   results
 }
