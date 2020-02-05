@@ -15,6 +15,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
 
   final _modeController = BehaviorSubject<TeamPlayMode>();
   final _itemController = BehaviorSubject<String>();
+  final _teamController = BehaviorSubject<TeamItem>();
 
   List<CategoryInfoItem> _selectedCategories = [];
   List<TeamItem> _teams = [];
@@ -40,24 +41,65 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   Stream<TeamPlayMode> get mode => _modeController.stream;
 
   @override
+  Stream<TeamItem> get currentTeam => _teamController.stream;
+
+  @override
   void initState(BuildContext context) async {
     _remoteAnalyticsService.setCurrentScreen('team_play');
     await _generatorService.start(context, _selectedCategories);
-    _generateNewWord(context);
 
     // set current play mode as starting one
     _modeController.sink.add(_mode);
+
+    _pickRandomTeam();
   }
 
   @override
-  void generateNewWordAction(BuildContext context) {
+  void startGameAction(BuildContext context) {
     _generateNewWord(context);
+
+    _modeController.sink.add(TeamPlayMode.act);
+  }
+
+  @override
+  void wordGuessedAction(BuildContext context) async {
+    _generateNewWord(context);
+
+    _modeController.sink.add(TeamPlayMode.nextTeam);
+  }
+
+  @override
+  void wordNotGuessedAction(BuildContext context) {
+    _generateNewWord(context);
+    
+    _modeController.sink.add(TeamPlayMode.nextTeam);
+  }
+
+  @override
+  void endGameAction(BuildContext context) {
+    _modeController.sink.add(TeamPlayMode.results);
+  }
+
+  @override
+  void nextTeamPlayAction(BuildContext context) {
+    _modeController.sink.add(TeamPlayMode.act);
+  }
+
+  @override
+  void shareResultsAction(BuildContext context) {
+
+  }
+
+  @override
+  void playAgainAction(BuildContext context) {
+    Navigator.of(context).pop();
   }
 
   @override
   void dispose() {
     _itemController.close();
     _modeController.close();
+    _teamController.close();
   }
 
   void _generateNewWord(BuildContext context) async {
@@ -65,6 +107,10 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     _remoteAnalyticsService.sendAnalyticsEvent(event);
     String word = await _generatorService.getRandomWord(context);
     _itemController.sink.add(word);
+  }
+
+  void _pickRandomTeam() {
+    _teamController.sink.add(_teams.first);
   }
 
 }

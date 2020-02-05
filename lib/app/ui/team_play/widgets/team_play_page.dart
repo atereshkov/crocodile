@@ -1,3 +1,7 @@
+import 'package:crocodile_game/app/ui/team_play/widgets/mode_game_widget.dart';
+import 'package:crocodile_game/app/ui/team_play/widgets/mode_prepare_widget.dart';
+import 'package:crocodile_game/app/ui/team_play/widgets/mode_next_team_widget.dart';
+import 'package:crocodile_game/app/ui/team_play/widgets/mode_results_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:crocodile_game/app/localization/app_localizations.dart';
 import 'package:crocodile_game/app/ui/team_play/module.dart';
@@ -43,47 +47,65 @@ class _TeamPlayPageState extends State<TeamPlayPage> {
 
   Widget _buildAppBar(BuildContext context) {
     return AppBar(
-      title: Text(AppLocalizations.of(context).singlePlayTitle),
+      title: Text('Team Play'),
     );
   }
 
   Widget _buildBody(BuildContext context) {
-    return StreamBuilder(
-      stream: widget._viewModel.mode,
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          TeamPlayMode mode = snapshot.data;
-          switch (mode) {
-            case TeamPlayMode.start:
-              return _buildPrepareMode(context);
-            case TeamPlayMode.act:
-              return _buildActMode(context);
-            case TeamPlayMode.nextTeam:
-              return _buildNextTeamMode(context);
-            case TeamPlayMode.results:
-              return _buildResultsMode(context);
-          }
-        } else {
-          return Container();
-        }
-      }
+    return Column(
+      children: <Widget>[
+        Expanded(
+          child: StreamBuilder(
+            stream: widget._viewModel.mode,
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                TeamPlayMode mode = snapshot.data;
+                switch (mode) {
+                  case TeamPlayMode.start:
+                    return _buildPrepareMode(context);
+                  case TeamPlayMode.act:
+                    return _buildActMode(context);
+                  case TeamPlayMode.nextTeam:
+                    return _buildNextTeamMode(context);
+                  case TeamPlayMode.results:
+                    return _buildResultsMode(context);
+                }
+              } else {
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+            }
+          ),
+        ),
+        Container(
+          width: double.maxFinite,
+          color: Color(0xffC1ECFC),
+          child: SafeArea(
+            child: AdmobBanner(
+              adUnitId: getBottomBannerId(),
+              adSize: AdmobBannerSize.BANNER,
+            ),
+          ),
+        ),
+      ],
     );
   }
 
   Widget _buildPrepareMode(BuildContext context) {
-    return Text('Prepare');
+    return PrepareModeWidget(widget._viewModel);
   }
 
   Widget _buildActMode(BuildContext context) {
-    return Text('Act');
+    return GameModeWidget(widget._viewModel);
   }
 
   Widget _buildNextTeamMode(BuildContext context) {
-    return Text('Next team');
+    return NextTeamModeWidget(widget._viewModel);
   }
 
   Widget _buildResultsMode(BuildContext context) {
-    return Text('Results');
+    return ResultsModeWidget(widget._viewModel);
   }
   
   void _buildViewModel() {
