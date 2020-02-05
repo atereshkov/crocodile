@@ -6,6 +6,7 @@ abstract class TeamPlayViewModelType {
   Stream<String> get item;
   Stream<TeamPlayMode> get mode;
   Stream<TeamItem> get currentTeam;
+  Stream<int> get roundsLeft;
 
   void initState(BuildContext context);
   void startGameAction(BuildContext context);

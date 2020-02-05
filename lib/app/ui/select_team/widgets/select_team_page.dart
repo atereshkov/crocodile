@@ -67,6 +67,7 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
     return Column(
       children: <Widget>[
         _buildTimerSettings(context),
+        _buildRoundSettings(context),
       ],
     );
   }
@@ -87,6 +88,32 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
               Padding(
                 padding: EdgeInsets.only(right: 12),
                 child: _buildTimerDropdown(context),
+              ),
+            ],
+          );
+        } else {
+          return Text('Loading');
+        }
+      }
+    );
+  }
+
+  Widget _buildRoundSettings(BuildContext context) {
+    return StreamBuilder(
+      stream: widget._viewModel.isRoundsChecked,
+      builder: (context, snapshot) {
+        bool isChecked = snapshot.data;
+
+        if (snapshot.hasData) {
+          return Row(
+            children: <Widget>[
+              Expanded(
+                child: _buildRoundsCheckbox(context, isChecked),
+              ),
+              if (isChecked)
+              Padding(
+                padding: EdgeInsets.only(right: 12),
+                child: _buildRoundsDropdown(context),
               ),
             ],
           );
@@ -136,6 +163,56 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
               setState(
                 () {
                   widget._viewModel.timerDropdownAction(newValue);
+                },
+              );
+            },
+          );
+        } else {
+          return Container();
+        }
+      },
+    );
+  }
+
+  Widget _buildRoundsCheckbox(BuildContext context, bool isChecked) {
+    return InkWell(
+      child: Row(
+        children: <Widget>[
+          Checkbox(
+            value: isChecked,
+            onChanged: (newValue) {
+              widget._viewModel.onRoundsCheckboxAction(newValue);
+            },
+          ),
+          Text('Rounds')
+        ],
+      ),
+      onTap: () {
+        widget._viewModel.onRoundsCheckboxAction(!isChecked);
+      },
+    );
+  }
+
+  Widget _buildRoundsDropdown(BuildContext context) {
+    return StreamBuilder(
+      stream: widget._viewModel.roundsValue,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return DropdownButton(
+            hint: Text(snapshot.data),
+            style: TextStyle(color: Colors.blue),
+            items: ['3', '5', '7', '10', '15', '20', '25'].map(
+              (val) {
+                return DropdownMenuItem<String>(
+                  value: val,
+                  child: Text(val),
+                );
+              },
+            ).toList(),
+            onChanged: (newValue) {
+              setState(
+                () {
+                  widget._viewModel.roundsDropdownAction(newValue);
                 },
               );
             },

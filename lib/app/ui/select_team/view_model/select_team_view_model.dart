@@ -21,7 +21,9 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   final _teamsController = BehaviorSubject<List<TeamItem>>();
   final _startButtonEnabledController = BehaviorSubject<bool>();
   final _timerCheckboxController = BehaviorSubject<bool>();
+  final _roundsCheckboxController = BehaviorSubject<bool>();
   final _timerDropdownController = BehaviorSubject<String>();
+  final _roundsDropdownController = BehaviorSubject<String>();
 
   SelectTeamViewModel(this._injector, this._selectedCategories) {
     _remoteAnalyticsService = _injector.getDependency<RemoteAnalyticsServiceType>();
@@ -38,7 +40,13 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   Stream<bool> get isTimerChecked => _timerCheckboxController.stream;
 
   @override
+  Stream<bool> get isRoundsChecked => _roundsCheckboxController.stream;
+
+  @override
   Stream<String> get timerValue => _timerDropdownController.stream;
+
+  @override
+  Stream<String> get roundsValue => _roundsDropdownController.stream;
   
   @override
   void initState(BuildContext context) async {
@@ -49,10 +57,14 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
     // enable timer checkbox by default
     _timerCheckboxController.sink.add(true);
 
+    // enable rounds checkbox by default
+    _roundsCheckboxController.sink.add(true);
+
     // disable play button by default
     _startButtonEnabledController.sink.add(true);
 
     _timerDropdownController.sink.add('60');
+    _roundsDropdownController.sink.add('5');
   }
 
   @override
@@ -122,6 +134,16 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   }
 
   @override
+  void onRoundsCheckboxAction(bool value) {
+    _roundsCheckboxController.sink.add(value);
+  }
+
+  @override
+  void roundsDropdownAction(String value) {
+    _roundsDropdownController.sink.add(value);
+  }
+
+  @override
   void addTeamAction(BuildContext context) async {
     List<TeamItem> currentTeams = _teamsController.value;
 
@@ -174,7 +196,9 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
     _teamsController.close();
     _startButtonEnabledController.close();
     _timerCheckboxController.close();
+    _roundsCheckboxController.close();
     _timerDropdownController.close();
+    _roundsDropdownController.close();
   }
 
 }

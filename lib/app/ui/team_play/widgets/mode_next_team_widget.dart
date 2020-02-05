@@ -27,6 +27,8 @@ class _NextTeamModeWidgetState extends State<NextTeamModeWidget> {
             ]
           ),
         ),
+        _buildRoundsLabel(context),
+        Padding(padding: EdgeInsets.only(bottom: 8)),
         Align(
           alignment: Alignment.bottomCenter,
           child: _buildBottomContainer(context),
@@ -55,6 +57,25 @@ class _NextTeamModeWidgetState extends State<NextTeamModeWidget> {
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
+            ),
+          );
+        } else {
+          return Container();
+        }
+      },
+    );
+  }
+
+  Widget _buildRoundsLabel(BuildContext context) {
+    return StreamBuilder(
+      stream: widget._viewModel.roundsLeft,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          int rounds = snapshot.data;
+          return Text(
+            'Rounds left: $rounds',
+            style: TextStyle(
+              fontSize: 13,
             ),
           );
         } else {
@@ -132,7 +153,7 @@ class _NextTeamModeWidgetState extends State<NextTeamModeWidget> {
         color: Colors.green,
         child: Center(
           child: Text(
-            'Ready, GO',
+            'Ready',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.w500,

@@ -16,6 +16,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   final _modeController = BehaviorSubject<TeamPlayMode>();
   final _itemController = BehaviorSubject<String>();
   final _teamController = BehaviorSubject<TeamItem>();
+  final _roundsLeftController = BehaviorSubject<int>();
 
   List<CategoryInfoItem> _selectedCategories = [];
   List<TeamItem> _teams = [];
@@ -42,6 +43,9 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
 
   @override
   Stream<TeamItem> get currentTeam => _teamController.stream;
+
+  @override
+  Stream<int> get roundsLeft => _roundsLeftController.stream;
 
   @override
   void initState(BuildContext context) async {
@@ -100,6 +104,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     _itemController.close();
     _modeController.close();
     _teamController.close();
+    _roundsLeftController.close();
   }
 
   void _generateNewWord(BuildContext context) async {
