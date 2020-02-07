@@ -10,6 +10,8 @@ class TeamPlayService implements TeamPlayServiceType {
   TeamItem _currentTeam;
   int _rounds = 0;
 
+  final Map<String, int> teamPoints = {};
+
   TeamPlayService();
 
   @override
@@ -42,6 +44,11 @@ class TeamPlayService implements TeamPlayServiceType {
       _rounds--;
       _roundTeams.addAll(_allTeams);
     }
+    if (teamPoints[_currentTeam.id] == null) {
+      teamPoints[_currentTeam.id] = 1;
+    } else {
+      teamPoints[_currentTeam.id]++;
+    }
   }
 
   @override
@@ -49,6 +56,11 @@ class TeamPlayService implements TeamPlayServiceType {
     if (_roundTeams.isEmpty) {
       _rounds--;
       _roundTeams.addAll(_allTeams);
+    }
+    if (teamPoints[_currentTeam.id] == null) {
+      teamPoints[_currentTeam.id] = 0;
+    } else {
+      teamPoints[_currentTeam.id]--;
     }
   }
 
