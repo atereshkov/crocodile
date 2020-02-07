@@ -184,7 +184,8 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
               widget._viewModel.onRoundsCheckboxAction(newValue);
             },
           ),
-          Text('Rounds')
+          Text('Rounds'),
+          // Text('Uncheck for unlimited rounds')
         ],
       ),
       onTap: () {

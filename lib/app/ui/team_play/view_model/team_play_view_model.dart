@@ -11,6 +11,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
 
   final Injector _injector;
   GeneratorServiceType _generatorService;
+  TeamPlayServiceType _teamPlayService;
   RemoteAnalyticsServiceType _remoteAnalyticsService;
 
   final _modeController = BehaviorSubject<TeamPlayMode>();
@@ -20,19 +21,18 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
 
   List<CategoryInfoItem> _selectedCategories = [];
   List<TeamItem> _teams = [];
-  bool _isTimerEnabled = false;
-  int _timerSeconds = 0;
+  TeamPlayModeBuilder gameParameters;
 
   TeamPlayMode _mode = TeamPlayMode.start;
 
   TeamPlayViewModel(this._injector, TeamPlayModeBuilder params) {
     _generatorService = _injector.getDependency<GeneratorServiceType>();
+    _teamPlayService = _injector.getDependency<TeamPlayServiceType>();
     _remoteAnalyticsService = _injector.getDependency<RemoteAnalyticsServiceType>();
 
     _selectedCategories = params.categories;
     _teams = params.teams;
-    _isTimerEnabled = params.isTimerTurnedOn;
-    _timerSeconds = params.timerSeconds;
+    gameParameters = params;
   }
 
   @override
@@ -51,6 +51,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   void initState(BuildContext context) async {
     _remoteAnalyticsService.setCurrentScreen('team_play');
     await _generatorService.start(context, _selectedCategories);
+    await _teamPlayService.start(context, gameParameters);
 
     // set current play mode as starting one
     _modeController.sink.add(_mode);
@@ -68,15 +69,27 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   @override
   void wordGuessedAction(BuildContext context) async {
     _generateNewWord(context);
+    _teamPlayService.wordIsGuessed();
+    _pickRandomTeam();
 
-    _modeController.sink.add(TeamPlayMode.nextTeam);
+    if (_teamPlayService.gameIsActive()) {
+      _modeController.sink.add(TeamPlayMode.nextTeam);
+    } else {
+      _modeController.sink.add(TeamPlayMode.act);
+    }
   }
 
   @override
   void wordNotGuessedAction(BuildContext context) {
     _generateNewWord(context);
+    _teamPlayService.wordIsNotGuessed();
+    _pickRandomTeam();
     
-    _modeController.sink.add(TeamPlayMode.nextTeam);
+    if (_teamPlayService.gameIsActive()) {
+      _modeController.sink.add(TeamPlayMode.nextTeam);
+    } else {
+      _modeController.sink.add(TeamPlayMode.act);
+    }
   }
 
   @override
@@ -91,7 +104,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
 
   @override
   void shareResultsAction(BuildContext context) {
-
+    
   }
 
   @override
@@ -114,8 +127,9 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     _itemController.sink.add(word);
   }
 
-  void _pickRandomTeam() {
-    _teamController.sink.add(_teams.first);
+  void _pickRandomTeam() async {
+    TeamItem team = await _teamPlayService.getRandomTeam();
+    _teamController.sink.add(team);
   }
 
 }

@@ -14,6 +14,7 @@ class Session implements SessionType {
 
     final teamNameProvider = LocalRandomNamesProvider();
     injector.registerSingleton<TeamGeneratorServiceType>((_) => TeamGeneratorService(teamNameProvider));
+    injector.registerSingleton<TeamPlayServiceType>((_) => TeamPlayService());
 
     injector.registerSingleton<RemoteAnalyticsServiceType>((_) => FirebaseAnalyticsService());
     injector.registerSingleton<LanguageProviderType>((_) => LanguageProvider());

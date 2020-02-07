@@ -167,6 +167,7 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
     params.teams = _teamsController.value;
     params.isTimerTurnedOn = _timerCheckboxController.value;
     params.timerSeconds = int.tryParse(_timerDropdownController.value) ?? 0;
+    params.rounds = int.tryParse(_roundsDropdownController.value) ?? 0;
 
     TeamPlayViewModelType vm = TeamPlayViewModel(_injector, params);
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => TeamPlayPage(vm)));

@@ -36,21 +36,21 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
   Widget _buildBottomContainer(BuildContext context) {
     return Row(
       children: <Widget>[
-        Expanded(
-          child: Container(
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.4),
-                  blurRadius: 15.0,
-                  spreadRadius: 3.0,
-                ),
-              ],
-            ),
-            height: 50,
-            child: _buildShareButton(context),
-          ),
-        ),
+        // Expanded(
+        //   child: Container(
+        //     decoration: BoxDecoration(
+        //       boxShadow: [
+        //         BoxShadow(
+        //           color: Colors.grey.withOpacity(0.4),
+        //           blurRadius: 15.0,
+        //           spreadRadius: 3.0,
+        //         ),
+        //       ],
+        //     ),
+        //     height: 50,
+        //     child: _buildShareButton(context),
+        //   ),
+        // ),
         Expanded(
           child: Container(
             decoration: BoxDecoration(
