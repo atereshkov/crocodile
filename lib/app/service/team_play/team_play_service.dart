@@ -27,8 +27,8 @@ class TeamPlayService implements TeamPlayServiceType {
   @override
   Future<TeamItem> getRandomTeam() async {
     var randomTeam = _roundTeams[Random().nextInt(_roundTeams.length)];
-    if (randomTeam.id == _currentTeam.id) {
-      _currentTeam = _roundTeams.firstWhere((t) => t.id != _currentTeam.id, orElse: null);
+    if (_currentTeam != null && randomTeam.id == _currentTeam.id) {
+      _currentTeam = _roundTeams.firstWhere((t) => t.id != _currentTeam.id, orElse: () => null);
     } else {
       _currentTeam = randomTeam;
     }
