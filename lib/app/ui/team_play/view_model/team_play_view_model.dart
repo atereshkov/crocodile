@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:injector/injector.dart';
 import 'package:rxdart/rxdart.dart';
+import 'dart:async';
 
 import 'package:crocodile_game/app/service/services.dart';
 import 'package:crocodile_game/app/ui/team_play/module.dart';
@@ -18,11 +19,13 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   final _itemController = BehaviorSubject<String>();
   final _teamController = BehaviorSubject<TeamItem>();
   final _roundsLeftController = BehaviorSubject<int>();
+  final _timerSecondsLeftController = BehaviorSubject<int>();
 
   List<CategoryInfoItem> _selectedCategories = [];
   List<TeamItem> _teams = [];
   TeamPlayModeBuilder gameParameters;
 
+  Timer _timer;
   TeamPlayMode _mode = TeamPlayMode.start;
 
   TeamPlayViewModel(this._injector, TeamPlayModeBuilder params) {
@@ -48,6 +51,12 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   Stream<int> get roundsLeft => _roundsLeftController.stream;
 
   @override
+  Stream<int> get timerSecondsLeft => _timerSecondsLeftController.stream;
+
+  @override
+  int get fullTimerValue => gameParameters.timerSeconds;
+
+  @override
   void initState(BuildContext context) async {
     _remoteAnalyticsService.setCurrentScreen('team_play');
     await _generatorService.start(context, _selectedCategories);
@@ -57,17 +66,30 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     _modeController.sink.add(_mode);
 
     _pickRandomTeam();
+
+    if (gameParameters.isTimerTurnedOn) {
+      _timerSecondsLeftController.sink.add(gameParameters.timerSeconds);
+    }
   }
 
   @override
   void startGameAction(BuildContext context) {
     _generateNewWord(context);
 
+    if (gameParameters.isTimerTurnedOn) {
+      _timerSecondsLeftController.sink.add(gameParameters.timerSeconds);
+      _runTimer(context);
+    }
+
     _modeController.sink.add(TeamPlayMode.act);
   }
 
   @override
   void wordGuessedAction(BuildContext context) async {
+    if (_timer.isActive) {
+      _timer.cancel();
+    }
+
     _generateNewWord(context);
     _teamPlayService.wordIsGuessed();
     _pickRandomTeam();
@@ -82,6 +104,10 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
 
   @override
   void wordNotGuessedAction(BuildContext context) {
+    if (_timer.isActive) {
+      _timer.cancel();
+    }
+
     _generateNewWord(context);
     _teamPlayService.wordIsNotGuessed();
     _pickRandomTeam();
@@ -101,6 +127,14 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
 
   @override
   void nextTeamPlayAction(BuildContext context) {
+    if (gameParameters.isTimerTurnedOn) {
+      _timerSecondsLeftController.sink.add(gameParameters.timerSeconds);
+      if (_timer.isActive) {
+        _timer.cancel();
+      }
+      _runTimer(context);
+    }
+
     _modeController.sink.add(TeamPlayMode.act);
   }
 
@@ -136,6 +170,8 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     _modeController.close();
     _teamController.close();
     _roundsLeftController.close();
+    _timerSecondsLeftController.close();
+    _timer.cancel();
   }
 
   void _generateNewWord(BuildContext context) async {
@@ -148,6 +184,24 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   void _pickRandomTeam() async {
     TeamItem team = await _teamPlayService.getRandomTeam();
     _teamController.sink.add(team);
+  }
+  
+  void _runTimer(BuildContext context) {
+    int countdown = gameParameters.timerSeconds;
+
+      const timerTick = const Duration(seconds: 1);
+      _timer = Timer.periodic(
+        timerTick, (Timer timer) {
+          if (countdown < 1) {
+            // time is left
+            wordNotGuessedAction(context);
+            timer.cancel();
+          } else {
+            countdown = countdown - 1;
+            _timerSecondsLeftController.sink.add(countdown);
+          }
+        },
+      );
   }
 
 }

@@ -1,5 +1,6 @@
 import 'package:crocodile_game/app/model/models.dart';
 import 'package:crocodile_game/app/ui/team_play/module.dart';
+import 'package:crocodile_game/app/ui/common/circular_countdown.dart';
 import 'package:flutter/material.dart';
 
 class GameModeWidget extends StatefulWidget {
@@ -23,6 +24,7 @@ class _GameModeWidgetState extends State<GameModeWidget> {
             children: <Widget>[
              _buildTeamName(context),
              _buildWord(context),
+             _buildTimer(context),
             ]
           ),
         ),
@@ -61,6 +63,57 @@ class _GameModeWidgetState extends State<GameModeWidget> {
           );
         }
       },
+    );
+  }
+
+  Widget _buildTimer(BuildContext context) {
+    double radius = MediaQuery.of(context).size.width * 0.4;
+
+    return StreamBuilder(
+      stream: widget._viewModel.timerSecondsLeft,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          double percent = (snapshot.data / widget._viewModel.fullTimerValue);
+
+          String text = "${snapshot.data}";
+
+          Widget centerTextWidget;
+          if (snapshot.data >= 10) {
+            centerTextWidget = _buildTimerDefaultText(context, text);
+          } else {
+            centerTextWidget = _buildTimerWarningText(context, text);
+          }
+
+          return CircularCountdown(
+            radius: radius,
+            lineWidth: 5.0,
+            percent: percent,
+            center: centerTextWidget,
+            progressColor: Colors.green,
+          );
+        } else {
+          return Container();
+        }
+      },
+    );
+  }
+
+  Widget _buildTimerDefaultText(BuildContext context, String text) {
+    return Text(
+      text,
+      style: TextStyle(
+        fontSize: 40,
+      ),
+    );
+  }
+
+  Widget _buildTimerWarningText(BuildContext context, String text) {
+    return Text(
+      text,
+      style: TextStyle(
+        fontSize: 45,
+        color: Colors.red,
+      ),
     );
   }
 

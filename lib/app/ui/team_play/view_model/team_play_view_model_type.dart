@@ -7,8 +7,10 @@ abstract class TeamPlayViewModelType {
   Stream<TeamPlayMode> get mode;
   Stream<TeamItem> get currentTeam;
   Stream<int> get roundsLeft;
+  Stream<int> get timerSecondsLeft;
 
   List<TeamPoints> getWinners();
+  int get fullTimerValue;
 
   void initState(BuildContext context);
   void startGameAction(BuildContext context);
