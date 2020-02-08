@@ -21,7 +21,7 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Results'),
+              _buildResultsWidget(context),
             ]
           ),
         ),
@@ -29,6 +29,108 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
           alignment: Alignment.bottomCenter,
           child: _buildBottomContainer(context),
         ),
+      ],
+    );
+  }
+
+  Widget _buildResultsWidget(BuildContext context) {
+    double containerHeight = MediaQuery.of(context).size.height * 0.15;
+    double containerWidth = MediaQuery.of(context).size.width * 0.25;
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: <Widget>[
+        _buildSecondPlaceWidget(context, containerHeight, containerWidth),
+        _buildFirstPlaceWidget(context, containerHeight, containerWidth),
+        _buildThirdPlaceWidget(context, containerHeight, containerWidth),
+      ],
+    );
+  }
+
+  Widget _buildSecondPlaceWidget(BuildContext context, double containerHeight, double containerWidth) {
+    return Column(
+      children: <Widget>[
+        Container(
+          width: containerWidth,
+          child: Center(
+            child: Text(
+              'Kekers Team',
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
+        Padding(padding: EdgeInsets.only(top: 4)),
+        Container(
+          height: containerHeight + 35,
+          width: containerWidth,
+          color: Colors.transparent,
+          child: Center(
+            child: Image(
+              image: AssetImage('resources/images/place_2.png'),
+            ),
+          ),
+        ),
+        Padding(padding: EdgeInsets.only(top: 4)),
+        Text('10 points'),
+      ],
+    );
+  }
+
+  Widget _buildFirstPlaceWidget(BuildContext context, double containerHeight, double containerWidth) {
+    return Column(
+      children: <Widget>[
+        Container(
+          width: containerWidth,
+          child: Center(
+            child: Text(
+              'Whooopers Team',
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
+        Padding(padding: EdgeInsets.only(top: 4)),
+        Container(
+          height: containerHeight + 80,
+          width: containerWidth,
+          color: Colors.transparent,
+          child: Center(
+            child: Image(
+              image: AssetImage('resources/images/place_1.png'),
+            ),
+          ),
+        ),
+        Padding(padding: EdgeInsets.only(top: 4)),
+        Text('15 points'),
+      ],
+    );
+  }
+
+  Widget _buildThirdPlaceWidget(BuildContext context, double containerHeight, double containerWidth) {
+    return Column(
+      children: <Widget>[
+        Container(
+          width: containerWidth,
+          child: Center(
+            child: Text(
+              'Boomers Team',
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
+        Padding(padding: EdgeInsets.only(top: 4)),
+        Container(
+          height: containerHeight + 10,
+          width: containerWidth,
+          color: Colors.transparent,
+          child: Center(
+            child: Image(
+              image: AssetImage('resources/images/place_3.png'),
+            ),
+          ),
+        ),
+        Padding(padding: EdgeInsets.only(top: 4)),
+        Text('5 points'),
       ],
     );
   }
