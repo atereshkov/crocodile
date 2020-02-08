@@ -86,7 +86,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
 
   @override
   void wordGuessedAction(BuildContext context) async {
-    if (_timer.isActive) {
+    if (_timer != null && _timer.isActive) {
       _timer.cancel();
     }
 
@@ -104,7 +104,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
 
   @override
   void wordNotGuessedAction(BuildContext context) {
-    if (_timer.isActive) {
+    if (_timer != null && _timer.isActive) {
       _timer.cancel();
     }
 
@@ -171,7 +171,9 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     _teamController.close();
     _roundsLeftController.close();
     _timerSecondsLeftController.close();
-    _timer.cancel();
+    if (_timer != null) {
+      _timer.cancel();
+    }
   }
 
   void _generateNewWord(BuildContext context) async {

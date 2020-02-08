@@ -111,7 +111,7 @@ class _GameModeWidgetState extends State<GameModeWidget> {
     return Text(
       text,
       style: TextStyle(
-        fontSize: 45,
+        fontSize: 55,
         color: Colors.red,
       ),
     );
