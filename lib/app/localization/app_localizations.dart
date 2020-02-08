@@ -74,5 +74,11 @@ class AppLocalizations {
   String get teamPlayGameWordIsGuessed => Intl.message('Word is guessed', name: 'teamPlayGameWordIsGuessed');
   String get teamPlayGameMinusPoints => Intl.message('-1 point', name: 'teamPlayGameMinusPoints');
   String get teamPlayGamePlusPoints => Intl.message('+2 points', name: 'teamPlayGamePlusPoints');
+
+  String get selectTeamTitle => Intl.message('Team Play', name: 'selectTeamTitle');
+  String get selectTeamTeamsLabel => Intl.message('Teams', name: 'selectTeamTeamsLabel');
+  String get selectTeamTimerSetting => Intl.message('Timer (seconds)', name: 'selectTeamTimerSetting');
+  String get selectTeamRoundsSetting => Intl.message('Rounds', name: 'selectTeamRoundsSetting');
+  String get selectTeamAddTeam => Intl.message('Add team', name: 'selectTeamAddTeam');
   
 }

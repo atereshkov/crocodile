@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-02-08T22:50:53.616439",
+  "@@last_modified": "2020-02-08T22:57:49.182574",
   "mainMenuPlaySingleMode": "Play",
   "@mainMenuPlaySingleMode": {
     "type": "text",
@@ -182,6 +182,31 @@
   },
   "teamPlayGamePlusPoints": "+2 points",
   "@teamPlayGamePlusPoints": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTeamTitle": "Team Play",
+  "@selectTeamTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTeamTeamsLabel": "Teams",
+  "@selectTeamTeamsLabel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTeamTimerSetting": "Timer (seconds)",
+  "@selectTeamTimerSetting": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTeamRoundsSetting": "Rounds",
+  "@selectTeamRoundsSetting": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTeamAddTeam": "Add team",
+  "@selectTeamAddTeam": {
     "type": "text",
     "placeholders": {}
   }

@@ -185,5 +185,30 @@
   "@teamPlayGamePlusPoints": {
     "type": "text",
     "placeholders": {}
+  },
+  "selectTeamTitle": "Team Play",
+  "@selectTeamTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTeamTeamsLabel": "Teams",
+  "@selectTeamTeamsLabel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTeamTimerSetting": "Timer (seconds)",
+  "@selectTeamTimerSetting": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTeamRoundsSetting": "Rounds",
+  "@selectTeamRoundsSetting": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTeamAddTeam": "Add team",
+  "@selectTeamAddTeam": {
+    "type": "text",
+    "placeholders": {}
   }
 }

@@ -185,5 +185,30 @@
   "@teamPlayGamePlusPoints": {
     "type": "text",
     "placeholders": {}
+  },
+  "selectTeamTitle": "Командная игра",
+  "@selectTeamTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTeamTeamsLabel": "Команды",
+  "@selectTeamTeamsLabel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTeamTimerSetting": "Таймер (секунды)",
+  "@selectTeamTimerSetting": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTeamRoundsSetting": "Раунды",
+  "@selectTeamRoundsSetting": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTeamAddTeam": "Добавить команду",
+  "@selectTeamAddTeam": {
+    "type": "text",
+    "placeholders": {}
   }
 }

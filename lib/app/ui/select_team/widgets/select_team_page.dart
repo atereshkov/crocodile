@@ -33,7 +33,7 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Team Play'),
+        title: Text(AppLocalizations.of(context).selectTeamTitle),
       ),
       body: _buildBody(context),
     );
@@ -51,7 +51,7 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
         Padding(
           padding: EdgeInsets.only(left: 12, top: 2, bottom: 0, right: 14),
           child: Text(
-            'Teams',
+            AppLocalizations.of(context).selectTeamTeamsLabel,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
@@ -134,7 +134,7 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
               widget._viewModel.onTimerCheckboxAction(newValue);
             },
           ),
-          Text('Timer (seconds)'),
+          Text(AppLocalizations.of(context).selectTeamTimerSetting),
         ],
       ),
       onTap: () {
@@ -184,7 +184,7 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
               widget._viewModel.onRoundsCheckboxAction(newValue);
             },
           ),
-          Text('Rounds'),
+          Text(AppLocalizations.of(context).selectTeamRoundsSetting),
           // Text('Uncheck for unlimited rounds')
         ],
       ),
@@ -292,7 +292,7 @@ class _SelectTeamPageState extends State<SelectTeamPage> {
               },
             ),
             Text(
-              'Add team',
+              AppLocalizations.of(context).selectTeamAddTeam,
               style: TextStyle(
                 fontSize: 12,
                 color: Color(0xFF4F4F4F),

@@ -222,7 +222,7 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
         color: Colors.green,
         child: Center(
           child: Text(
-            'Play again',
+            AppLocalizations.of(context).teamPlayResultsPlayAgain,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.w500,
