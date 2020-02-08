@@ -1,3 +1,4 @@
+import 'package:crocodile_game/app/localization/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:injector/injector.dart';
 import 'package:rxdart/rxdart.dart';
@@ -95,7 +96,9 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     }
 
     String teamName = _teamController.value.name;
-    SnackbarMessage message = SnackbarMessage(text: 'Yay! $teamName +2 points!', color: Colors.green);
+    String wordGuessed = AppLocalizations.of(context).teamPlayGameSnackbarWordNotGuessed;
+    String addPoints = AppLocalizations.of(context).teamPlayGameMinusPoints;
+    SnackbarMessage message = SnackbarMessage(text: '$wordGuessed $teamName $addPoints!', color: Colors.green);
     _snackBarMessageController.sink.add(message);
 
     _generateNewWord(context);
@@ -117,7 +120,9 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     }
 
     String teamName = _teamController.value.name;
-    SnackbarMessage message = SnackbarMessage(text: 'Uh, no! $teamName -1 point!', color: Colors.red);
+    String wordNotGuessed = AppLocalizations.of(context).teamPlayGameSnackbarWordNotGuessed;
+    String minusPoints = AppLocalizations.of(context).teamPlayGameMinusPoints;
+    SnackbarMessage message = SnackbarMessage(text: '$wordNotGuessed $teamName $minusPoints!', color: Colors.red);
     _snackBarMessageController.sink.add(message);
 
     _generateNewWord(context);

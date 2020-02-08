@@ -49,6 +49,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "singlePlayTitle" : MessageLookupByLibrary.simpleMessage("Game"),
     "teamPlayGameMinusPoints" : MessageLookupByLibrary.simpleMessage("-1 point"),
     "teamPlayGamePlusPoints" : MessageLookupByLibrary.simpleMessage("+2 points"),
+    "teamPlayGameSnackbarWordGuessed" : MessageLookupByLibrary.simpleMessage("Yay!"),
+    "teamPlayGameSnackbarWordNotGuessed" : MessageLookupByLibrary.simpleMessage("Uh, no."),
     "teamPlayGameTeamLabel" : MessageLookupByLibrary.simpleMessage("Team"),
     "teamPlayGameWordIsGuessed" : MessageLookupByLibrary.simpleMessage("Word is guessed"),
     "teamPlayGameWordIsNotGuessed" : MessageLookupByLibrary.simpleMessage("Word is not guessed"),

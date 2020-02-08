@@ -49,6 +49,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "singlePlayTitle" : MessageLookupByLibrary.simpleMessage("Обычный режим"),
     "teamPlayGameMinusPoints" : MessageLookupByLibrary.simpleMessage("-1 очко"),
     "teamPlayGamePlusPoints" : MessageLookupByLibrary.simpleMessage("+2 очка"),
+    "teamPlayGameSnackbarWordGuessed" : MessageLookupByLibrary.simpleMessage("Ура!"),
+    "teamPlayGameSnackbarWordNotGuessed" : MessageLookupByLibrary.simpleMessage("Оу, нет!"),
     "teamPlayGameTeamLabel" : MessageLookupByLibrary.simpleMessage("Команда"),
     "teamPlayGameWordIsGuessed" : MessageLookupByLibrary.simpleMessage("Слово отгадано"),
     "teamPlayGameWordIsNotGuessed" : MessageLookupByLibrary.simpleMessage("Слово не отгадано"),

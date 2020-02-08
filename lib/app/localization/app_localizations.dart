@@ -74,6 +74,8 @@ class AppLocalizations {
   String get teamPlayGameWordIsGuessed => Intl.message('Word is guessed', name: 'teamPlayGameWordIsGuessed');
   String get teamPlayGameMinusPoints => Intl.message('-1 point', name: 'teamPlayGameMinusPoints');
   String get teamPlayGamePlusPoints => Intl.message('+2 points', name: 'teamPlayGamePlusPoints');
+  String get teamPlayGameSnackbarWordNotGuessed => Intl.message('Uh, no.', name: 'teamPlayGameSnackbarWordNotGuessed');
+  String get teamPlayGameSnackbarWordGuessed => Intl.message('Yay!', name: 'teamPlayGameSnackbarWordGuessed');
 
   String get selectTeamTitle => Intl.message('Team Play', name: 'selectTeamTitle');
   String get selectTeamTeamsLabel => Intl.message('Teams', name: 'selectTeamTeamsLabel');

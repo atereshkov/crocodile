@@ -186,6 +186,16 @@
     "type": "text",
     "placeholders": {}
   },
+  "teamPlayGameSnackbarWordNotGuessed": "Uh, no.",
+  "@teamPlayGameSnackbarWordNotGuessed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayGameSnackbarWordGuessed": "Yay!",
+  "@teamPlayGameSnackbarWordGuessed": {
+    "type": "text",
+    "placeholders": {}
+  },
   "selectTeamTitle": "Team Play",
   "@selectTeamTitle": {
     "type": "text",

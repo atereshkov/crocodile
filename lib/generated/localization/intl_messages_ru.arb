@@ -186,6 +186,16 @@
     "type": "text",
     "placeholders": {}
   },
+  "teamPlayGameSnackbarWordNotGuessed": "Оу, нет!",
+  "@teamPlayGameSnackbarWordNotGuessed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayGameSnackbarWordGuessed": "Ура!",
+  "@teamPlayGameSnackbarWordGuessed": {
+    "type": "text",
+    "placeholders": {}
+  },
   "selectTeamTitle": "Командная игра",
   "@selectTeamTitle": {
     "type": "text",
