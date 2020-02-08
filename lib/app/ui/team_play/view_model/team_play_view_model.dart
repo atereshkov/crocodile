@@ -20,6 +20,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   final _teamController = BehaviorSubject<TeamItem>();
   final _roundsLeftController = BehaviorSubject<int>();
   final _timerSecondsLeftController = BehaviorSubject<int>();
+  final _snackBarMessageController = BehaviorSubject<SnackbarMessage>();
 
   List<CategoryInfoItem> _selectedCategories = [];
   List<TeamItem> _teams = [];
@@ -57,7 +58,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   int get fullTimerValue => gameParameters.timerSeconds;
 
   @override
-  String get currentTeamName => _teamController.value.name;
+  Stream<SnackbarMessage> get onSnackBarMessage => _snackBarMessageController.stream;
 
   @override
   void initState(BuildContext context) async {
@@ -93,6 +94,10 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
       _timer.cancel();
     }
 
+    String teamName = _teamController.value.name;
+    SnackbarMessage message = SnackbarMessage(text: 'Yay! $teamName +2 points!', color: Colors.green);
+    _snackBarMessageController.sink.add(message);
+
     _generateNewWord(context);
     _teamPlayService.wordIsGuessed();
     _pickRandomTeam();
@@ -110,6 +115,10 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     if (_timer != null && _timer.isActive) {
       _timer.cancel();
     }
+
+    String teamName = _teamController.value.name;
+    SnackbarMessage message = SnackbarMessage(text: 'Uh, no! $teamName -1 point!', color: Colors.red);
+    _snackBarMessageController.sink.add(message);
 
     _generateNewWord(context);
     _teamPlayService.wordIsNotGuessed();
@@ -174,6 +183,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     _teamController.close();
     _roundsLeftController.close();
     _timerSecondsLeftController.close();
+    _snackBarMessageController.close();
     if (_timer != null) {
       _timer.cancel();
     }

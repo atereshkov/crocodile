@@ -39,9 +39,9 @@ class _NextTeamModeWidgetState extends State<NextTeamModeWidget> {
 
   Widget _buildNextTeamLabel(BuildContext context) {
     return Text(
-      'Next team',
+      'Next team is ...',
       style: TextStyle(
-        fontSize: 18,
+        fontSize: 17,
       ),
     );
   }

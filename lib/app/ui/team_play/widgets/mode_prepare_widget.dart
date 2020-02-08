@@ -24,6 +24,8 @@ class _PrepareModeWidgetState extends State<PrepareModeWidget> {
               _buildTeamLabel(context),
               Padding(padding: EdgeInsets.only(top: 14)),
               _buildTeamName(context),
+              Padding(padding: EdgeInsets.only(top: 14)),
+              _buildPrepareLabel(context),
             ]
           ),
         ),
@@ -39,7 +41,7 @@ class _PrepareModeWidgetState extends State<PrepareModeWidget> {
     return Text(
       'Team',
       style: TextStyle(
-        fontSize: 18,
+        fontSize: 16,
       ),
     );
   }
@@ -53,7 +55,7 @@ class _PrepareModeWidgetState extends State<PrepareModeWidget> {
           return Text(
             team.name,
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 22,
               fontWeight: FontWeight.bold,
             ),
           );
@@ -61,6 +63,15 @@ class _PrepareModeWidgetState extends State<PrepareModeWidget> {
           return Container();
         }
       },
+    );
+  }
+
+  Widget _buildPrepareLabel(BuildContext context) {
+    return Text(
+      'is starting the game!',
+      style: TextStyle(
+        fontSize: 16,
+      ),
     );
   }
 
@@ -94,7 +105,7 @@ class _PrepareModeWidgetState extends State<PrepareModeWidget> {
         color: Colors.lightBlue,
         child: Center(
           child: Text(
-            'Start',
+            'Ready. Start!',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.w500,

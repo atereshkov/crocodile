@@ -11,7 +11,8 @@ abstract class TeamPlayViewModelType {
 
   List<TeamPoints> getWinners();
   int get fullTimerValue;
-  String get currentTeamName;
+
+  Stream<SnackbarMessage> get onSnackBarMessage;
 
   void initState(BuildContext context);
   void startGameAction(BuildContext context);

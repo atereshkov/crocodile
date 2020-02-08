@@ -50,7 +50,8 @@ class SelectGameViewModel implements SelectGameViewModelType {
   void initState(BuildContext context) async {
     _categoryProvider.getAllCategories(context).then((categories) {
       // tick first category as default one
-      currentCategories.add(categories.first);
+      currentCategories.add(categories[0]);
+      currentCategories.add(categories[1]);
 
       _updateStartGameButtonState();
       _gameTypeController.sink.add(_gameType);

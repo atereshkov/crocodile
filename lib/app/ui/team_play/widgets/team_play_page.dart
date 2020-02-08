@@ -21,6 +21,8 @@ class TeamPlayPage extends StatefulWidget {
 
 class _TeamPlayPageState extends State<TeamPlayPage> {
 
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   void initState() {
     super.initState();
@@ -28,6 +30,24 @@ class _TeamPlayPageState extends State<TeamPlayPage> {
     _buildViewModel();
     Future.delayed(Duration.zero, () {
       widget._viewModel.initState(context);
+      _bindViewModel(context);
+    });
+  }
+
+  void _bindViewModel(BuildContext context) async {
+    widget._viewModel.onSnackBarMessage.listen((message) {
+      final snackBar = SnackBar(
+          content: Text(
+            message.text,
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+          backgroundColor: message.color,
+          duration: Duration(seconds: 2),
+        );
+
+        _scaffoldKey.currentState.showSnackBar(snackBar);
     });
   }
 
@@ -40,6 +60,7 @@ class _TeamPlayPageState extends State<TeamPlayPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: _buildAppBar(context),
       body: _buildBody(context),
     );

@@ -36,13 +36,34 @@ class _GameModeWidgetState extends State<GameModeWidget> {
     );
   }
 
+  Widget _buildTeamLabel(BuildContext context) {
+    return Text(
+      'Team',
+      style: TextStyle(
+        fontSize: 13,
+      ),
+    );
+  }
+
   Widget _buildTeamName(BuildContext context) {
     return StreamBuilder(
       stream: widget._viewModel.currentTeam,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           TeamItem team = snapshot.data;
-          return Text(team.name);
+          return Column(
+            children: <Widget>[
+              _buildTeamLabel(context),
+              Padding(padding: EdgeInsets.only(top: 4)),
+              Text(
+                team.name,
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          );
         } else {
           return Container();
         }
@@ -56,7 +77,14 @@ class _GameModeWidgetState extends State<GameModeWidget> {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           String word = snapshot.data;
-          return Text(word);
+          return Text(
+            word,
+            style: TextStyle(
+              fontSize: 35,
+              fontWeight: FontWeight.bold,
+            ),
+            textAlign: TextAlign.center,
+          );
         } else {
           return Center(
             child: CircularProgressIndicator(),
@@ -157,21 +185,6 @@ class _GameModeWidgetState extends State<GameModeWidget> {
   Widget _buildWordNotGuessedButton(BuildContext context) {
     return InkWell(
       onTap: () {
-        String teamName = widget._viewModel.currentTeamName;
-
-        final snackBar = SnackBar(
-          content: Text(
-            'Uh, no! $teamName -1 point',
-            style: TextStyle(
-              color: Colors.white,
-            ),
-          ),
-          backgroundColor: Colors.red,
-          duration: Duration(seconds: 1),
-        );
-
-        Scaffold.of(context).showSnackBar(snackBar);
-
         widget._viewModel.wordNotGuessedAction(context);
       },
       child: Container(
@@ -205,21 +218,6 @@ class _GameModeWidgetState extends State<GameModeWidget> {
   Widget _buildWordGuessedButton(BuildContext context) {
     return InkWell(
       onTap: () {
-        String teamName = widget._viewModel.currentTeamName;
-
-        final snackBar = SnackBar(
-          content: Text(
-            'Yay! $teamName +2 points',
-            style: TextStyle(
-              color: Colors.white,
-            ),
-          ),
-          backgroundColor: Colors.green,
-          duration: Duration(seconds: 1),
-        );
-
-        Scaffold.of(context).showSnackBar(snackBar);
-
         widget._viewModel.wordGuessedAction(context);
       },
       child: Container(
