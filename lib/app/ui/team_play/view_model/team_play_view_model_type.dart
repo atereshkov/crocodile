@@ -11,6 +11,7 @@ abstract class TeamPlayViewModelType {
 
   List<TeamPoints> getWinners();
   int get fullTimerValue;
+  String get currentTeamName;
 
   void initState(BuildContext context);
   void startGameAction(BuildContext context);

@@ -57,6 +57,9 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   int get fullTimerValue => gameParameters.timerSeconds;
 
   @override
+  String get currentTeamName => _teamController.value.name;
+
+  @override
   void initState(BuildContext context) async {
     _remoteAnalyticsService.setCurrentScreen('team_play');
     await _generatorService.start(context, _selectedCategories);
