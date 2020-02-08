@@ -24,6 +24,11 @@ class TeamPlayService implements TeamPlayServiceType {
     } else {
       _rounds = params.rounds;
     }
+
+    teamPoints.clear();
+    _allTeams.forEach((team) {
+      teamPoints[team.id] = 0;
+    });
   }
 
   @override

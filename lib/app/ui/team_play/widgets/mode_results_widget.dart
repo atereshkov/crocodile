@@ -37,30 +37,40 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
     double containerHeight = MediaQuery.of(context).size.height * 0.15;
     double containerWidth = MediaQuery.of(context).size.width * 0.25;
 
+    var teamPoints = widget._viewModel.getWinners();
+    bool secondPlaceExists = teamPoints.length >= 2;
+    bool thirdPlaceExists = teamPoints.length >= 3;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.end,
       children: <Widget>[
-        _buildSecondPlaceWidget(context, containerHeight, containerWidth),
-        _buildFirstPlaceWidget(context, containerHeight, containerWidth),
-        _buildThirdPlaceWidget(context, containerHeight, containerWidth),
+        if (secondPlaceExists)
+        _buildSecondPlaceWidget(context, teamPoints[1], containerHeight, containerWidth),
+        _buildFirstPlaceWidget(context, teamPoints[0], containerHeight, containerWidth),
+        if (thirdPlaceExists)
+        _buildThirdPlaceWidget(context, teamPoints[2], containerHeight, containerWidth),
       ],
     );
   }
 
-  Widget _buildSecondPlaceWidget(BuildContext context, double containerHeight, double containerWidth) {
+  Widget _buildSecondPlaceWidget(BuildContext context, TeamPoints teamPoints, double containerHeight, double containerWidth) {
     return Column(
       children: <Widget>[
         Container(
           width: containerWidth,
           child: Center(
             child: Text(
-              'Kekers Team',
+              teamPoints.team.name,
               textAlign: TextAlign.center,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+              ),
             ),
           ),
         ),
-        Padding(padding: EdgeInsets.only(top: 4)),
+        Padding(padding: EdgeInsets.only(top: 8)),
         Container(
           height: containerHeight + 35,
           width: containerWidth,
@@ -72,24 +82,28 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
           ),
         ),
         Padding(padding: EdgeInsets.only(top: 4)),
-        Text('10 points'),
+        Text('${teamPoints.points} points'),
       ],
     );
   }
 
-  Widget _buildFirstPlaceWidget(BuildContext context, double containerHeight, double containerWidth) {
+  Widget _buildFirstPlaceWidget(BuildContext context, TeamPoints teamPoints, double containerHeight, double containerWidth) {
     return Column(
       children: <Widget>[
         Container(
           width: containerWidth,
           child: Center(
             child: Text(
-              'Whooopers Team',
+              teamPoints.team.name,
               textAlign: TextAlign.center,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
             ),
           ),
         ),
-        Padding(padding: EdgeInsets.only(top: 4)),
+        Padding(padding: EdgeInsets.only(top: 2)),
         Container(
           height: containerHeight + 80,
           width: containerWidth,
@@ -101,24 +115,28 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
           ),
         ),
         Padding(padding: EdgeInsets.only(top: 4)),
-        Text('15 points'),
+        Text('${teamPoints.points} points'),
       ],
     );
   }
 
-  Widget _buildThirdPlaceWidget(BuildContext context, double containerHeight, double containerWidth) {
+  Widget _buildThirdPlaceWidget(BuildContext context, TeamPoints teamPoints, double containerHeight, double containerWidth) {
     return Column(
       children: <Widget>[
         Container(
           width: containerWidth,
           child: Center(
             child: Text(
-              'Boomers Team',
+              teamPoints.team.name,
               textAlign: TextAlign.center,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 14,
+              ),
             ),
           ),
         ),
-        Padding(padding: EdgeInsets.only(top: 4)),
+        Padding(padding: EdgeInsets.only(top: 6)),
         Container(
           height: containerHeight + 10,
           width: containerWidth,
@@ -130,7 +148,7 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
           ),
         ),
         Padding(padding: EdgeInsets.only(top: 4)),
-        Text('5 points'),
+        Text('${teamPoints.points} points'),
       ],
     );
   }

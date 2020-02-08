@@ -8,6 +8,8 @@ abstract class TeamPlayViewModelType {
   Stream<TeamItem> get currentTeam;
   Stream<int> get roundsLeft;
 
+  List<TeamPoints> getWinners();
+
   void initState(BuildContext context);
   void startGameAction(BuildContext context);
   void wordGuessedAction(BuildContext context);

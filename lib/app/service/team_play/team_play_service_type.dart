@@ -8,4 +8,6 @@ abstract class TeamPlayServiceType {
   void wordIsNotGuessed();
 
   bool gameIsActive();
+
+  Map<String, int> get teamPoints;
 }

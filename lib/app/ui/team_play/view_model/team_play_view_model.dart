@@ -75,7 +75,8 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     if (_teamPlayService.gameIsActive()) {
       _modeController.sink.add(TeamPlayMode.nextTeam);
     } else {
-      _modeController.sink.add(TeamPlayMode.act);
+      // if no rounds left, open results screen
+      _modeController.sink.add(TeamPlayMode.results);
     }
   }
 
@@ -88,7 +89,8 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     if (_teamPlayService.gameIsActive()) {
       _modeController.sink.add(TeamPlayMode.nextTeam);
     } else {
-      _modeController.sink.add(TeamPlayMode.act);
+      // if no rounds left, open results screen
+      _modeController.sink.add(TeamPlayMode.results);
     }
   }
 
@@ -110,6 +112,22 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   @override
   void playAgainAction(BuildContext context) {
     Navigator.of(context).pop();
+  }
+
+  @override
+  List<TeamPoints> getWinners() {
+    Map<String, int> teamPoints = _teamPlayService.teamPoints;
+    List<TeamPoints> winners = List<TeamPoints>();
+    
+    for (var pointsMap in teamPoints.entries) {
+      TeamItem team = _teams.firstWhere((t) => t.id == pointsMap.key, orElse: () => null);
+      TeamPoints teamPoints = TeamPoints(team: team, points: pointsMap.value);
+      winners.add(teamPoints);
+    }
+
+    winners.sort((a, b) => b.points.compareTo(a.points));
+
+    return winners;
   }
 
   @override
