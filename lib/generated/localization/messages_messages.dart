@@ -41,6 +41,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectGameTeamPlay" : MessageLookupByLibrary.simpleMessage("Team Play"),
     "selectGameTitle" : MessageLookupByLibrary.simpleMessage("Choose game type & words"),
     "singlePlayNextWordButton" : MessageLookupByLibrary.simpleMessage("Next Word"),
-    "singlePlayTitle" : MessageLookupByLibrary.simpleMessage("Game")
+    "singlePlayTitle" : MessageLookupByLibrary.simpleMessage("Game"),
+    "teamPlayGameMinusPoints" : MessageLookupByLibrary.simpleMessage("-1 point"),
+    "teamPlayGamePlusPoints" : MessageLookupByLibrary.simpleMessage("+2 points"),
+    "teamPlayGameTeamLabel" : MessageLookupByLibrary.simpleMessage("Team"),
+    "teamPlayGameWordIsGuessed" : MessageLookupByLibrary.simpleMessage("Word is guessed"),
+    "teamPlayGameWordIsNotGuessed" : MessageLookupByLibrary.simpleMessage("Word is not guessed"),
+    "teamPlayNextTeam" : MessageLookupByLibrary.simpleMessage("Next team is ..."),
+    "teamPlayNextTeamFinishGame" : MessageLookupByLibrary.simpleMessage("Finish the game"),
+    "teamPlayNextTeamReadyButton" : MessageLookupByLibrary.simpleMessage("Ready"),
+    "teamPlayNextTeamRoundsLeft" : MessageLookupByLibrary.simpleMessage("Rounds left:"),
+    "teamPlayPrepareStartButton" : MessageLookupByLibrary.simpleMessage("Ready. Start!"),
+    "teamPlayPrepareStartingTeam" : MessageLookupByLibrary.simpleMessage("is starting the game!"),
+    "teamPlayPrepareTeamLabel" : MessageLookupByLibrary.simpleMessage("Team"),
+    "teamPlayResultsPlayAgain" : MessageLookupByLibrary.simpleMessage("Play again"),
+    "teamPlayResultsPoints" : MessageLookupByLibrary.simpleMessage("points"),
+    "teamPlayResultsShare" : MessageLookupByLibrary.simpleMessage("Share"),
+    "teamPlayTitle" : MessageLookupByLibrary.simpleMessage("Team Play")
   };
 }

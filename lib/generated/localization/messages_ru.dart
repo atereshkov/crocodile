@@ -41,6 +41,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectGameTeamPlay" : MessageLookupByLibrary.simpleMessage("Командная игра"),
     "selectGameTitle" : MessageLookupByLibrary.simpleMessage("Тип игры и слова"),
     "singlePlayNextWordButton" : MessageLookupByLibrary.simpleMessage("Следующее слово"),
-    "singlePlayTitle" : MessageLookupByLibrary.simpleMessage("Обычный режим")
+    "singlePlayTitle" : MessageLookupByLibrary.simpleMessage("Обычный режим"),
+    "teamPlayGameMinusPoints" : MessageLookupByLibrary.simpleMessage("-1 очко"),
+    "teamPlayGamePlusPoints" : MessageLookupByLibrary.simpleMessage("+2 очка"),
+    "teamPlayGameTeamLabel" : MessageLookupByLibrary.simpleMessage("Команда"),
+    "teamPlayGameWordIsGuessed" : MessageLookupByLibrary.simpleMessage("Слово отгадано"),
+    "teamPlayGameWordIsNotGuessed" : MessageLookupByLibrary.simpleMessage("Слово не отгадано"),
+    "teamPlayNextTeam" : MessageLookupByLibrary.simpleMessage("Следующая команда ..."),
+    "teamPlayNextTeamFinishGame" : MessageLookupByLibrary.simpleMessage("Закончить игру"),
+    "teamPlayNextTeamReadyButton" : MessageLookupByLibrary.simpleMessage("Готовы"),
+    "teamPlayNextTeamRoundsLeft" : MessageLookupByLibrary.simpleMessage("Раундов осталось:"),
+    "teamPlayPrepareStartButton" : MessageLookupByLibrary.simpleMessage("Готовы. Поехали!"),
+    "teamPlayPrepareStartingTeam" : MessageLookupByLibrary.simpleMessage("начинает игру!"),
+    "teamPlayPrepareTeamLabel" : MessageLookupByLibrary.simpleMessage("Команда"),
+    "teamPlayResultsPlayAgain" : MessageLookupByLibrary.simpleMessage("Сыграть снова"),
+    "teamPlayResultsPoints" : MessageLookupByLibrary.simpleMessage("очков"),
+    "teamPlayResultsShare" : MessageLookupByLibrary.simpleMessage("Поделиться"),
+    "teamPlayTitle" : MessageLookupByLibrary.simpleMessage("Командная игра")
   };
 }

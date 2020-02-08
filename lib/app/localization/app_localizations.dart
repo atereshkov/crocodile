@@ -52,5 +52,27 @@ class AppLocalizations {
   String get selectGameSinglePlay => Intl.message('Single Play', name: 'selectGameSinglePlay');
   String get selectGameTeamPlay => Intl.message('Team Play', name: 'selectGameTeamPlay');
   String get selectGameStartGameButton => Intl.message('Play', name: 'selectGameStartGameButton');
+
+  // Team play
+  String get teamPlayTitle => Intl.message('Team Play', name: 'teamPlayTitle');
+  
+  String get teamPlayPrepareTeamLabel => Intl.message('Team', name: 'teamPlayPrepareTeamLabel');
+  String get teamPlayPrepareStartingTeam => Intl.message('is starting the game!', name: 'teamPlayPrepareStartingTeam');
+  String get teamPlayPrepareStartButton => Intl.message('Ready. Start!', name: 'teamPlayPrepareStartButton');
+  
+  String get teamPlayNextTeam => Intl.message('Next team is ...', name: 'teamPlayNextTeam');
+  String get teamPlayNextTeamRoundsLeft => Intl.message('Rounds left:', name: 'teamPlayNextTeamRoundsLeft');
+  String get teamPlayNextTeamFinishGame => Intl.message('Finish the game', name: 'teamPlayNextTeamFinishGame');
+  String get teamPlayNextTeamReadyButton => Intl.message('Ready', name: 'teamPlayNextTeamReadyButton');
+  
+  String get teamPlayResultsPoints => Intl.message('points', name: 'teamPlayResultsPoints');
+  String get teamPlayResultsShare => Intl.message('Share', name: 'teamPlayResultsShare');
+  String get teamPlayResultsPlayAgain => Intl.message('Play again', name: 'teamPlayResultsPlayAgain');
+  
+  String get teamPlayGameTeamLabel => Intl.message('Team', name: 'teamPlayGameTeamLabel');
+  String get teamPlayGameWordIsNotGuessed => Intl.message('Word is not guessed', name: 'teamPlayGameWordIsNotGuessed');
+  String get teamPlayGameWordIsGuessed => Intl.message('Word is guessed', name: 'teamPlayGameWordIsGuessed');
+  String get teamPlayGameMinusPoints => Intl.message('-1 point', name: 'teamPlayGameMinusPoints');
+  String get teamPlayGamePlusPoints => Intl.message('+2 points', name: 'teamPlayGamePlusPoints');
   
 }

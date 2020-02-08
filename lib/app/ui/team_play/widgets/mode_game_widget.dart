@@ -1,3 +1,4 @@
+import 'package:crocodile_game/app/localization/app_localizations.dart';
 import 'package:crocodile_game/app/model/models.dart';
 import 'package:crocodile_game/app/ui/team_play/module.dart';
 import 'package:crocodile_game/app/ui/common/circular_countdown.dart';
@@ -38,7 +39,7 @@ class _GameModeWidgetState extends State<GameModeWidget> {
 
   Widget _buildTeamLabel(BuildContext context) {
     return Text(
-      'Team',
+      AppLocalizations.of(context).teamPlayGameTeamLabel,
       style: TextStyle(
         fontSize: 13,
       ),
@@ -193,7 +194,7 @@ class _GameModeWidgetState extends State<GameModeWidget> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Word is not guessed',
+              AppLocalizations.of(context).teamPlayGameWordIsNotGuessed,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontWeight: FontWeight.w500,
@@ -203,7 +204,7 @@ class _GameModeWidgetState extends State<GameModeWidget> {
             ),
             Padding(padding: EdgeInsets.only(top: 2)),
             Text(
-              '-1 point',
+              AppLocalizations.of(context).teamPlayGameMinusPoints,
               style: TextStyle(
                 fontSize: 13,
                 color: Colors.white70,
@@ -229,7 +230,7 @@ class _GameModeWidgetState extends State<GameModeWidget> {
               color: Colors.green,
               child: Center(
                 child: Text(
-                  'Word is guessed',
+                  AppLocalizations.of(context).teamPlayGameWordIsGuessed,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
@@ -241,7 +242,7 @@ class _GameModeWidgetState extends State<GameModeWidget> {
             ),
             Padding(padding: EdgeInsets.only(top: 2)),
             Text(
-              '+2 points',
+              AppLocalizations.of(context).teamPlayGamePlusPoints,
               style: TextStyle(
                 fontSize: 13,
                 color: Colors.white70,

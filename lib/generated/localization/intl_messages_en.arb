@@ -105,5 +105,85 @@
   "@selectGameStartGameButton": {
     "type": "text",
     "placeholders": {}
+  },
+  "teamPlayTitle": "Team Play",
+  "@teamPlayTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayPrepareTeamLabel": "Team",
+  "@teamPlayPrepareTeamLabel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayPrepareStartingTeam": "is starting the game!",
+  "@teamPlayPrepareStartingTeam": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayPrepareStartButton": "Ready. Start!",
+  "@teamPlayPrepareStartButton": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayNextTeam": "Next team is ...",
+  "@teamPlayNextTeam": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayNextTeamRoundsLeft": "Rounds left:",
+  "@teamPlayNextTeamRoundsLeft": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayNextTeamFinishGame": "Finish the game",
+  "@teamPlayNextTeamFinishGame": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayNextTeamReadyButton": "Ready",
+  "@teamPlayNextTeamReadyButton": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayResultsPoints": "points",
+  "@teamPlayResultsPoints": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayResultsShare": "Share",
+  "@teamPlayResultsShare": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayResultsPlayAgain": "Play again",
+  "@teamPlayResultsPlayAgain": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayGameTeamLabel": "Team",
+  "@teamPlayGameTeamLabel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayGameWordIsNotGuessed": "Word is not guessed",
+  "@teamPlayGameWordIsNotGuessed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayGameWordIsGuessed": "Word is guessed",
+  "@teamPlayGameWordIsGuessed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayGameMinusPoints": "-1 point",
+  "@teamPlayGameMinusPoints": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayGamePlusPoints": "+2 points",
+  "@teamPlayGamePlusPoints": {
+    "type": "text",
+    "placeholders": {}
   }
 }

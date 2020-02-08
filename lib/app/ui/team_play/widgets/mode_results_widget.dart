@@ -1,5 +1,6 @@
 import 'package:crocodile_game/app/model/models.dart';
 import 'package:crocodile_game/app/ui/team_play/module.dart';
+import 'package:crocodile_game/app/localization/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class ResultsModeWidget extends StatefulWidget {
@@ -82,7 +83,7 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
           ),
         ),
         Padding(padding: EdgeInsets.only(top: 4)),
-        Text('${teamPoints.points} points'),
+        Text('${teamPoints.points} ${AppLocalizations.of(context).teamPlayResultsPoints}'),
       ],
     );
   }
@@ -115,7 +116,7 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
           ),
         ),
         Padding(padding: EdgeInsets.only(top: 4)),
-        Text('${teamPoints.points} points'),
+        Text('${teamPoints.points} ${AppLocalizations.of(context).teamPlayResultsPoints}'),
       ],
     );
   }
@@ -148,7 +149,7 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
           ),
         ),
         Padding(padding: EdgeInsets.only(top: 4)),
-        Text('${teamPoints.points} points'),
+        Text('${teamPoints.points} ${AppLocalizations.of(context).teamPlayResultsPoints}'),
       ],
     );
   }
@@ -199,7 +200,7 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
         color: Colors.purple,
         child: Center(
           child: Text(
-            'Share',
+            AppLocalizations.of(context).teamPlayResultsShare,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.w500,

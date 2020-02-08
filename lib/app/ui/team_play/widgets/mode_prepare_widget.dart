@@ -1,3 +1,4 @@
+import 'package:crocodile_game/app/localization/app_localizations.dart';
 import 'package:crocodile_game/app/model/models.dart';
 import 'package:crocodile_game/app/ui/team_play/module.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +40,7 @@ class _PrepareModeWidgetState extends State<PrepareModeWidget> {
 
   Widget _buildTeamLabel(BuildContext context) {
     return Text(
-      'Team',
+      AppLocalizations.of(context).teamPlayPrepareTeamLabel,
       style: TextStyle(
         fontSize: 16,
       ),
@@ -68,7 +69,7 @@ class _PrepareModeWidgetState extends State<PrepareModeWidget> {
 
   Widget _buildPrepareLabel(BuildContext context) {
     return Text(
-      'is starting the game!',
+      AppLocalizations.of(context).teamPlayPrepareStartingTeam,
       style: TextStyle(
         fontSize: 16,
       ),
@@ -105,7 +106,7 @@ class _PrepareModeWidgetState extends State<PrepareModeWidget> {
         color: Colors.lightBlue,
         child: Center(
           child: Text(
-            'Ready. Start!',
+            AppLocalizations.of(context).teamPlayPrepareStartButton,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.w500,

@@ -1,3 +1,4 @@
+import 'package:crocodile_game/app/localization/app_localizations.dart';
 import 'package:crocodile_game/app/model/models.dart';
 import 'package:crocodile_game/app/ui/team_play/module.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +40,7 @@ class _NextTeamModeWidgetState extends State<NextTeamModeWidget> {
 
   Widget _buildNextTeamLabel(BuildContext context) {
     return Text(
-      'Next team is ...',
+      AppLocalizations.of(context).teamPlayNextTeam,
       style: TextStyle(
         fontSize: 17,
       ),
@@ -72,8 +73,9 @@ class _NextTeamModeWidgetState extends State<NextTeamModeWidget> {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           int rounds = snapshot.data;
+          String roundsLeft = AppLocalizations.of(context).teamPlayNextTeamRoundsLeft;
           return Text(
-            'Rounds left: $rounds',
+            '$roundsLeft $rounds',
             style: TextStyle(
               fontSize: 13,
             ),
@@ -131,7 +133,7 @@ class _NextTeamModeWidgetState extends State<NextTeamModeWidget> {
         color: Colors.red,
         child: Center(
           child: Text(
-            'End game',
+            AppLocalizations.of(context).teamPlayNextTeamFinishGame,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.w500,
@@ -153,7 +155,7 @@ class _NextTeamModeWidgetState extends State<NextTeamModeWidget> {
         color: Colors.green,
         child: Center(
           child: Text(
-            'Ready',
+            AppLocalizations.of(context).teamPlayNextTeamReadyButton,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.w500,

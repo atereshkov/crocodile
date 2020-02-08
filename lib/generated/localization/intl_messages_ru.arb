@@ -105,5 +105,85 @@
   "@selectGameStartGameButton": {
     "type": "text",
     "placeholders": {}
+  },
+  "teamPlayTitle": "Командная игра",
+  "@teamPlayTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayPrepareTeamLabel": "Команда",
+  "@teamPlayPrepareTeamLabel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayPrepareStartingTeam": "начинает игру!",
+  "@teamPlayPrepareStartingTeam": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayPrepareStartButton": "Готовы. Поехали!",
+  "@teamPlayPrepareStartButton": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayNextTeam": "Следующая команда ...",
+  "@teamPlayNextTeam": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayNextTeamRoundsLeft": "Раундов осталось:",
+  "@teamPlayNextTeamRoundsLeft": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayNextTeamFinishGame": "Закончить игру",
+  "@teamPlayNextTeamFinishGame": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayNextTeamReadyButton": "Готовы",
+  "@teamPlayNextTeamReadyButton": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayResultsPoints": "очков",
+  "@teamPlayResultsPoints": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayResultsShare": "Поделиться",
+  "@teamPlayResultsShare": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayResultsPlayAgain": "Сыграть снова",
+  "@teamPlayResultsPlayAgain": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayGameTeamLabel": "Команда",
+  "@teamPlayGameTeamLabel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayGameWordIsNotGuessed": "Слово не отгадано",
+  "@teamPlayGameWordIsNotGuessed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayGameWordIsGuessed": "Слово отгадано",
+  "@teamPlayGameWordIsGuessed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayGameMinusPoints": "-1 очко",
+  "@teamPlayGameMinusPoints": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "teamPlayGamePlusPoints": "+2 очка",
+  "@teamPlayGamePlusPoints": {
+    "type": "text",
+    "placeholders": {}
   }
 }

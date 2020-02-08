@@ -68,7 +68,7 @@ class _TeamPlayPageState extends State<TeamPlayPage> {
 
   Widget _buildAppBar(BuildContext context) {
     return AppBar(
-      title: Text('Team Play'),
+      title: Text(AppLocalizations.of(context).teamPlayTitle),
     );
   }
 
