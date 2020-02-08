@@ -96,8 +96,8 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     }
 
     String teamName = _teamController.value.name;
-    String wordGuessed = AppLocalizations.of(context).teamPlayGameSnackbarWordNotGuessed;
-    String addPoints = AppLocalizations.of(context).teamPlayGameMinusPoints;
+    String wordGuessed = AppLocalizations.of(context).teamPlayGameSnackbarWordGuessed;
+    String addPoints = AppLocalizations.of(context).teamPlayGamePlusPoints;
     SnackbarMessage message = SnackbarMessage(text: '$wordGuessed $teamName $addPoints!', color: Colors.green);
     _snackBarMessageController.sink.add(message);
 
