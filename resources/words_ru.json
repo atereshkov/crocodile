@@ -742,8 +742,8 @@
 			"categories": [
 				{
 					"category": {
-						"name": "Простые",
-						"id": "easy"
+						"name": "Сложные",
+						"id": "hard"
 					}
 				}
 			]
