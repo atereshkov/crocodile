@@ -108,16 +108,27 @@ class _GameModeWidgetState extends State<GameModeWidget> {
       },
       child: Container(
         color: Colors.red,
-        child: Center(
-          child: Text(
-            'Word is not guessed',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 18,
-              color: Colors.white,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Word is not guessed',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 18,
+                color: Colors.white,
+              ),
             ),
-          ),
+            Padding(padding: EdgeInsets.only(top: 2)),
+            Text(
+              '-1 point',
+              style: TextStyle(
+                fontSize: 13,
+                color: Colors.white70,
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -130,16 +141,32 @@ class _GameModeWidgetState extends State<GameModeWidget> {
       },
       child: Container(
         color: Colors.green,
-        child: Center(
-          child: Text(
-            'Word is guessed',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 18,
-              color: Colors.white,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              color: Colors.green,
+              child: Center(
+                child: Text(
+                  'Word is guessed',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 18,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
             ),
-          ),
+            Padding(padding: EdgeInsets.only(top: 2)),
+            Text(
+              '+2 points',
+              style: TextStyle(
+                fontSize: 13,
+                color: Colors.white70,
+              ),
+            ),
+          ],
         ),
       ),
     );

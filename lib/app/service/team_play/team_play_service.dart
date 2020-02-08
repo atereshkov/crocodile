@@ -45,9 +45,9 @@ class TeamPlayService implements TeamPlayServiceType {
       _roundTeams.addAll(_allTeams);
     }
     if (teamPoints[_currentTeam.id] == null) {
-      teamPoints[_currentTeam.id] = 1;
+      teamPoints[_currentTeam.id] = 2;
     } else {
-      teamPoints[_currentTeam.id]++;
+      teamPoints[_currentTeam.id] += 2;
     }
   }
 
@@ -60,7 +60,7 @@ class TeamPlayService implements TeamPlayServiceType {
     if (teamPoints[_currentTeam.id] == null) {
       teamPoints[_currentTeam.id] = 0;
     } else {
-      teamPoints[_currentTeam.id]--;
+      teamPoints[_currentTeam.id] -= 1;
     }
   }
 
