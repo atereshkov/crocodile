@@ -1,3 +1,4 @@
+import 'package:crocodile_game/app/localization/app_localizations.dart';
 import 'package:injector/injector.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:flutter/material.dart';
@@ -70,7 +71,7 @@ class SelectTeamViewModel implements SelectTeamViewModelType {
   @override
   void handleTeamItemTap(BuildContext context, TeamItem item) async {
     TextDialogPresenterType dialogPresenter = TextDialogPresenter(
-      'Change name',
+      AppLocalizations.of(context).selectTeamChangeTeamName,
       item.name,
       (newTeamName) async {
         List<TeamItem> currentTeams = _teamsController.value;

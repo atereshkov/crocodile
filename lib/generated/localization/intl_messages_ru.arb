@@ -220,5 +220,10 @@
   "@selectTeamAddTeam": {
     "type": "text",
     "placeholders": {}
+  },
+  "selectTeamChangeTeamName": "Изменить имя",
+  "@selectTeamChangeTeamName": {
+    "type": "text",
+    "placeholders": {}
   }
 }

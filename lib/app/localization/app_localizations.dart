@@ -82,5 +82,6 @@ class AppLocalizations {
   String get selectTeamTimerSetting => Intl.message('Timer (seconds)', name: 'selectTeamTimerSetting');
   String get selectTeamRoundsSetting => Intl.message('Rounds', name: 'selectTeamRoundsSetting');
   String get selectTeamAddTeam => Intl.message('Add team', name: 'selectTeamAddTeam');
+  String get selectTeamChangeTeamName => Intl.message('Change name', name: 'selectTeamChangeTeamName');
   
 }

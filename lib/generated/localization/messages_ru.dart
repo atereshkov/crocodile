@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectGameTeamPlay" : MessageLookupByLibrary.simpleMessage("Командная игра"),
     "selectGameTitle" : MessageLookupByLibrary.simpleMessage("Тип игры и слова"),
     "selectTeamAddTeam" : MessageLookupByLibrary.simpleMessage("Добавить команду"),
+    "selectTeamChangeTeamName" : MessageLookupByLibrary.simpleMessage("Изменить имя"),
     "selectTeamRoundsSetting" : MessageLookupByLibrary.simpleMessage("Раунды"),
     "selectTeamTeamsLabel" : MessageLookupByLibrary.simpleMessage("Команды"),
     "selectTeamTimerSetting" : MessageLookupByLibrary.simpleMessage("Таймер (секунды)"),
