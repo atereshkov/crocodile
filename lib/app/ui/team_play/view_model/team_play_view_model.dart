@@ -15,6 +15,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   GeneratorServiceType _generatorService;
   TeamPlayServiceType _teamPlayService;
   RemoteAnalyticsServiceType _remoteAnalyticsService;
+  AudioPlayerType _audioPlayerService;
 
   final _modeController = BehaviorSubject<TeamPlayMode>();
   final _itemController = BehaviorSubject<String>();
@@ -34,6 +35,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     _generatorService = _injector.getDependency<GeneratorServiceType>();
     _teamPlayService = _injector.getDependency<TeamPlayServiceType>();
     _remoteAnalyticsService = _injector.getDependency<RemoteAnalyticsServiceType>();
+    _audioPlayerService = _injector.getDependency<AudioPlayerType>();
 
     _selectedCategories = params.categories;
     _teams = params.teams;
@@ -95,6 +97,8 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
       _timer.cancel();
     }
 
+    _audioPlayerService.play(SoundType.correct);
+
     String teamName = _teamController.value.name;
     String wordGuessed = AppLocalizations.of(context).teamPlayGameSnackbarWordGuessed;
     String addPoints = AppLocalizations.of(context).teamPlayGamePlusPoints;
@@ -118,6 +122,8 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     if (_timer != null && _timer.isActive) {
       _timer.cancel();
     }
+
+    _audioPlayerService.play(SoundType.incorrect);
 
     String teamName = _teamController.value.name;
     String wordNotGuessed = AppLocalizations.of(context).teamPlayGameSnackbarWordNotGuessed;
@@ -205,6 +211,25 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
     TeamItem team = await _teamPlayService.getRandomTeam();
     _teamController.sink.add(team);
   }
+
+  void _timeIsUp(BuildContext context) {
+    if (_timer != null && _timer.isActive) {
+      _timer.cancel();
+    }
+
+    _audioPlayerService.play(SoundType.timeIsUp);
+
+    _generateNewWord(context);
+    _teamPlayService.wordIsNotGuessed();
+    _pickRandomTeam();
+    
+    if (_teamPlayService.gameIsActive()) {
+      _modeController.sink.add(TeamPlayMode.nextTeam);
+    } else {
+      // if no rounds left, open results screen
+      _modeController.sink.add(TeamPlayMode.results);
+    }
+  }
   
   void _runTimer(BuildContext context) {
     int countdown = gameParameters.timerSeconds;
@@ -213,8 +238,8 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
       _timer = Timer.periodic(
         timerTick, (Timer timer) {
           if (countdown < 1) {
-            // time is left
-            wordNotGuessedAction(context);
+            // time is up
+            _timeIsUp(context);
             timer.cancel();
           } else {
             countdown = countdown - 1;

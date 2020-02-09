@@ -6,3 +6,5 @@ export 'package:crocodile_game/app/service/team_generator/team_generator_service
 export 'package:crocodile_game/app/service/team_generator/team_generator_service.dart';
 export 'package:crocodile_game/app/service/team_play/team_play_service_type.dart';
 export 'package:crocodile_game/app/service/team_play/team_play_service.dart';
+export 'package:crocodile_game/app/service/audio_player/audio_player_type.dart';
+export 'package:crocodile_game/app/service/audio_player/audio_player.dart';

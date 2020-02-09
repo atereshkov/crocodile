@@ -183,7 +183,7 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
                 ),
               ],
             ),
-            height: 50,
+            height: 60,
             child: _buildPlayAgainButton(context),
           ),
         ),

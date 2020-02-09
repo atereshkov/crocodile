@@ -89,7 +89,7 @@ class _PrepareModeWidgetState extends State<PrepareModeWidget> {
               ),
             ],
           ),
-          height: 50,
+          height: 60,
           width: double.infinity,
           child: _buildStartGameButton(context),
         ),
