@@ -146,7 +146,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "teamPlayResultsPoints": "очков",
+  "teamPlayResultsPoints": "Очков:",
   "@teamPlayResultsPoints": {
     "type": "text",
     "placeholders": {}

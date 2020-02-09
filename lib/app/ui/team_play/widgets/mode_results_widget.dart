@@ -83,7 +83,7 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
           ),
         ),
         Padding(padding: EdgeInsets.only(top: 4)),
-        Text('${teamPoints.points} ${AppLocalizations.of(context).teamPlayResultsPoints}'),
+        Text('${AppLocalizations.of(context).teamPlayResultsPoints} ${teamPoints.points}'),
       ],
     );
   }
@@ -116,7 +116,7 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
           ),
         ),
         Padding(padding: EdgeInsets.only(top: 4)),
-        Text('${teamPoints.points} ${AppLocalizations.of(context).teamPlayResultsPoints}'),
+        Text('${AppLocalizations.of(context).teamPlayResultsPoints} ${teamPoints.points}'),
       ],
     );
   }
@@ -149,7 +149,7 @@ class _ResultsModeWidgetState extends State<ResultsModeWidget> {
           ),
         ),
         Padding(padding: EdgeInsets.only(top: 4)),
-        Text('${teamPoints.points} ${AppLocalizations.of(context).teamPlayResultsPoints}'),
+        Text('${AppLocalizations.of(context).teamPlayResultsPoints} ${teamPoints.points}'),
       ],
     );
   }

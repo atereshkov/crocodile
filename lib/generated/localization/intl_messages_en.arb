@@ -146,7 +146,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "teamPlayResultsPoints": "points",
+  "teamPlayResultsPoints": "Points:",
   "@teamPlayResultsPoints": {
     "type": "text",
     "placeholders": {}
@@ -218,6 +218,11 @@
   },
   "selectTeamAddTeam": "Add team",
   "@selectTeamAddTeam": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTeamChangeTeamName": "Change name",
+  "@selectTeamChangeTeamName": {
     "type": "text",
     "placeholders": {}
   }

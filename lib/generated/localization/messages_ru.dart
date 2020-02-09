@@ -63,7 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "teamPlayPrepareStartingTeam" : MessageLookupByLibrary.simpleMessage("начинает игру!"),
     "teamPlayPrepareTeamLabel" : MessageLookupByLibrary.simpleMessage("Команда"),
     "teamPlayResultsPlayAgain" : MessageLookupByLibrary.simpleMessage("Сыграть снова"),
-    "teamPlayResultsPoints" : MessageLookupByLibrary.simpleMessage("очков"),
+    "teamPlayResultsPoints" : MessageLookupByLibrary.simpleMessage("Очков:"),
     "teamPlayResultsShare" : MessageLookupByLibrary.simpleMessage("Поделиться"),
     "teamPlayTitle" : MessageLookupByLibrary.simpleMessage("Командная игра")
   };

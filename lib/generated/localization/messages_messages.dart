@@ -63,7 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "teamPlayPrepareStartingTeam" : MessageLookupByLibrary.simpleMessage("is starting the game!"),
     "teamPlayPrepareTeamLabel" : MessageLookupByLibrary.simpleMessage("Team"),
     "teamPlayResultsPlayAgain" : MessageLookupByLibrary.simpleMessage("Play again"),
-    "teamPlayResultsPoints" : MessageLookupByLibrary.simpleMessage("points"),
+    "teamPlayResultsPoints" : MessageLookupByLibrary.simpleMessage("Points:"),
     "teamPlayResultsShare" : MessageLookupByLibrary.simpleMessage("Share"),
     "teamPlayTitle" : MessageLookupByLibrary.simpleMessage("Team Play")
   };

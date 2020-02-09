@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-02-09T13:44:09.717210",
+  "@@last_modified": "2020-02-09T21:14:43.907803",
   "mainMenuPlaySingleMode": "Play",
   "@mainMenuPlaySingleMode": {
     "type": "text",
@@ -145,7 +145,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "teamPlayResultsPoints": "points",
+  "teamPlayResultsPoints": "Points:",
   "@teamPlayResultsPoints": {
     "type": "text",
     "placeholders": {}

@@ -65,7 +65,7 @@ class AppLocalizations {
   String get teamPlayNextTeamFinishGame => Intl.message('Finish the game', name: 'teamPlayNextTeamFinishGame');
   String get teamPlayNextTeamReadyButton => Intl.message('Ready', name: 'teamPlayNextTeamReadyButton');
   
-  String get teamPlayResultsPoints => Intl.message('points', name: 'teamPlayResultsPoints');
+  String get teamPlayResultsPoints => Intl.message('Points:', name: 'teamPlayResultsPoints');
   String get teamPlayResultsShare => Intl.message('Share', name: 'teamPlayResultsShare');
   String get teamPlayResultsPlayAgain => Intl.message('Play again', name: 'teamPlayResultsPlayAgain');
   

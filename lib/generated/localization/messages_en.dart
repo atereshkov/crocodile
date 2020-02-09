@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectGameTeamPlay" : MessageLookupByLibrary.simpleMessage("Team Play"),
     "selectGameTitle" : MessageLookupByLibrary.simpleMessage("Choose game type & words"),
     "selectTeamAddTeam" : MessageLookupByLibrary.simpleMessage("Add team"),
+    "selectTeamChangeTeamName" : MessageLookupByLibrary.simpleMessage("Change name"),
     "selectTeamRoundsSetting" : MessageLookupByLibrary.simpleMessage("Rounds"),
     "selectTeamTeamsLabel" : MessageLookupByLibrary.simpleMessage("Teams"),
     "selectTeamTimerSetting" : MessageLookupByLibrary.simpleMessage("Timer (seconds)"),
@@ -62,7 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "teamPlayPrepareStartingTeam" : MessageLookupByLibrary.simpleMessage("is starting the game!"),
     "teamPlayPrepareTeamLabel" : MessageLookupByLibrary.simpleMessage("Team"),
     "teamPlayResultsPlayAgain" : MessageLookupByLibrary.simpleMessage("Play again"),
-    "teamPlayResultsPoints" : MessageLookupByLibrary.simpleMessage("points"),
+    "teamPlayResultsPoints" : MessageLookupByLibrary.simpleMessage("Points:"),
     "teamPlayResultsShare" : MessageLookupByLibrary.simpleMessage("Share"),
     "teamPlayTitle" : MessageLookupByLibrary.simpleMessage("Team Play")
   };
