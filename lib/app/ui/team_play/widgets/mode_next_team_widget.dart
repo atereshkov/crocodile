@@ -25,6 +25,8 @@ class _NextTeamModeWidgetState extends State<NextTeamModeWidget> {
               _buildNextTeamLabel(context),
               Padding(padding: EdgeInsets.only(top: 14)),
               _buildTeamName(context),
+              Padding(padding: EdgeInsets.only(top: 32)),
+              _buildLeadersTable(context),
             ]
           ),
         ),
@@ -65,6 +67,43 @@ class _NextTeamModeWidgetState extends State<NextTeamModeWidget> {
         }
       },
     );
+  }
+
+  Widget _buildLeadersTable(BuildContext context) {
+    return Table(children: [
+      TableRow(children: [
+        Center(
+          child: Text("Points"),
+        ),
+        Center(
+          child: Text("Team"),
+        ),
+      ]),
+      TableRow(children:[
+        Center(
+          child: Text("6"),
+        ),
+        Center(
+          child: Text("Team 1"),
+        ),
+      ]),
+      TableRow(children:[
+        Center(
+          child: Text("2"),
+        ),
+        Center(
+          child: Text("Team 2"),
+        ),
+      ]),
+      TableRow(children:[
+        Center(
+          child: Text("-2"),
+        ),
+        Center(
+          child: Text("Team 3"),
+        ),
+      ]),
+    ]);
   }
 
   Widget _buildRoundsLabel(BuildContext context) {
