@@ -868,6 +868,204 @@
 					}
 				}
 			]
+		},
+		{
+		  "word": "Sluggish tomato",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Perversion",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Waterfall",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Ideal",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Betrayal",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Revolution",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Friday",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Ninja Turtle",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Laziness",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Scales",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Carpet",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Bear",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Thermometer",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Rainbow",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Bullet",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Shot",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Apartment",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Secret",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
 		}
 	]
 }
