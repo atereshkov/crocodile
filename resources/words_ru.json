@@ -2573,6 +2573,116 @@
 		      }
 		    }
 		  ]
+		},
+		{
+		  "word": "Арбуз",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Краска",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Хабалка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Тождественность",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Изобретение",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Строитель",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Аграгий",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Абстракция",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Тариф",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Зазор",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
 		}
 	]
 }
