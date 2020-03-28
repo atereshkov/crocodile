@@ -16,6 +16,11 @@ class GeneratorService implements GeneratorServiceType {
   GeneratorService(this._wordsProvider);
 
   @override
+  Future<void> preLoad(BuildContext context) async {
+    _allWords = await _wordsProvider.getAllWords(context);
+  }
+
+  @override
   Future<void> start(BuildContext context, List<CategoryInfoItem> categories) async {
     _categories = categories;
     _allWords = await _loadWords(context);

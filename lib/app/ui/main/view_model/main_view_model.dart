@@ -13,19 +13,25 @@ class MainViewModel implements MainViewModelType {
   Injector _injector;
   RemoteAnalyticsServiceType _remoteAnalyticsService;
   LanguageProviderType _languageProvider;
+  GeneratorServiceType _generatorService;
 
   Future<List<Language>> languages;
 
   MainViewModel(this._injector) {
     _remoteAnalyticsService = _injector.getDependency<RemoteAnalyticsServiceType>();
     _languageProvider = _injector.getDependency<LanguageProviderType>();
+    _generatorService = _injector.getDependency<GeneratorServiceType>();
   }
 
   @override
-  void initState() {
-    _remoteAnalyticsService.setCurrentScreen('main');
-
+  void initStateSync() {
     languages = _languageProvider.getLanguages();
+  }
+
+  @override
+  void initState(BuildContext context) {
+    _remoteAnalyticsService.setCurrentScreen('main');
+    _generatorService.preLoad(context);
   }
 
   @override

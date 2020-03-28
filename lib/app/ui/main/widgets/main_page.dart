@@ -20,8 +20,10 @@ class _MainPageState extends State<MainPage> {
   @override
   void initState() {
     super.initState();
-    widget._viewModel.initState();
-    _buildViewModel();
+    widget._viewModel.initStateSync();
+    Future.delayed(Duration.zero, () {
+      widget._viewModel.initState(context);
+    });
   }
 
   @override
@@ -212,10 +214,6 @@ class _MainPageState extends State<MainPage> {
         ),
       ),
     );
-  }
-
-  void _buildViewModel() {
-
   }
 
   String getBottomBannerId() {
