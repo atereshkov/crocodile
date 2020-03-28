@@ -2683,6 +2683,479 @@
 		      }
 		    }
 		  ]
+		},
+		{
+		  "word": "Блокнот",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Монитор",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Coca-Cola",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Сантехник",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Психиатр",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Космонавт",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Прокурор",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Стюардесса",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Дровосек",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Промоутер",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Крупье",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Пожарный",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Режиссер",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Дежавю",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Аллегория",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Поле чудес",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Конец света",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Культура",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Мямля",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Аперитив",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Печать",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Шествие",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Уничтожение",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Размышление",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Стремление",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Колибри",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Выступление",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Велотренажёр",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Автостоп",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Евровидение",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Прицел",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Услуга",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Танцплощадка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Фантазёр",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Оформление",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Лучник",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Космодром",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Холод",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Митинг",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Батут",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Штукатурка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Массаж",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Свисток",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
 		}
 	]
 }
