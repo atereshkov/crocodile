@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:injector/injector.dart';
+import 'package:rxdart/rxdart.dart';
 
 import 'package:crocodile_game/app/ui/main/module.dart';
 import 'package:crocodile_game/app/ui/select_game/module.dart';
@@ -14,14 +15,32 @@ class MainViewModel implements MainViewModelType {
   RemoteAnalyticsServiceType _remoteAnalyticsService;
   LanguageProviderType _languageProvider;
   GeneratorServiceType _generatorService;
+  AppLanguageServiceType _appLanguageService;
 
   Future<List<Language>> languages;
+  Language currentLanguage;
 
   MainViewModel(this._injector) {
     _remoteAnalyticsService = _injector.getDependency<RemoteAnalyticsServiceType>();
     _languageProvider = _injector.getDependency<LanguageProviderType>();
     _generatorService = _injector.getDependency<GeneratorServiceType>();
+    _appLanguageService = _injector.getDependency<AppLanguageServiceType>();
   }
+
+  Stream<bool> get loadingIsFinished {
+    Observable<bool> isFinished = Observable.combineLatest2(
+      _one,
+      _two, (one, two) {
+        if (!one && two) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+
+    return isFinished;
+  }
+
 
   @override
   void initStateSync() {
@@ -32,6 +51,12 @@ class MainViewModel implements MainViewModelType {
   void initState(BuildContext context) {
     _remoteAnalyticsService.setCurrentScreen('main');
     _generatorService.preLoad(context);
+
+    _appLanguageService.getCurrentAppLanguage().then((lang) {
+      if (lang != null) {
+        AppLocalizations.load(Locale(lang.code, lang.country));
+      }
+    });
   }
 
   @override
@@ -57,7 +82,8 @@ class MainViewModel implements MainViewModelType {
 
   @override
   void languageDropDownAction(Language language) {
-    AppLocalizations.load(Locale(language.code, language.country));
+    this.currentLanguage = language;
+    _appLanguageService.switchAppLanguage(language);
     
     AnalyticsEventType event = RemoteAnalyticsEvent(name: "switch_language");
     _remoteAnalyticsService.sendAnalyticsEvent(event);

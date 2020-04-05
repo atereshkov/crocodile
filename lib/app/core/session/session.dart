@@ -20,6 +20,8 @@ class Session implements SessionType {
     injector.registerSingleton<RemoteAnalyticsServiceType>((_) => FirebaseAnalyticsService());
     injector.registerSingleton<LanguageProviderType>((_) => LanguageProvider());
     injector.registerSingleton<CategoryProviderType>((_) => CategoryProvider());
+
+    injector.registerSingleton<AppLanguageServiceType>((_) => AppLanguageService());
   }
 
 }
