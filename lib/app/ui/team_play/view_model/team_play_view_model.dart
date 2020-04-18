@@ -201,7 +201,7 @@ class TeamPlayViewModel implements TeamPlayViewModelType {
   }
 
   void _generateNewWord(BuildContext context) async {
-    AnalyticsEventType event = RemoteAnalyticsEvent(name: "user_action", parameters: { 'type': 'generate_new_word' });
+    AnalyticsEventType event = RemoteAnalyticsEvent(name: "user_action", parameters: { 'type': 'generate_new_word_team' });
     _remoteAnalyticsService.sendAnalyticsEvent(event);
     String word = await _generatorService.getRandomWord(context);
     _itemController.sink.add(word);
