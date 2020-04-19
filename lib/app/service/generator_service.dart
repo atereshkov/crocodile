@@ -24,14 +24,22 @@ class GeneratorService implements GeneratorServiceType {
   Future<void> start(BuildContext context, List<CategoryInfoItem> categories) async {
     _categories = categories;
     _allWords = await _loadWords(context);
-    _seenWords.clear();
+
+    // remove already seen words from the new words
+    for (var seenWord in _seenWords) {
+      _allWords.removeWhere((w) => w.word == seenWord.word);
+    }
   }
 
   @override
   Future<String> getRandomWord(BuildContext context) async {
     if (_allWords.length == 0) {
       _allWords = await _loadWords(context);
-      _seenWords.clear();
+
+      // remove loaded new words from the seen words as there are no words left for play
+      for (var newWord in _allWords) {
+        _seenWords.removeWhere((w) => w.word == newWord.word);
+      }
     }
 
     final randomItem = _allWords[Random().nextInt(_allWords.length)];
