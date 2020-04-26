@@ -3156,6 +3156,1447 @@
 		      }
 		    }
 		  ]
+		},
+		{
+		  "word": "Суп с котом",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Картофель фри",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Кот в мешке",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "День рождения",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Иголка в стоге сена",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Мороженое",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Банан",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Авантюризм",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Заинтересованность",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Вирус",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Радиовышка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Интернет-магазин",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Россия",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Хомяк",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Паук",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Муха",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Передача Что? Где? Когда?",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Конституция",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Студент",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Ламинат",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Мужской пол",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Пьяный конь",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Винни-Пух",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Атмосфера",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Тубус",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Резьба",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Гараж",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Напёрсток",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Голосование",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Насморк",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Комар",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Выправка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Философ",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "План",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Шоу",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Ужас",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Сквер",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Огонь",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Кирпич",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Подарок",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Баба-яга",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Всемирная паутина",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Жаркое",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Тряпка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Кофе",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Кафе",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Воробей",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Ворона",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Певец",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Груша",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Мышь",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Змея",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Опоссум",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Заявление",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Паспортист",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Заключение",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Кукуруза",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Фигурное катание",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Пограничник",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Барыга",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Магазин Duty Free",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Кокос",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Клюшка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Карман",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Граф",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Океан",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Друг",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Кухня",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Красотка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Журнал",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Патруль",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Патрульный",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Милиционер",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Спецназовец",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "ВДВшник",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Бабочка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Вождь",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Отвар",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Градус",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Огород",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Оригами",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Блюдо",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Салат",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Десерт",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Ложка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Вилка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Минск",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Москва",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Америка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Футбол",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Футболист",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Журналист",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Хоккей",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Регби",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Погоня",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Пенопласт",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Парад",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Наклейка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Пиявка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Пришелец",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Фонарь",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Факел",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Пикник",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Красная куртка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Мини-юбка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Запорожец",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Жигули",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Пиво",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Виски",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Водка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Краник",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Механизм",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Шахта",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Сахар",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Соль",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Дно",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Путешествие",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Экскурсия",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Любовь",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Сок",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Береза",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Медсестра",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Сложные",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Дверь",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Небо",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Ворота",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Треугольник",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Фитнес-часы",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Средние",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Бутылка",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Простые",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Тюрьма",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Остров",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Погода",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Абстрактные",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
 		}
 	]
 }
