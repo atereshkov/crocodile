@@ -3123,6 +3123,1095 @@
 		      }
 		    }
 		  ]
+		},
+		{
+		  "word": "Icecream",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Banana",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Prison",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Adventurism",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Virus",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Online store",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Russia",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Hamster",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Spider",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Student",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Gender",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Drunk horse",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Winnie the Pooh",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Atmosphere",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Tube",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Thread",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Garage",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Thimble",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Voting",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Runny nose",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Mosquito",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Philosopher",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Plan",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Schedule",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Horror",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Fire",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Brick",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Present",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "The World Wide Web",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Roast",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Rag",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Coffee",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Cafe",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Sparrow",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Mouse",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Snake",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Opossum",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Conclusion",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Corn",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Figure skating",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Border guard",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Huckster",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Duty Free Shop",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Coconut",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Pocket",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Graph",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Ocean",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Friend",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Kitchen",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Beautiful girl",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Magazine",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Commandos",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Butterfly",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Leader",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Decoction",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Garden",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Origami",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Dish",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Salad",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Dessert",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Spoon",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Fork",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Minsk",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Moscow",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "America",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Football",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Player",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Journalist",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Hockey",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Rugby",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Chase",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Styrofoam",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Sticker",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Alien",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Lamp",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Torch",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Picnic",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Red jacket",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Mini skirt",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Beer",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Whiskey",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Vodka",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Faucet",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Mechanism",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Mine",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Sugar",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Salt",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Travel",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Excursion",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Love",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Juice",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Nurse",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Door",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Sky",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Triangle",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Fitness watch",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Medium",
+		        "id": "medium"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Bottle",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Easy",
+		        "id": "easy"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Island",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Hard",
+		        "id": "hard"
+		      }
+		    }
+		  ]
+		},
+		{
+		  "word": "Weather",
+		  "categories": [
+		    {
+		      "category": {
+		        "name": "Abstract",
+		        "id": "abstract"
+		      }
+		    }
+		  ]
 		}
 	]
 }
